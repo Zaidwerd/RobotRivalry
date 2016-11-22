@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../normalize.css';
+import '../../../normalize.css';
 import style from './categories.css';
 
 // create a React Component called _App_
@@ -15,8 +15,8 @@ class Categories extends Component {
         <div className='category-box5'>category name</div>
 		    <div className='category-box6'>category name</div>
         <div className='category-box7'>category name</div>
-        <div className='category-box8'>category name</div> 
-        <div className='category-box9'>category name</div>       
+        <div className='category-box8'>category name</div>
+        <div className='category-box9'>category name</div>
       </div>
     );
   }
