@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'ReactJS Hello World',
+      title: 'Robot Rival',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),

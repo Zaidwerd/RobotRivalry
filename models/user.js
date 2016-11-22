@@ -1,6 +1,6 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
-const db = require('../lib/dbConnect')
+const db = require('../lib/dbConnect');
 const bcrypt = require('bcryptjs');
 
 const SALTROUNDS = 10;
@@ -22,7 +22,7 @@ function createUser(req, res, next) {
 function getUserById(id) {
   const promise = new Promise((resolve, reject) => {
   db.one(
-    'SELECT * FROM users Where id = $/id/')
+    'SELECT * FROM users Where id = $/id/', req.body)
   .then((user) => {
     res.rows = user;
     next();
@@ -48,7 +48,7 @@ function getUserById(id) {
 function getUserByUsername(username) {
   const promise = new Promise((resolve, reject) => {
     db.one(
-    'SELECT * FROM users Where username = $/username/')
+    'SELECT * FROM users Where username = $/username/', req.body)
   .then((user) => {
     res.rows = user;
     next();

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './../normalize.css';
-import GameState from '../GameState/GameState';
+import GameState from './Game/GameState/GameState';
 import style from './App.css';
 
 class App extends Component {
