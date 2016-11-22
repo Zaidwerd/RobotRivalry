@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './../normalize.css';
 import GameState from './Game/GameState/GameState';
-import LogIn from './LogIn/LogIn';
 import style from './App.css';
 
 class App extends Component {

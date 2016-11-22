@@ -7,15 +7,17 @@ class SignUp extends Component {
   render() {
     return (
       <div id ={style['container']}>
+
+      <h1>SIGNUP</h1>
       <input
       type="text"
       placeholder="Create username"
-      value={this.props.signUpUserName}
+      value=""
       />
       <input
        type="text"
        placeholder="Create Password"
-       value={this.props.signUpPassWord}
+       value=""
        />
        </div>
       )
