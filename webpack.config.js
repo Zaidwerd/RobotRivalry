@@ -9,11 +9,7 @@ const APP_DIR           = path.resolve(__dirname, 'src');
 
 
 module.exports = {
-  entry: {
-    "indexEntry": `${APP_DIR}/index.js`,
-    "signupEntry": `${APP_DIR}/signupEntry.js`,
-    "loginEntry": `${APP_DIR}/loginEntry.js`,
-  },
+  entry: `${APP_DIR}/index.js`,
   output: {
     path: BUILD_DIR,
     filename: '/js/[name].js',
@@ -30,9 +26,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '[Name]',
+      title: 'Robot Rival',
       xhtml: true,
       inject: false,
+      template: require('html-webpack-template'),
       appMountId: 'root-container'
     }),
     new ExtractTextPlugin('/css/[name].css', {
