@@ -16,7 +16,7 @@ class App extends Component {
 
 getQuestions() {
   console.log('clicked!');
-  fetch(`https://www.opentdb.com/api.php?amount=10&type=multiple`)
+  fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
     .then(r => r.json())
     .then((data) => {
       this.setState({
@@ -26,7 +26,6 @@ getQuestions() {
     })
     .catch(error => console.log('Error: ', error));
 }
-
 
   render(){
     return (
