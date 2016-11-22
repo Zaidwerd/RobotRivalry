@@ -8,11 +8,11 @@ const SECRET  = 'tacos3000';
 
 const PORT    = process.argv[2] || process.env.port || 3000;
 const bodyParser = require('body-parser');
-// const session         = require('express-session');
-// const cookieParser    = require('cookie-parser');
-// const methodOverride  = require('method-override');
-// const authRouter      = require('./routes/auth');
-// const usersRouter     = require('./routes/users');
+const session         = require('express-session');
+const cookieParser    = require('cookie-parser');
+const methodOverride  = require('method-override');
+const authRouter      = require('./routes/auth');
+const usersRouter     = require('./routes/users');
 
 app.use(logger('dev'));
 

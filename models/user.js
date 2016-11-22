@@ -5,24 +5,21 @@ const bcrypt = require('bcryptjs');
 
 const SALTROUNDS = 10;
 
-module.exports = {
-
-  createUser(req, res, next) {
+function createUser(req, res, next) {
   db.one(
     'INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));'
   )
     // Store hashed password
     // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-  };
 
-  then((data) => {
+  .then((data) => {
     res.rows = users;
     next();
-  });
+  })
   .cathc(error => next(error));
 }
 
-getUserById(id) {
+function getUserById(id) {
   const promise = new Promise((resolve, reject) => {
   db.one(
     'SELECT * FROM users Where id = $/id/')
@@ -48,7 +45,7 @@ getUserById(id) {
   // });
 }
 
-getUserByUsername(username) {
+function getUserByUsername(username) {
   const promise = new Promise((resolve, reject) => {
     db.one(
     'SELECT * FROM users Where username = $/username/')
@@ -73,4 +70,8 @@ getUserByUsername(username) {
 //   });
 }
 
+module.exports = {
+  createUser,
+  getUserById,
+  getUserByUsername
 };
