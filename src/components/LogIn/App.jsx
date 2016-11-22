@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import SignUp from './SignUp.jsx';
-import style from './SignUp.css';
+import SignUp from './LogIn.jsx';
+import style from './LogIn.css';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      signUpUserName: '',
-      signUpPassword: ''
+      LogInUserName: '',
+      LogInPassword: ''
     };
   }
 render() {
   return (
     <div id="container">
     <header>
-    <h1>Sign Up</h1>
+    <h1>Log In</h1>
     </header>
-    <SignUp
+    <LogIn
 
 
       />

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import style from './SignUp.css';
+import style from './LogIn.css';
 
-class SignUp extends Component {
+class LogIn extends Component {
   render() {
     return (
       <div id ={style['container']}>
       <input
       type="text"
-      placeholder="Create username"
-      value={this.props.signUpUserName}
+      placeholder="Username"
+      value={this.props.UserName}
       />
       <input
        type="text"
-       placeholder="Create Password"
-       value={this.props.signUpPassWord}
+       placeholder="Password"
+       value={this.props.PassWord}
        />
        </div>
       )
   }
 
 }
-export default SignUp;
+export default LogIn;
