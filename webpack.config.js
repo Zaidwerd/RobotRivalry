@@ -9,7 +9,11 @@ const APP_DIR           = path.resolve(__dirname, 'src');
 
 
 module.exports = {
-  entry: `${APP_DIR}/index.js`,
+  entry: {
+    "indexEntry": `${APP_DIR}/index.js`,
+    "signupEntry": `${APP_DIR}/signupEntry.js`,
+    "loginEntry": `${APP_DIR}/LogIn/LogIn.jsx`,
+  },
   output: {
     path: BUILD_DIR,
     filename: '/js/[name].js',
@@ -25,11 +29,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'ReactJS Hello World',
+    new HtmlWebpackPlugin('/html/[name].html', {
+      title: '[Name]',
       xhtml: true,
       inject: false,
-      template: require('html-webpack-template'),
       appMountId: 'root-container'
     }),
     new ExtractTextPlugin('/css/[name].css', {
