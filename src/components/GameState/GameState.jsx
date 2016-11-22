@@ -8,15 +8,20 @@ class GameState extends Component {
 
     const questions = this.props.questions.map((question, i) => {
 
+      // randomize question order
       let answerArray = [question.correct_answer, question.incorrect_answers[0], question.incorrect_answers[1], question.incorrect_answers[2]];
-      // var randomUAnswer = Math.floor(Math.round(Math.random() * (answerArray.length - 1)))
       let shuffledAnswerArray = _.shuffle(answerArray);
       console.log(shuffledAnswerArray);
+
+      // clean up apostrophe, quotations
+      let questionDirty1 = question.question;
+      let questionClean1 = questionDirty1.replace(/&#039;/g , "'");
+      let questionClean2 = questionClean1.replace(/&quot;/g , '"');
 
       return (
         <Question
           key={i}
-          question={question.question}
+          question={questionClean2}
           answerA={shuffledAnswerArray[0]}
           answerB={shuffledAnswerArray[1]}
           answerC={shuffledAnswerArray[2]}
