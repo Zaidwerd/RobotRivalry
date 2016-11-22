@@ -8,7 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      questions: {},
+      questions: [],
       q_correct: 0,
       q_incorrect: 0,
     }
@@ -34,6 +34,7 @@ getQuestions() {
         <h1>hey</h1>
 
         <GameState
+          questions={this.state.questions}
           getQuestions={event => this.getQuestions(event)}
         />
       </div>

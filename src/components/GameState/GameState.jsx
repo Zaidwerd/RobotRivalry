@@ -9,11 +9,11 @@ class GameState extends Component {
       return (
         <Question
           key={i}
-          question={questions.question}
-          answerA={questions.correct_answer}
-          answerB={questions.incorrect_answer[0]}
-          answerC={questions.incorrect_answer[1]}
-          answerD={questions.incorrect_answer[2]}
+          question={question.question}
+          answerA={question.correct_answer}
+          answerB={question.incorrect_answers[0]}
+          answerC={question.incorrect_answers[1]}
+          answerD={question.incorrect_answers[2]}
         />
         )
     })
