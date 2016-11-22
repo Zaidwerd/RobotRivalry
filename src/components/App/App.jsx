@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './../normalize.css';
 import GameState from '../GameState/GameState';
 import style from './App.css';
-import './normalize.css';
 
 class App extends Component {
   constructor() {
@@ -22,16 +21,10 @@ getQuestions() {
     .then(r => r.json())
     .then((data) => {
 
-      // for(let i = 0; i < data.results.length; i++) {
-      //   let allAnswersArray + i = Array.from(
-      //     data.results.correct_answer,
-      //     data.results.incorrect_answer[0],
-      //     data.results.incorrect_answer[1],
-      //     data.results.incorrect_answer[2],
-      //     );
-      // }
+      for(let i = 0; i < data.results.length; i++) {
+        console.log(data.results[i].correct_answer)
+      }
 
-      console.log(data.results);
       this.setState({
         questions: data.results
       })
