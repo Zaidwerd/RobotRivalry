@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../normalize.css';
-import GameState from '../GameState/GameState';
+import GameState from './Game/GameState/GameState';
+import LogIn from './LogIn/LogIn';
 import style from './App.css';
 
 class App extends Component {
@@ -12,6 +13,10 @@ class App extends Component {
       allAnswers: [],
       q_correct: 0,
       q_incorrect: 0,
+      UserName: '',
+      PassWord: '',
+      signUpUserName: '',
+      signUpPassword: ''
     }
   }
 
