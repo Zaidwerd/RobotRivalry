@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../normalize.css';
 import GameState from '../GameState/GameState';
 import style from './App.css';
 import './normalize.css';
