@@ -17,7 +17,7 @@ class LogIn extends Component {
 				/>
 				<button onClick='#'>
 					LOG IN
-				</button
+				</button>
 			</div>
 
 			)
