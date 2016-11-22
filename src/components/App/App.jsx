@@ -9,6 +9,7 @@ class App extends Component {
 
     this.state = {
       questions: [],
+      allAnswers: [],
       q_correct: 0,
       q_incorrect: 0,
     }
@@ -19,6 +20,17 @@ getQuestions() {
   fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
     .then(r => r.json())
     .then((data) => {
+
+      // for(let i = 0; i < data.results.length; i++) {
+      //   let allAnswersArray + i = Array.from(
+      //     data.results.correct_answer,
+      //     data.results.incorrect_answer[0],
+      //     data.results.incorrect_answer[1],
+      //     data.results.incorrect_answer[2],
+      //     );
+      // }
+
+      console.log(data.results);
       this.setState({
         questions: data.results
       })
