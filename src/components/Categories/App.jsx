@@ -23,7 +23,8 @@ class App extends Component {
 	    .then(this.getUser())
 	    .catch(err => console.log(err));
 	  }
-
+	}
+}
 
     render(){
       return (
