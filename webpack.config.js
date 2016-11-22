@@ -12,7 +12,7 @@ module.exports = {
   entry: {
     "indexEntry": `${APP_DIR}/index.js`,
     "signupEntry": `${APP_DIR}/signupEntry.js`,
-    "loginEntry": `${APP_DIR}/LogIn/LogIn.jsx`,
+    "loginEntry": `${APP_DIR}/loginEntry.js`,
   },
   output: {
     path: BUILD_DIR,
@@ -29,7 +29,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
-    new HtmlWebpackPlugin('/html/[name].html', {
+    new HtmlWebpackPlugin({
       title: '[Name]',
       xhtml: true,
       inject: false,
