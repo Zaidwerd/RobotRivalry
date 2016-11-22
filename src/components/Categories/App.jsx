@@ -25,14 +25,14 @@ class App extends Component {
 	  }
 
 
-  render(){
-    return (
-      <div id='container'>
-        <Categories />
-      </div>
-    );
-  }
-}
+	  render(){
+	    return (
+	      <div id='container'>
+		<Categories />
+	      </div>
+	    );
+	  }
+	}
 }
 
 export default App;
