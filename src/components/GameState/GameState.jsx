@@ -6,6 +6,12 @@ class GameState extends Component {
   render() {
 
     const questions = this.props.questions.map((question, i) => {
+
+      let answerArray = [question.correct_answer, question.incorrect_answers[0], question.incorrect_answers[1], question.incorrect_answers[2]];
+      // var randomUAnswer = Math.floor(Math.round(Math.random() * (answerArray.length - 1)))
+      let shuffledAnswerArray = _.shuffle(answerArray);
+      console.log(shuffledAnswerArray);
+
       return (
         <Question
           key={i}
