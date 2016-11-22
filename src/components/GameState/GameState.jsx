@@ -6,6 +6,7 @@ class GameState extends Component {
     return(
       <container>
         <h2> Scott hello </h2>
+        <button onClick={this.props.getQuestions}> Get questions </button>
       </container>
       );
   }
