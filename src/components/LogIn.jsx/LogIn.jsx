@@ -10,18 +10,18 @@ class LogIn extends Component {
 				<input
 					type='text'
 					placeholder='Username'
-					value='#'
+					value={this.props.login}
 				/>
 				<input='text'
 				placeholder='Password'
-				value='#'
+				value={this.props.password}
 				/>
 				<button onClick='#'>
 					LOG IN
 				</button>
 			</div>
 
-			)
+		)
 	}
 }
 export default LogIn;
