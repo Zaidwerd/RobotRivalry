@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import App from './Stats.jsx';
+import './../normalize.css';
 import style from './Stats.css';
 
 
@@ -14,7 +15,7 @@ class Stats extends Component {
 
         <div className="GlobalStats">
         </div>
-        
+
       </div>
     )
   }
