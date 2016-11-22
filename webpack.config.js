@@ -21,6 +21,9 @@ module.exports = {
     colors: true,
     reasons: true
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'ReactJS Hello World',
