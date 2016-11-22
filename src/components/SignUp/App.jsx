@@ -11,6 +11,8 @@ class App extends Component {
       signUpPassword: ''
     };
   }
+
+
 render() {
   return (
     <div id="container">
