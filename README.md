@@ -62,6 +62,7 @@ On the homepage, the user will also have a link to edit their profile. Here they
 
 Wireframes:
 ![](./wireframes/RobotRivalry-SignIn.png)
+![](./wireframes/RobotRivalry-StartPage.png)
 ![](./wireframes/RobotRivalry-Categories.png)
 ![](./wireframes/RobotRivalry-Levels.png)
 ![](./wireframes/RobotRivalry-Questions.png)
