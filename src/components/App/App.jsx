@@ -23,16 +23,8 @@ getQuestions() {
 
       for(let i = 0; i < data.results.length; i++) {
         console.log(data.results[i].correct_answer)
-        // console.log(data.results[i].incorrect_answers[0]);
-          // let allAnswersArray =
-          // Array.from(
-          //   data.results[i].correct_answer,
-          //   data.results[i].incorrect_answers[0],
-          //   data.results[i].incorrect_answers[1],
-          //   data.results[i].incorrect_answers[2],
-          // );
       }
-      // console.log(allAnswersArray);
+
       this.setState({
         questions: data.results
       })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Question from '../Question/question';
 import './GameState.css';
+let _ = require('underscore');
 
 class GameState extends Component {
   render() {
@@ -16,10 +17,10 @@ class GameState extends Component {
         <Question
           key={i}
           question={question.question}
-          answerA={question.correct_answer}
-          answerB={question.incorrect_answers[0]}
-          answerC={question.incorrect_answers[1]}
-          answerD={question.incorrect_answers[2]}
+          answerA={shuffledAnswerArray[0]}
+          answerB={shuffledAnswerArray[1]}
+          answerC={shuffledAnswerArray[2]}
+          answerD={shuffledAnswerArray[3]}
         />
         )
     })
