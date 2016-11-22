@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './../normalize.css';
 import style from './LogIn.css';
 
 class LogIn extends Component {
@@ -23,3 +24,4 @@ class LogIn extends Component {
 			)
 	}
 }
+export default LogIn;
