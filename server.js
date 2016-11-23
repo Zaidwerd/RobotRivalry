@@ -4,7 +4,9 @@ const express = require('express');
 const logger  = require('morgan');
 const path    = require('path');
 const app     = express();
-const SECRET  = 'tacos3000';
+const jwt     = require('jsonwebtoken');
+
+var secret = process.env.JWT_SECRET || 'tacos3000';
 
 const PORT    = process.argv[2] || process.env.port || 3000;
 const bodyParser = require('body-parser');
@@ -25,11 +27,11 @@ app.use(methodOverride('_method'));
 
 app.use(cookieParser());
 
-app.use(session({
-  resave: false,
-  saveUninitialized: false,
-  secret: SECRET
-}));
+// app.use(session({
+//   resave: false,
+//   saveUninitialized: false,
+//   secret: SECRET
+// }));
 
 // app.get('/', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'index.html'));

@@ -1,77 +1,17 @@
-/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
-/* eslint no-param-reassign: ["error", { "props": false }] */
-const db = require('../lib/dbConnect');
-const bcrypt = require('bcryptjs');
 
-const SALTROUNDS = 10;
-
-function createUser(req, res, next) {
-  db.one(
-    'INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));'
-  )
-    // Store hashed password
-    // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-
-  .then((data) => {
-    res.rows = users;
-    next();
-  })
-  .cathc(error => next(error));
-}
-
-function getUserById(id) {
-  const promise = new Promise((resolve, reject) => {
-  db.one(
-    'SELECT * FROM users Where id = $/id/', req.body)
-  .then((user) => {
-    res.rows = user;
-    next();
-  })
-  .catch(error => next(error));
+//Generate Token using secret from process.env.JWT_SECRET
+var jwt = require(‘jsonwebtoken’);
+function generateToken(user) {
+  //1. Dont use password and other sensitive fields
+  //2. Use fields that are useful in other parts of the
+  //app/collections/models
+  var u = {
+   name: user.name,
+   username: user.username,
+   _id: user._id.toString(),
+  };
+  return token = jwt.sign(u, process.env.JWT_SECRET, {
+     expiresIn: 60 * 60 * 24 // expires in 24 hours
   });
-  return promise;
-
-
-  // return getDB().then((db) => {
-  //   const promise = new Promise((resolve, reject) => {
-  //     db.collection('users')
-  //       .findOne({ _id: ObjectID(id) }, (findError, user) => {
-  //         if (findError) reject(findError);
-  //         db.close();
-  //         resolve(user);
-  //       });
-  //   });
-  //   return promise;
-  // });
 }
 
-function getUserByUsername(username) {
-  const promise = new Promise((resolve, reject) => {
-    db.one(
-    'SELECT * FROM users Where username = $/username/', req.body)
-  .then((user) => {
-    res.rows = user;
-    next();
-  })
-  .catch(error => next(error));
-  });
-  return promise;
-
-//   return getDB().then((db) => {
-//     const promise = new Promise((resolve, reject) => {
-//       db.collection('users')
-//         .findOne({ username }, (findError, user) => {
-//           if (findError) reject(findError);
-//           db.close();
-//           resolve(user);
-//         });
-//     });
-//     return promise;
-//   });
-}
-
-module.exports = {
-  createUser,
-  getUserById,
-  getUserByUsername
-};
