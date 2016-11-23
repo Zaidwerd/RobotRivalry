@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS user_stats;
+DROP TABLE IF EXISTS trivia_stats;
 DROP TABLE IF EXISTS global_stats;
 DROP TABLE IF EXISTS game_stats;
 
@@ -26,13 +27,23 @@ CREATE TABLE user_stats (
   percent_q_correct INT
 );
 
+CREATE TABLE trivia_stats (
+  id SERIAL PRIMARY KEY,
+  user_id INT NOT NULL,
+  num_q_answered INT,
+  num_q_correct INT,
+  num_q_incorrect INT,
+  num_games INT,
+  percent_q_correct INT
+);
+
 CREATE TABLE global_stats (
   id SERIAL PRIMARY KEY,
   total_q_answered INT,
   total_q_correct INT,
   total_q_incorrect INT,
   total_games INT,
-  percent_q_correct INT,
+  percent_q_correct INT
 );
 
 CREATE TABLE game_stats (
@@ -40,5 +51,5 @@ CREATE TABLE game_stats (
   category VARCHAR(20) NOT NULL,
   difficulty VARCHAR(20) NOT NULL,
   num_q_correct INT NOT NULL,
-  num_q_incorrect INT NOT NULL,
+  num_q_incorrect INT NOT NULL
 );
