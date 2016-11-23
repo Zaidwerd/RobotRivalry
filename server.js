@@ -3,18 +3,21 @@ require('dotenv').config({ silent: true });
 const express = require('express');
 const logger  = require('morgan');
 const path    = require('path');
-const app     = express();
 const jwt     = require('jsonwebtoken');
+const expressJWT = require('express-jwt')
 
-var secret = process.env.JWT_SECRET || 'tacos3000';
-
+const app     = express();
 const PORT    = process.argv[2] || process.env.port || 3000;
+
 const bodyParser = require('body-parser');
 const session         = require('express-session');
 const cookieParser    = require('cookie-parser');
 const methodOverride  = require('method-override');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
+
+// const SECRET  = 'tacos3000';
+app.use(expressJWT({ secret: 'tacos3000'}))
 
 app.use(logger('dev'));
 
@@ -45,7 +48,7 @@ app.use(cookieParser());
 // // map our apiRouter to the '/api' route
 // app.use('/api/puppies', apiPuppiesRouter);
 
-app.use('/auth', authRouter);
+app.use('/login', authRouter);
 app.use('/users', usersRouter);
 
 app.listen(PORT, () => {
