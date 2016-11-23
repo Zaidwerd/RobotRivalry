@@ -13,7 +13,7 @@ function createUser(req, res, next) {
     // Store hashed password
     // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
 
-  .then((data) => {
+  .then((users) => {
     res.rows = users;
     next();
   })
