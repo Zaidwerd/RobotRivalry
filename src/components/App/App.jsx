@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import './../normalize.css';
 import style from './App.css';
-
-
-// import Login from './Login/LogIn.jsx';
-// import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFoler/Trivia.jsx';
+import Login from './Login/LogIn.jsx';
+import SignUp from './SignUp/SignUp.jsx';
+import Trivia from './Game/GameFoler/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
-// import Categories from './Game/Categories/Categories.jsx';
-// import Levels from './Game/Levels/Levels.jsx';
-// import Question from './Game/Question/question.jsx';
+import Categories from './Game/Categories/Categories.jsx';
+import Levels from './Game/Levels/Levels.jsx';
+import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
-// import Stats from './Stats/Stats.jsx';
+import Stats from './Stats/Stats.jsx';
 
 let _ = require('underscore');
 
@@ -143,6 +141,11 @@ class App extends Component {
     this.setState({
       signUpUserName: e.target.value,
     });
+  }
+
+  getCategories() {
+
+
   }
 
 
