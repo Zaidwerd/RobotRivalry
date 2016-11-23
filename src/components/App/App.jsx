@@ -12,6 +12,10 @@ class App extends Component {
       questions: [],
       q_correct: 0,
       q_incorrect: 0,
+      UserName: '',
+      PassWord: '',
+      signUpUserName: '',
+      signUpPassword: ''
       currentQuestion: '',
       currentAnswers: [],
       currentCorrectAnswer: '',
@@ -51,6 +55,15 @@ class App extends Component {
       currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
       currentAnswers: shuffledAnswerArray,
     })
+
+    .catch(error => console.log('Error: ', error));
+}
+  updateName(e) {
+    this.setState({
+      signUpUserName: e.target.value,
+    });
+  }
+=======
   }
 
   nextQuestion() {
@@ -60,6 +73,7 @@ class App extends Component {
     })
     this.getOneQuestion();
   }
+
 
 
   render(){
