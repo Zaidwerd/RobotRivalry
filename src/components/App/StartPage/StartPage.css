@@ -16,9 +16,9 @@ body {
 	background-attachment: fixed;
 	background-color: orange;
 /*	object-fit: cover;*/
-	background-size: cover;
+	background-size: 1270px 900px;
 	/*background-size: contain;*/
-	position: relative;
+	position: absolute;
 	background-repeat: no-repeat;
 	height: 950px;
 	width: 100%;

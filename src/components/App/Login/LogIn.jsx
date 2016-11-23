@@ -5,23 +5,35 @@ class LogIn extends Component {
 
   render() {
     return (
-      <div id ={style['container']}>
+            // <div id={style['container']}>
 
-      <div className='userBox'>
-        <input
-          type="text"
-          placeholder="Username"
-          value={this.props.Username}
-        />
-        <input
-           type="text"
-           placeholder="Password"
-           value={this.props.Password}
-         />
-         <button> Log In </button>
-       </div>
+      <div id="container">
+      
 
-       </div>
+
+        <div className='userBox'>
+
+          <div className='hOne'>
+            <h1>Log In</h1>
+          </div>
+
+          <div className='inputContainer'>
+            <input className='user'
+            type="text"
+            placeholder="Username"
+            value={this.props.Username}
+            />
+
+            <input className='pass'
+            type="text"
+            placeholder="Password"
+            value={this.props.Password}
+            />
+            <button> Log In </button>
+          </div>
+          
+        </div>  
+      </div>
     )
   }
 

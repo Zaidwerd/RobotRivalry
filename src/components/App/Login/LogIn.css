@@ -1,0 +1,59 @@
+
+#container {
+	background-color: #222222;
+	height: 800px;
+}
+
+.userBox {
+	align-self: center;
+	background-color: blue;
+	width: 800px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.inputContainer {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.user {
+	width: 200px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+
+}
+
+.pass {
+	width: 200px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+}
+
+h1 {
+	font-size: 100px;
+	align-self: flex-start;
+	align-items: center;
+}
+
+.hOne h1{
+	text-align: center;
+}
