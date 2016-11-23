@@ -2,6 +2,7 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
 const db = require('../lib/dbConnect');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken')
 
 const SALTROUNDS = 10;
 
