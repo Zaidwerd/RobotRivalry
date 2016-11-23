@@ -33,6 +33,7 @@ class App extends Component {
           questions: data.results
         })
         console.log(this.state.questions);
+        this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }

@@ -11,7 +11,6 @@ class GameState extends Component {
       <container>
         <h2> Scott hello </h2>
         <button onClick={this.props.getQuestions}> Get questions </button>
-        <button onClick={this.props.getOneQuestion}> Get one question </button>
         <h3>{this.props.question}</h3>
         <h5>{this.props.answer1}</h5>
         <h5>{this.props.answer2}</h5>
