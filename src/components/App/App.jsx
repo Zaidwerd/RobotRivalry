@@ -5,7 +5,7 @@ import style from './App.css';
 // import Login from './Login/LogIn.jsx';
 // import SignUp from './SignUp/SignUp.jsx';
 // import Trivia from './GameFolder/Trivia.jsx';
-// import GameState from './GameState/GameState.jsx';
+import GameState from '.Game/GameState/GameState.jsx';
 // import Categories from './Categories/Categories.jsx';
 // import Levels from './Levels/Levels.jsx';
 // import Questions from './Questions/question.jsx';
