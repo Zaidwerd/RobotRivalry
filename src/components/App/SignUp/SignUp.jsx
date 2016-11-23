@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import style from './SignUp.css';
 
 class SignUp extends Component {
-  constructor() {
-    super();
-    this.state = {
-      signUpUserName: '',
-      signUpPassword: ''
-    };
-  }
+
 
   render() {
     return (
