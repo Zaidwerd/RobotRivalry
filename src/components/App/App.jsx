@@ -54,6 +54,7 @@ class App extends Component {
   }
 
   nextQuestion() {
+    console.log('counter plus 1');
     this.setState({
       counter: this.state.counter + 1,
     })
