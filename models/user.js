@@ -7,9 +7,13 @@ const jwt = require('jsonwebtoken')
 const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
-  db.one(`INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));`
+  db.one(
+    `INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));`
   )
-  .then((data) => {
+    // Store hashed password
+    // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
+
+  .then((users) => {
     res.rows = users;
     next();
   })
@@ -19,7 +23,7 @@ function createUser(req, res, next) {
 function getUserById(id) {
   const promise = new Promise((resolve, reject) => {
   db.one(
-    'SELECT * FROM users Where id = $/id/', req.body)
+    `SELECT * FROM users Where id = $/id/`, req.body)
   .then((user) => {
     res.rows = user;
     next();
@@ -32,7 +36,7 @@ function getUserById(id) {
 function getUserByUsername(username) {
   const promise = new Promise((resolve, reject) => {
     db.one(
-    'SELECT * FROM users Where username = $/username/', req.body)
+    `SELECT * FROM users Where username = $/username/`, req.body)
   .then((user) => {
     res.rows = user;
     next();
