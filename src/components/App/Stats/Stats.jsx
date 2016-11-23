@@ -15,6 +15,7 @@ class Stats extends Component {
         </div>
 
         <div className="GlobalStats">
+        GLOBAL
         </div>
 
       </div>
