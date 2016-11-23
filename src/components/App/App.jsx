@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import './../normalize.css';
 import GameState from './Game/GameState/GameState';
 import style from './App.css';
+import StartPage from './Login/LogIn.jsx';
+import StartPage from './SignUp/SignUp.jsx';
+import StartPage from './GameFoler/Trivia.jsx';
+import StartPage from './GameState/GameState.jsx';
+import StartPage from './Categories/Categories.jsx';
+import StartPage from './Levels/Levels.jsx';
+import StartPage from './Questions/question.jsx';
+import StartPage from './StartPage/StartPage.jsx';
+import StartPage from './Stats/Stats.jsx';
 
 class App extends Component {
   constructor() {

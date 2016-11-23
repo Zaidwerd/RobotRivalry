@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './starterBG.jpg';
 import style from './StartPage.css';
 
 class StartPage extends Component {
   render(){
     return (
-      <div>
-      <div class="robotrivalry">Robot Rivalry</div>
-      <div class="cookingmama">cookingmama coming soon</div>
-      <div class="cookingmama">cookingmama coming soon</div>
+      <div className="container">
+      <div className="robotrivalry">Robot Rivalry</div>
+      <div className="cookingmama">cookingmama coming soon</div>
+      <div className="pokemon">cookingmama coming soon</div>
       </div>
       );
   }
