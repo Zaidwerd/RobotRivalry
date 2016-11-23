@@ -10,9 +10,9 @@ class Categories extends Component {
       <div id='container'>
 
       <div className='main-box'>
-        <button className='category-box1 box'>category name</button>
+        <button className='category-box1 box' onClick={() => alert('clicked!')}>category name</button>
       </div>
-      
+
       </div>
     );
   }

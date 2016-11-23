@@ -3,11 +3,10 @@ import './../normalize.css';
 import style from './App.css';
 import Login from './Login/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-import Trivia from './GameFoler/Trivia.jsx';
-import GameState from './GameState/GameState.jsx';
-import Categories from './Categories/Categories.jsx';
-import Levels from './Levels/Levels.jsx';
-import Questions from './Questions/question.jsx';
+import GameState from './Game/GameState/GameState.jsx';
+import Categories from './Game/Categories/Categories.jsx';
+import Levels from './Game/Levels/Levels.jsx';
+import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
 
@@ -32,6 +31,8 @@ class App extends Component {
       counter: 0,
     }
   }
+
+
 
   getQuestions() {
     console.log('clicked!');
@@ -68,11 +69,12 @@ class App extends Component {
 
     .catch(error => console.log('Error: ', error));
 }
-  updateName(e) {
-    this.setState({
-      signUpUserName: e.target.value,
-    });
-  }
+
+
+
+
+
+
 
   nextQuestion() {
     console.log('counter plus 1');
