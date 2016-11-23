@@ -13,7 +13,7 @@ CREATE TABLE users (
   age INT NOT NULL,
   gender VARCHAR(6) NOT NULL,
   zodiac VARCHAR(12) NOT NULL,
-  state VARHCAR(2) NOT NULL,
+  state VARCHAR(2) NOT NULL,
   email text NOT NULL
 );
 

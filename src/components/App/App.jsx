@@ -11,6 +11,7 @@ import GameState from './Game/GameState/GameState.jsx';
 // import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 // import Stats from './Stats/Stats.jsx';
+import AjaxAdapter from '../../helpers/AjaxAdapter';
 
 let _ = require('underscore');
 
@@ -37,16 +38,24 @@ class App extends Component {
     }
   }
 
+  // SIGN UP PAGE
+
+  addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
+    AjaxAdapter.createUser({ username, first_name, last_name, password, age, gender, zodiac, state, email })
+    // .then((newUser) => {
+    //   // clone existing state
+    //   const newState = { ...this.state.users };
+
+    })
+  }
+
+
+  // GAME LOGIC
   getQuestions() {
     console.log('clicked!');
     fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
       .then(r => r.json())
       .then((data) => {
-
-        // for(let i = 0; i < data.results.length; i++) {
-        //   console.log(data.results[i].correct_answer)
-        // }
-
         this.setState({
           questions: data.results
         })
