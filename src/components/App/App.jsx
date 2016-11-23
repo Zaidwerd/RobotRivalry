@@ -37,6 +37,7 @@ class App extends Component {
       answerC: '',
       answerD: '',
       counter: 0,
+      token:'',
     }
   }
 

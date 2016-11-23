@@ -17,7 +17,7 @@ function createUser(req, res, next) {
     res.rows = users;
     next();
   })
-  .cathc(error => next(error));
+  .catch(error => next(error));
 }
 
 function getUserById(id) {
@@ -45,6 +45,8 @@ function getUserByUsername(username) {
   });
   return promise;
 }
+
+
 
 module.exports = {
   createUser,
