@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import './../normalize.css';
 import style from './App.css';
-<<<<<<< HEAD
+
 // import Login from './Login/LogIn.jsx';
 // import SignUp from './SignUp/SignUp.jsx';
 // import Trivia from './GameFoler/Trivia.jsx';
-// import GameState from './GameState/GameState.jsx';
+import GameState from './Game/GameState/GameState.jsx';
 // import Categories from './Categories/Categories.jsx';
 // import Levels from './Levels/Levels.jsx';
 // import Questions from './Questions/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 // import Stats from './Stats/Stats.jsx';
-=======
 let _ = require('underscore');
->>>>>>> origin
 
 class App extends Component {
   constructor() {
@@ -26,7 +24,7 @@ class App extends Component {
       UserName: '',
       PassWord: '',
       signUpUserName: '',
-      signUpPassword: ''
+      signUpPassword: '',
       currentQuestion: '',
       currentAnswers: [],
       currentCorrectAnswer: '',
@@ -73,8 +71,6 @@ class App extends Component {
     this.setState({
       signUpUserName: e.target.value,
     });
-  }
-=======
   }
 
   nextQuestion() {
