@@ -6,9 +6,13 @@ class StartPage extends Component {
   render(){
     return (
       <div className="container">
+
+      <div className="bg">
       <div className="robotrivalry">Robot Rivalry</div>
       <div className="cookingmama">cookingmama coming soon</div>
       <div className="pokemon">cookingmama coming soon</div>
+      </div>
+
       </div>
       );
   }
