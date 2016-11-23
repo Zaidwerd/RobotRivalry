@@ -17,7 +17,7 @@ const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
 
 // const SECRET  = 'tacos3000';
-app.use(expressJWT({ secret: 'tacos3000'}))
+// app.use(expressJWT({ secret: 'tacos3000'}))
 
 app.use(logger('dev'));
 

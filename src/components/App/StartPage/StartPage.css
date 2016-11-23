@@ -16,7 +16,7 @@ body {
 	background-attachment: fixed;
 	background-color: orange;
 /*	object-fit: cover;*/
-	background-size: 1270px 900px;
+	background-size: 1350px 800px;
 	/*background-size: contain;*/
 	position: absolute;
 	background-repeat: no-repeat;
@@ -37,8 +37,8 @@ no maintain ratio w/ window size*/
 	height: 100px;
 	width: 200px;
 	position: relative;
-	top: 348px;
-	left: 635px;
+	top: 340px;
+	left: 655px;
 }
 
 .cookingmama {
@@ -48,7 +48,7 @@ no maintain ratio w/ window size*/
 	height: 120px;
 	width: 145px;
 	position: absolute;
-	top: 297px;
+	top: 290px;
 	left: 5px;
 }
 
@@ -59,6 +59,6 @@ no maintain ratio w/ window size*/
 	height: 100px;
 	width: 130px;
 	position: absolute;
-	top: 338px;
-	left: 439px;
+	top: 330px;
+	left: 455px;
 }

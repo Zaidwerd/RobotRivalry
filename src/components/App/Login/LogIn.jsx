@@ -5,7 +5,6 @@ class LogIn extends Component {
 
   render() {
     return (
-            // <div id={style['container']}>
 
       <div id="container">
       
