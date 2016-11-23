@@ -7,7 +7,6 @@ import SignUp from './components/App/SignUp/SignUp.jsx';
 import StartPage from './components/App/StartPage/StartPage.jsx';
 import Stats from './components/App/Stats/Stats.jsx';
 import Categories from './components/App/Game/Categories/categories.jsx';
-import GameFolder from './components/App/Game/GameFolder/Trivia.jsx';
 import GameState from './components/App/Game/GameState/GameState.jsx';
 import Levels from './components/App/Game/Levels/Levels.jsx';
 import Question from './components/App/Game/Question/question.jsx';

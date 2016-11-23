@@ -2,19 +2,20 @@
 import React, { Component } from 'react';
 import './../normalize.css';
 import style from './App.css';
-
-// import Login from './Login/LogIn.jsx';
-// import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFoler/Trivia.jsx';
+import Login from './Login/LogIn.jsx';
+import SignUp from './SignUp/SignUp.jsx';
+import Trivia from './Game/GameFoler/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
-// import Categories from './Game/Categories/Categories.jsx';
-// import Levels from './Game/Levels/Levels.jsx';
-// import Question from './Game/Question/question.jsx';
+import Categories from './Game/Categories/Categories.jsx';
+import Levels from './Game/Levels/Levels.jsx';
+import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
-// import Stats from './Stats/Stats.jsx';
+import Stats from './Stats/Stats.jsx';
 import AjaxAdapter from '../../helpers/AjaxAdapter';
 
+
 let _ = require('underscore');
+
 
 class App extends Component {
   constructor() {
@@ -39,6 +40,7 @@ class App extends Component {
     }
   }
 
+
   // SIGN UP PAGE
 
   addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
@@ -52,6 +54,7 @@ class App extends Component {
 
 
   // GAME LOGIC
+
   getQuestions() {
     console.log('clicked!');
     fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
@@ -101,6 +104,10 @@ class App extends Component {
     this.getOneQuestion();
   }
 
+    .catch(error => console.log('Error: ', error));
+}
+
+
     nextQuestionB() {
     console.log('clicked');
     console.log('ANSWER B: ', this.state.answerB);
@@ -147,6 +154,11 @@ class App extends Component {
     });
   }
 
+  getCategories() {
+
+
+  }
+
 
   render(){
     return (
@@ -172,6 +184,7 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
 
