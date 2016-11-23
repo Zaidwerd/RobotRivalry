@@ -1,17 +1,17 @@
 body {
-	background-image: url(./starterBG.jpg);
+/*	background-image: url(./starterBG.jpg);*/
 
 }
 
 .container {
-	background-image: url(./starterBG.jpg);
-background-color: black;
-height: 100px;
-width: 100px;
+/*	background-image: url(./starterBG.jpg);*/
+	background-color: #010101;
+	height: 100px;
+	width: 100px;
 
 }
 
-.robotrivalry {
+/*.robotrivalry {
 	color: black;
 }
 
@@ -21,4 +21,4 @@ width: 100px;
 
 .pokemon {
 	color: white;
-}
+}*/
