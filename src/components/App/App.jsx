@@ -36,6 +36,11 @@ getQuestions() {
     })
     .catch(error => console.log('Error: ', error));
 }
+  updateName(e) {
+    this.setState({
+      signUpUserName: e.target.value,
+    });
+  }
 
   render(){
     return (
