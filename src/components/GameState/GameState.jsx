@@ -17,6 +17,7 @@ class GameState extends Component {
         <h5>{this.props.answer2}</h5>
         <h5>{this.props.answer3}</h5>
         <h5>{this.props.answer4}</h5>
+        <button onClick={this.props.nextQuestion}> Next Question </button>
       </container>
       );
   }

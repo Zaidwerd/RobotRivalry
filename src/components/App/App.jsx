@@ -25,9 +25,9 @@ class App extends Component {
       .then(r => r.json())
       .then((data) => {
 
-        for(let i = 0; i < data.results.length; i++) {
-          console.log(data.results[i].correct_answer)
-        }
+        // for(let i = 0; i < data.results.length; i++) {
+        //   console.log(data.results[i].correct_answer)
+        // }
 
         this.setState({
           questions: data.results
@@ -45,12 +45,19 @@ class App extends Component {
     let questionClean2 = questionClean1.replace(/&quot;/g , '"');
     console.log(questionClean2);
     this.setState({
+      // counter: this.state.counter + 1,
       currentQuestion: questionClean2,
       currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
       currentAnswers: shuffledAnswerArray,
     })
   }
 
+  nextQuestion() {
+    this.setState({
+      counter: this.state.counter + 1,
+    })
+    this.getOneQuestion();
+  }
 
 
   render(){
@@ -68,6 +75,7 @@ class App extends Component {
           answer2={this.state.currentAnswers[1]}
           answer3={this.state.currentAnswers[2]}
           answer4={this.state.currentAnswers[3]}
+          nextQuestion={event => this.nextQuestion(event)}
         />
       </div>
     );
