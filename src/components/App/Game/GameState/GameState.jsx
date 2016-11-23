@@ -10,13 +10,15 @@ class GameState extends Component {
     return(
       <container>
         <h2> Scott hello </h2>
+
         <button onClick={this.props.getQuestions}> Get questions </button>
+
         <h3>{this.props.question}</h3>
-        <h5>{this.props.answer1}</h5>
-        <h5>{this.props.answer2}</h5>
-        <h5>{this.props.answer3}</h5>
-        <h5>{this.props.answer4}</h5>
-        <button onClick={this.props.nextQuestion}> Next Question </button>
+
+        <button onClick={this.props.nextQuestionA}> {this.props.answerA}</button>
+        <button onClick={this.props.nextQuestionB}>{this.props.answerB}</button>
+        <button onClick={this.props.nextQuestionC}>{this.props.answerC}</button>
+        <button onClick={this.props.nextQuestionD}>{this.props.answerD}</button>
       </container>
       );
   }

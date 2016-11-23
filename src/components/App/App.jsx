@@ -28,6 +28,10 @@ class App extends Component {
       currentQuestion: '',
       currentAnswers: [],
       currentCorrectAnswer: '',
+      answerA: '',
+      answerB: '',
+      answerC: '',
+      answerD: '',
       counter: 0,
     }
   }
@@ -65,16 +69,66 @@ class App extends Component {
       currentQuestion: questionClean2,
       currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
       currentAnswers: shuffledAnswerArray,
+      answerA: shuffledAnswerArray[0],
+      answerB: shuffledAnswerArray[1],
+      answerC: shuffledAnswerArray[2],
+      answerD: shuffledAnswerArray[3],
       counter: this.state.counter +1,
     })
   };
 
-  nextQuestion() {
+  nextQuestionA() {
+    console.log('clicked');
+    console.log('ANSWER A: ', this.state.answerA);
+    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+    if(this.state.answerA === this.state.currentCorrectAnswer) {
+      this.setState({q_correct: this.state.q_correct + 1});
+    }
     this.setState({
       counter: this.state.counter + 1,
     })
     this.getOneQuestion();
   }
+
+    nextQuestionB() {
+    console.log('clicked');
+    console.log('ANSWER B: ', this.state.answerB);
+    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+    if(this.state.answerB === this.state.currentCorrectAnswer) {
+      this.setState({q_correct: this.state.q_correct + 1});
+    }
+    this.setState({
+      counter: this.state.counter + 1,
+    })
+    this.getOneQuestion();
+  }
+
+    nextQuestionC() {
+    console.log('clicked');
+    console.log('ANSWER C: ', this.state.answerC);
+    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+    if(this.state.answerC === this.state.currentCorrectAnswer) {
+      this.setState({q_correct: this.state.q_correct + 1});
+    }
+    this.setState({
+      counter: this.state.counter + 1,
+    })
+    this.getOneQuestion();
+  }
+
+    nextQuestionD() {
+    console.log('clicked');
+    console.log('ANSWER D: ', this.state.answerD);
+    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+    if(this.state.answerD === this.state.currentCorrectAnswer) {
+      this.setState({q_correct: this.state.q_correct + 1});
+    }
+    this.setState({
+      counter: this.state.counter + 1,
+    })
+    this.getOneQuestion();
+  }
+
 
   updateName(e) {
     this.setState({
@@ -94,11 +148,14 @@ class App extends Component {
           getQuestions={event => this.getQuestions(event)}
           getOneQuestion={event => this.getOneQuestion(event)}
           question={this.state.currentQuestion}
-          answer1={this.state.currentAnswers[0]}
-          answer2={this.state.currentAnswers[1]}
-          answer3={this.state.currentAnswers[2]}
-          answer4={this.state.currentAnswers[3]}
-          nextQuestion={event => this.nextQuestion(event)}
+          answerA={this.state.answerA}
+          answerB={this.state.answerB}
+          answerC={this.state.answerC}
+          answerD={this.state.answerD}
+          nextQuestionA={event => this.nextQuestionA(event)}
+          nextQuestionB={event => this.nextQuestionB(event)}
+          nextQuestionC={event => this.nextQuestionC(event)}
+          nextQuestionD={event => this.nextQuestionD(event)}
         />
       </div>
     );
