@@ -4,7 +4,7 @@ const express = require('express');
 const logger  = require('morgan');
 const path    = require('path');
 const jwt     = require('jsonwebtoken');
-const expressJWT = require('express-jwt')
+// const expressJWT = require('express-jwt')
 
 const app     = express();
 const PORT    = process.argv[2] || process.env.port || 3000;
@@ -16,8 +16,8 @@ const methodOverride  = require('method-override');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
 
-// const SECRET  = 'tacos3000';
-app.use(expressJWT({ secret: 'tacos3000'}))
+const secret = 'secret'
+// app.use(expressJWT({ secret: 'tacos3000'}).unless({path: ['/users']}))
 
 app.use(logger('dev'));
 

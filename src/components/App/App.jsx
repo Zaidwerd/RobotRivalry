@@ -34,6 +34,7 @@ class App extends Component {
       answerC: '',
       answerD: '',
       counter: 0,
+      token:'',
     }
   }
 
@@ -136,6 +137,21 @@ class App extends Component {
       signUpUserName: e.target.value,
     });
   }
+
+  // generateToken() {
+  //   fetch('/users', {
+  //     method: 'POST',
+  //     body: {
+  //       first_name:
+  //       last_name:
+  //       email:
+  //       password:
+  //     }
+  //   })
+  //   .then((token)=> {
+  //     setState(token);
+  //   })
+  // }
 
 
   render(){

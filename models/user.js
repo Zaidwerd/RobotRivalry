@@ -7,17 +7,13 @@ const jwt = require('jsonwebtoken')
 const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
-  db.one(
-    'INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));'
+  db.one(`INSERT INTO users (username, email, first_name, last_name, age, gender, zodiac, state, password) Values ($/username/, $/email/, $/first_name/, $/last_name/, $/age/, $/gender/, $/zodiac/, $/state/, bcrypt.hashSync(req.body.user.password, SALTROUNDS));`
   )
-    // Store hashed password
-    // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-
   .then((data) => {
     res.rows = users;
     next();
   })
-  .cathc(error => next(error));
+  .catch(error => next(error));
 }
 
 function getUserById(id) {
@@ -31,19 +27,6 @@ function getUserById(id) {
   .catch(error => next(error));
   });
   return promise;
-
-
-  // return getDB().then((db) => {
-  //   const promise = new Promise((resolve, reject) => {
-  //     db.collection('users')
-  //       .findOne({ _id: ObjectID(id) }, (findError, user) => {
-  //         if (findError) reject(findError);
-  //         db.close();
-  //         resolve(user);
-  //       });
-  //   });
-  //   return promise;
-  // });
 }
 
 function getUserByUsername(username) {
@@ -57,19 +40,9 @@ function getUserByUsername(username) {
   .catch(error => next(error));
   });
   return promise;
-
-//   return getDB().then((db) => {
-//     const promise = new Promise((resolve, reject) => {
-//       db.collection('users')
-//         .findOne({ username }, (findError, user) => {
-//           if (findError) reject(findError);
-//           db.close();
-//           resolve(user);
-//         });
-//     });
-//     return promise;
-//   });
 }
+
+
 
 module.exports = {
   createUser,
