@@ -59,7 +59,7 @@ CREATE TABLE questions (
   id SERIAL PRIMARY KEY,
   category VARCHAR(50) NOT NULL,
   difficulty VARCHAR(10) NOT NULL,
-  questions text NOT NULL,
+  question text NOT NULL,
   correct_answer text NOT NULL,
-  incorrect_answer text ARRAY[3]
+  incorrect_answers text ARRAY[3]
 );
