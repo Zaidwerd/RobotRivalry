@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import style from './SignUp.css';
 
-class SignUp extends Component {
+export default function SignUp(props) {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const myForm = event.target;
 
 
-  render() {
+  }
+
     return (
       <div id="formBox">
         <h1>SIGNUP</h1>
@@ -12,7 +17,7 @@ class SignUp extends Component {
 
           <input
           type="text"
-          placeholder="Create username"
+          placeholder="Create Username"
           value=""
           />
 
@@ -22,12 +27,51 @@ class SignUp extends Component {
            value=""
            />
 
+          <input
+           type="text"
+           placeholder="Enter First Name"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Enter Last Name"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Enter Age"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Select Gender"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Select Zodiac Sign"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Enter State"
+           value=""
+           />
+
+          <input
+           type="text"
+           placeholder="Enter Email"
+           value=""
+           />
+
           <button type="submit" className="signup-submit"> Sign up </button>
 
         </form>
       </div>
     );
-  }
 }
-
-export default SignUp;
