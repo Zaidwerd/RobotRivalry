@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './starterBG.jpg';
 import style from './StartPage.css';
 import { Link } from 'react-router';
-import Categories from './../Categories/categories.jsx';
+import Categories from '../Game/Categories/categories.jsx';
 
 
 class StartPage extends Component {

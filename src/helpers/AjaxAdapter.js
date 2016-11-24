@@ -6,7 +6,7 @@ export default class AjaxAdapter {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-      body: JSON.stringify(newTask)
+      body: JSON.stringify(newUser)
     })
     .then(r=> r.json());
   }
