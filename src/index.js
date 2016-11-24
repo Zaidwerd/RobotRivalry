@@ -20,9 +20,12 @@ ReactDOM.render((
     <Route path="/startpage" component={StartPage}/>
     <Route path="/stats" component={Stats}/>
     <Route path="/categories" component={Categories}/>
-    <Route path="/gamefolder" component={GameFolder}/>
     <Route path="/gamestate" component={GameState}/>
     <Route path="/levels" component={Levels}/>
     <Route path="/question" component={Question}/>
   </Router>
 ), document.querySelector('#root-container'))
+
+
+
+    // <Route path="/gamefolder" component={GameFolder}/>

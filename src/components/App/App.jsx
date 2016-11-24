@@ -1,10 +1,9 @@
 
 import React, { Component } from 'react';
-import './../normalize.css';
 import style from './App.css';
 import Login from './Login/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-import Trivia from './Game/GameFoler/Trivia.jsx';
+// import Trivia from './Game/GameFoler/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
@@ -12,6 +11,7 @@ import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
 import AjaxAdapter from '../../helpers/AjaxAdapter';
+import './../normalize.css';
 
 
 let _ = require('underscore');
@@ -49,8 +49,7 @@ class App extends Component {
     // .then((newUser) => {
     //   // clone existing state
     //   const newState = { ...this.state.users };
-
-    })
+    // })
   }
 
 
@@ -103,9 +102,6 @@ class App extends Component {
       counter: this.state.counter + 1,
     })
     this.getOneQuestion();
-  }
-
-    .catch(error => console.log('Error: ', error));
 }
 
 
@@ -181,6 +177,11 @@ class App extends Component {
           nextQuestionC={event => this.nextQuestionC(event)}
           nextQuestionD={event => this.nextQuestionD(event)}
         />
+
+        <SignUp
+          addUser={event => this.addUser(event)}
+        />
+
       </div>
     );
   }
