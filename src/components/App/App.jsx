@@ -36,8 +36,6 @@ class App extends Component {
       q_incorrect: 0,
       UserName: '',
       PassWord: '',
-      signUpUserName: '',
-      signUpPassword: '',
       currentQuestion: '',
       currentAnswers: [],
       currentCorrectAnswer: '',
@@ -49,7 +47,7 @@ class App extends Component {
       token:'',
     };
 
-    this.addUser = this.addUser.bind(this);
+    // this.addUser = this.addUser.bind(this);
   }
 
 
@@ -67,6 +65,60 @@ class App extends Component {
   //     throw error;
   //   });
   // }
+
+  updateFormUsername(e) {
+    this.setState({
+      userFormUsername: e.target.value,
+    });
+  }
+
+  updateFormPassword(e) {
+    this.setState({
+      userFormPassword: e.target.value,
+    });
+  }
+
+  updateFormFirstName(e) {
+    this.setState({
+      userFormFirstName: e.target.value,
+    });
+  }
+
+  updateFormLastName(e) {
+    this.setState({
+      userFormLastName: e.target.value,
+    });
+  }
+
+  updateFormAge(e) {
+    this.setState({
+      userFormAge: e.target.value,
+    });
+  }
+
+  updateFormGender(e) {
+    this.setState({
+      userFormGender: e.target.value,
+    });
+  }
+
+  updateFormZodiac(e) {
+    this.setState({
+      userFormZodiac: e.target.value,
+    });
+  }
+
+  updateFormState(e) {
+    this.setState({
+      userFormState: e.target.value,
+    });
+  }
+
+  updateFormEmail(e) {
+    this.setState({
+      userFormEmail: e.target.value,
+    });
+  }
 
   handleFormSubmit() {
     fetch('/users', {
@@ -211,6 +263,28 @@ class App extends Component {
 
         <h1>hey</h1>
 
+        <SignUp
+          userFormUsername={this.state.userFormUsername}
+          userFormPassword={this.state.userFormPassword}
+          userFormFirstName={this.state.userFormFirstName}
+          userFormLastName={this.state.userFormLastName}
+          userFormAge={this.state.userFormAge}
+          userFormGender={this.state.userFormGender}
+          userFormZodiac={this.state.userFormZodiac}
+          userFormState={this.state.userFormState}
+          userFormEmail={this.state.userFormEmail}
+          updateFormUsername={event => this.updateFormUsername(event)}
+          updateFormPassword={event => this.updateFormPassword(event)}
+          updateFormFirstName={event => this.updateFormFirstName(event)}
+          updateFormLastName={event => this.updateFormLastName(event)}
+          updateFormAge={event => this.updateFormAge(event)}
+          updateFormGender={event => this.updateFormGender(event)}
+          updateFormZodiac={event => this.updateFormZodiac(event)}
+          updateFormState={event => this.updateFormState(event)}
+          updateFormEmail={event => this.updateFormEmail(event)}
+          handleFormSubmit={() => this.handleFormSubmit()}
+        />
+
         <GameState
           questions={this.state.questions}
           getQuestions={event => this.getQuestions(event)}
@@ -226,9 +300,6 @@ class App extends Component {
           nextQuestionD={event => this.nextQuestionD(event)}
         />
 
-        <SignUp
-          addUser={this.addUser}
-        />
 
       </div>
     );
