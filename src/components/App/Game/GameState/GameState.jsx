@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Question from '../Question/question';
 import './GameState.css';
-let _ = require('underscore');
 
 class GameState extends Component {
   render() {
