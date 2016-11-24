@@ -10,7 +10,7 @@ import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
-import AjaxAdapter from '../../helpers/AjaxAdapter';
+// import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
 
@@ -18,10 +18,19 @@ let _ = require('underscore');
 
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
+      userFormUsername: '',
+      userFormPassword: '',
+      userFormFirstName: '',
+      userFormLastName: '',
+      userFormAge: '',
+      userFormGender: '',
+      userFormZodiac: '',
+      userFormState: '',
+      userFormEmail: '',
       questions: [],
       q_correct: 0,
       q_incorrect: 0,
@@ -38,18 +47,57 @@ class App extends Component {
       answerD: '',
       counter: 0,
       token:'',
-    }
+    };
+
+    this.addUser = this.addUser.bind(this);
   }
 
 
   // SIGN UP PAGE
 
-  addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
-    AjaxAdapter.createUser({ username, first_name, last_name, password, age, gender, zodiac, state, email })
-    // .then((newUser) => {
-    //   // clone existing state
-    //   const newState = { ...this.state.users };
-    // })
+  // addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
+  //   AjaxAdapter.createUser({ username, first_name, last_name, password, age, gender, zodiac, state, email })
+  //   .then((newUser) => {
+  //     // clone existing state
+  //     // const newState = { ...this.state.users };
+  //     // newState[newUser.id] = newUser;
+  //     this.setState({ users: newUser });
+  //   })
+  //   .catch((error) => {
+  //     throw error;
+  //   });
+  // }
+
+  handleFormSubmit() {
+    fetch('/users', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        username: this.state.userFormUsername,
+        password: this.state.userFormPassword,
+        first_name: this.state.userFormFirstName,
+        last_name: this.state.userFormLastName,
+        age: this.state.userFormAge,
+        gender: this.state.userFormGender,
+        zodiac: this.state.userFormZodiac,
+        state: this.state.userFormState,
+        email: this.state.userFormEmail,
+      })
+    })
+    .then(this.setState({
+      userFormUsername: '',
+      userFormPassword: '',
+      userFormFirstName: '',
+      userFormLastName: '',
+      userFormAge: '',
+      userFormGender: '',
+      userFormZodiac: '',
+      userFormState: '',
+      userFormEmail: '',
+    }))
+    .catch(err => console.log(err));
   }
 
 
@@ -179,7 +227,7 @@ class App extends Component {
         />
 
         <SignUp
-          addUser={event => this.addUser(event)}
+          addUser={this.addUser}
         />
 
       </div>

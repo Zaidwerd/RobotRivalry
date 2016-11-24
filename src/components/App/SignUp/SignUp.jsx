@@ -7,66 +7,69 @@ export default function SignUp(props) {
     event.preventDefault();
     const myForm = event.target;
 
+  props.addUser(
+    myForm.username.value,
+  );
 
   }
 
     return (
       <div id="formBox">
         <h1>SIGNUP</h1>
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={handleSubmit}>
 
           <input
           type="text"
           placeholder="Create Username"
-          value=""
+          name="username"
           />
 
           <input
            type="text"
            placeholder="Create Password"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Enter First Name"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Enter Last Name"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Enter Age"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Select Gender"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Select Zodiac Sign"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Enter State"
-           value=""
+           name=""
            />
 
           <input
            type="text"
            placeholder="Enter Email"
-           value=""
+           name=""
            />
 
           <button type="submit" className="signup-submit"> Sign up </button>
