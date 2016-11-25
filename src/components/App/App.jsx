@@ -33,8 +33,8 @@ class App extends Component {
       // userFormState: '',
       // userFormEmail: '',
       questions: [],
-      categories:[],
       difficulty:[],
+      category:[],
       q_correct: 0,
       q_incorrect: 0,
       UserName: '',
@@ -162,7 +162,7 @@ class App extends Component {
 
   getQuestions() {
     console.log('clicked!');
-    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&category=${this.state.categories}&difficulty=${this.state.difficulty}&type=multiple`)
+    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&category=${this.state.category}&difficulty=${this.state.difficulty}&type=multiple`)
       .then(r => r.json())
       .then((data) => {
         this.setState({
@@ -250,19 +250,44 @@ class App extends Component {
   }
 
 
-    // getCategories() {
-    //   console.log('working!!');
-    //   fetch(`https://www.opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`)
-    //   .then(r => r.json())
-    //   .then((data) => {
-    //     this.setState({
-    //       categories: data.results
-    //     });
-    //     console.log(this.state.categories);
-    //   })
-    //   .catch(err => console.log(err));
-    // }
+//added categories
 
+<<<<<<< HEAD
+  // catMisc(){
+  //   this.setState({category: 9})
+  // }
+
+  // catMusic(){
+  //   this.setState({category: 12})
+  // }
+
+  // catTele(){
+  //   this.setState({category: 14})
+  // }
+
+  // catSports(){
+  //   this.setState({category: 21})
+  // }
+  // catGeo(){
+  //   this.setState({category: 22})
+  // }
+
+  // catHistory(){
+  //   this.setState({category: 23})
+  // }
+
+  // catPolitics(){
+  //   this.setState({category: 24})
+  // }
+
+  // catCelebs(){
+  //   this.setState({category: 26})
+  // }
+
+  // catAnimals(){
+  //   this.setState({category: 27})
+  // }
+=======
    // <SignUp
    //        userFormUsername={this.state.userFormUsername}
    //        userFormPassword={this.state.userFormPassword}
@@ -299,6 +324,7 @@ class App extends Component {
    //        nextQuestionC={event => this.nextQuestionC(event)}
    //        nextQuestionD={event => this.nextQuestionD(event)}
    //      />
+>>>>>>> master
 
 
 
