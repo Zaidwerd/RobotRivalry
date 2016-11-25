@@ -8,7 +8,7 @@ const SALTROUNDS = 10;
 
 function createQuestion(req, res, next) {
   console.log('enter question!')
-  db.none(`INSERT INTO questions (question, correct_answer, incorrect_answers, difficulty, category) Values ($1, $2, $3, $4, $5`, [req.body.question, req.body.correct_answer, req.body.incorrect_answers, req,body.difficulty, req.body.category])
+  db.none(`INSERT INTO questions (question, correct_answer, answerA, answerB, answerC, answer D, category, difficulty) Values ($1, $2, $3, $4, $5, $6, $7, $8`, [req.body.question, req.body.correct_answer, req.body.answerA, req.body.answerB, req.body.answerC, req.body.answerD, req,body.difficulty, req.body.category])
     .then(next())
     .catch(error => next(error));
 }

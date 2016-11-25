@@ -61,5 +61,8 @@ CREATE TABLE questions (
   difficulty VARCHAR(10) NOT NULL,
   question text NOT NULL,
   correct_answer text NOT NULL,
-  incorrect_answers text ARRAY[3]
+  answerA text NOT NULL,
+  answerB text NOT NULL,
+  answerC text NOT NULL,
+  answerD text NOT NULL
 );

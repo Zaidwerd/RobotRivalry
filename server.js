@@ -51,7 +51,7 @@ app.use(cookieParser());
 
 app.use('/login', authRouter);
 app.use('/users', usersRouter);
-app.use('questions', questionsRouter);
+app.use('/questions', questionsRouter);
 
 app.listen(PORT, () => {
   console.log('woof! 🐶');

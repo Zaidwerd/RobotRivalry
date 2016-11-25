@@ -44,15 +44,10 @@ class App extends Component {
       answerB: '',
       answerC: '',
       answerD: '',
+      category: '',
+      difficulty: '',
       counter: 0,
       token:'',
-      selectedQuestion: '',
-      selectedCorrectAnswer: '',
-      selectedIncorrectAnswer1: '',
-      selectedIncorrectAnswer2: '',
-      selectedIncorrectAnswer3: '',
-      selectedCategory: '',
-      selectedDifficulty: '',
     };
 
     // this.addUser = this.addUser.bind(this);
@@ -267,6 +262,26 @@ class App extends Component {
 
   }
 
+  submitQuestion() {
+    fetch('/questions', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        question: this.state.currentQuestion,
+        correct_answer: this.state.currentCorrectAnswer,
+        answerA: this.state.answerA,
+        answerB: this.state.answerB,
+        answerC: this.state.answerC,
+        answerD: this.state.answerD,
+        category: this.state.category,
+        difficulty: this.state.difficulty,
+      })
+    })
+    .catch(err => console.log(err));
+  }
+
 
   render(){
     return (
@@ -301,6 +316,9 @@ class App extends Component {
           getQuestions={event => this.getQuestions(event)}
           getOneQuestion={event => this.getOneQuestion(event)}
           question={this.state.currentQuestion}
+          category={this.state.category}
+          difficulty={this.state.difficulty}
+          correct_answer={this.state.correct_answer}
           answerA={this.state.answerA}
           answerB={this.state.answerB}
           answerC={this.state.answerC}
@@ -309,17 +327,18 @@ class App extends Component {
           nextQuestionB={event => this.nextQuestionB(event)}
           nextQuestionC={event => this.nextQuestionC(event)}
           nextQuestionD={event => this.nextQuestionD(event)}
+          submitQuestion={event => this.submitQuestion(event)}
         />
 
-        <AddQuestions
-          questions={this.state.questions}
-        />
 
       </div>
     );
   }
 }
 
+        // <AddQuestions
+        //   questions={this.state.questions}
+        // />
 
 export default App;
 
