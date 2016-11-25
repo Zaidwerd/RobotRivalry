@@ -32,6 +32,7 @@ class App extends Component {
       userFormState: '',
       userFormEmail: '',
       questions: [],
+      categories:[],
       q_correct: 0,
       q_incorrect: 0,
       UserName: '',
@@ -245,16 +246,19 @@ class App extends Component {
   }
 
 
-  updateName(e) {
-    this.setState({
-      signUpUserName: e.target.value,
-    });
-  }
+    getCategories() {
+      console.log('working!!');
+      fetch(`https://www.opentdb.com/api.php?amount=10&type=multiple`)
+      .then(r => r.json())
+      .then((data) => {
+        this.setState({
+          categories: data
+        });
+        console.log(this.state.categories);
+      })
+    }
 
-  getCategories() {
 
-
-  }
 
 
   render(){
