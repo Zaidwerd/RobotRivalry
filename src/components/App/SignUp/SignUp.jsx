@@ -17,7 +17,7 @@ export default class Signup extends Component {
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
       <div className="formBox">
-        <h1>SIGNUP</h1>
+        <h1 className="signup">SIGNUP</h1>
 
         <input
           className="user"
