@@ -10,6 +10,7 @@ import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
+import Home from './Home.jsx'
 // import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 

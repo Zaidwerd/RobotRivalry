@@ -1,6 +1,6 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './components/App/App.jsx';
 import LogIn from './components/App/LogIn/LogIn.jsx';
 import SignUp from './components/App/SignUp/SignUp.jsx';
@@ -10,11 +10,13 @@ import Categories from './components/App/Game/Categories/Categories.jsx';
 import GameState from './components/App/Game/GameState/GameState.jsx';
 import Levels from './components/App/Game/Levels/Levels.jsx';
 import Question from './components/App/Game/Question/Question.jsx';
+import Home from './components/App/Home.jsx';
 
 // mount our App at #container
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
       <Route path="/login" component={LogIn}/>
       <Route path="/signup" component={SignUp}/>
       <Route path="/startpage" component={StartPage}/>
