@@ -14,15 +14,16 @@ import Question from './components/App/Game/Question/Question.jsx';
 // mount our App at #container
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path="/" component={App}/>
-    <Route path="/login" component={LogIn}/>
-    <Route path="/signup" component={SignUp}/>
-    <Route path="/startpage" component={StartPage}/>
-    <Route path="/stats" component={Stats}/>
-    <Route path="/categories" component={Categories}/>
-    <Route path="/gamestate" component={GameState}/>
-    <Route path="/levels" component={Levels}/>
-    <Route path="/question" component={Question}/>
+    <Route path="/" component={App}>
+      <Route path="/login" component={LogIn}/>
+      <Route path="/signup" component={SignUp}/>
+      <Route path="/startpage" component={StartPage}/>
+      <Route path="/stats" component={Stats}/>
+      <Route path="/categories" component={Categories}/>
+      <Route path="/gamestate" component={GameState}/>
+      <Route path="/levels" component={Levels}/>
+      <Route path="/question" component={Question}/>
+    </Route>
   </Router>
 ), document.querySelector('#root-container'))
 
