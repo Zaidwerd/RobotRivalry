@@ -252,7 +252,7 @@ class App extends Component {
 
 //added categories
 
-<<<<<<< HEAD
+
   // catMisc(){
   //   this.setState({category: 9})
   // }
@@ -287,7 +287,7 @@ class App extends Component {
   // catAnimals(){
   //   this.setState({category: 27})
   // }
-=======
+
    // <SignUp
    //        userFormUsername={this.state.userFormUsername}
    //        userFormPassword={this.state.userFormPassword}
@@ -324,7 +324,7 @@ class App extends Component {
    //        nextQuestionC={event => this.nextQuestionC(event)}
    //        nextQuestionD={event => this.nextQuestionD(event)}
    //      />
->>>>>>> master
+
 
 
 
