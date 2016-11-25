@@ -1,7 +1,111 @@
 import React, { Component } from 'react';
-import style from './SignUp.css';
+// import style from './SignUp.css';
 
 export default class Signup extends Component {
+
+    constructor(state) {
+    super();
+
+    this.state = {
+      userFormUsername: '',
+      userFormPassword: '',
+      userFormFirstName: '',
+      userFormLastName: '',
+      userFormAge: '',
+      userFormGender: '',
+      userFormZodiac: '',
+      userFormState: '',
+      userFormEmail: '',
+    };
+
+    // this.addUser = this.addUser.bind(this);
+  }
+
+  updateFormUsername(e) {
+    this.setState({
+      userFormUsername: e.target.value,
+    });
+  }
+
+  updateFormPassword(e) {
+    this.setState({
+      userFormPassword: e.target.value,
+    });
+  }
+
+  updateFormFirstName(e) {
+    this.setState({
+      userFormFirstName: e.target.value,
+    });
+  }
+
+  updateFormLastName(e) {
+    this.setState({
+      userFormLastName: e.target.value,
+    });
+  }
+
+  updateFormAge(e) {
+    this.setState({
+      userFormAge: e.target.value,
+    });
+  }
+
+  updateFormGender(e) {
+    this.setState({
+      userFormGender: e.target.value,
+    });
+  }
+
+  updateFormZodiac(e) {
+    this.setState({
+      userFormZodiac: e.target.value,
+    });
+  }
+
+  updateFormState(e) {
+    this.setState({
+      userFormState: e.target.value,
+    });
+  }
+
+  updateFormEmail(e) {
+    this.setState({
+      userFormEmail: e.target.value,
+    });
+  }
+
+  handleFormSubmit() {
+    fetch('/users', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        username: this.state.userFormUsername,
+        password: this.state.userFormPassword,
+        first_name: this.state.userFormFirstName,
+        last_name: this.state.userFormLastName,
+        age: this.state.userFormAge,
+        gender: this.state.userFormGender,
+        zodiac: this.state.userFormZodiac,
+        state: this.state.userFormState,
+        email: this.state.userFormEmail,
+      })
+    })
+    .then(this.setState({
+      userFormUsername: '',
+      userFormPassword: '',
+      userFormFirstName: '',
+      userFormLastName: '',
+      userFormAge: '',
+      userFormGender: '',
+      userFormZodiac: '',
+      userFormState: '',
+      userFormEmail: '',
+    }))
+    .catch(err => console.log(err));
+  }
 
   // const handleSubmit = (event) => {
   //   event.preventDefault();
@@ -24,7 +128,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Create Username"
           value={this.props.userFormUsername}
-          onChange={this.props.updateFormUsername}
+          onChange={event => this.updateFormUsername(event)}
         />
         <br/>
         <input
@@ -32,7 +136,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Create Password"
           value={this.props.userFormPassword}
-          onChange={this.props.updateFormPassword}
+          onChange={event => this.updateFormPassword(event)}
         />
         <br/>
         <input
@@ -40,7 +144,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Enter First Name"
           value={this.props.userFormFirstName}
-          onChange={this.props.updateFormFirstName}
+          onChange={event => this.updateFormFirstName(event)}
         />
         <br/>
         <input
@@ -48,7 +152,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Enter Last Name"
           value={this.props.userFormLastName}
-          onChange={this.props.updateFormLastName}
+          onChange={event => this.updateFormLastName(event)}
         />
         <br/>
         <input
@@ -56,7 +160,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Enter Age"
           value={this.props.userFormAge}
-          onChange={this.props.updateFormAge}
+          onChange={event => this.updateFormAge(event)}
         />
         <br/>
         <input
@@ -64,7 +168,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Select Gender"
           value={this.props.userFormGender}
-          onChange={this.props.updateFormGender}
+          onChange={event => this.updateFormGender(event)}
         />
         <br/>
         <input
@@ -72,7 +176,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Select Zodiac Sign"
           value={this.props.userFormZodiac}
-          onChange={this.props.updateFormZodiac}
+          onChange={event => this.updateFormZodiac(event)}
         />
         <br/>
         <input
@@ -80,7 +184,7 @@ export default class Signup extends Component {
           type="text"
           placeholder="Enter State"
           value={this.props.userFormState}
-          onChange={this.props.updateFormState}
+          onChange={event => this.updateFormState(event)}
         />
         <br/>
         <input
@@ -88,11 +192,11 @@ export default class Signup extends Component {
           type="text"
           placeholder="Enter Email"
           value={this.props.userFormEmail}
-          onChange={this.props.updateFormEmail}
+          onChange={event => this.updateFormEmail(event)}
         />
         <br/>
-        <button onClick={this.props.handleFormSubmit}> Sign up </button>
-      
+        <a href="./#/login"><button onClick={() => this.handleFormSubmit()}> Sign up </button></a>
+
       </div>
       </div>
     );

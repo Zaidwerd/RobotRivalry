@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './LogIn.css';
+import style from './Login.css';
 
 class LogIn extends Component {
 
@@ -8,7 +8,6 @@ class LogIn extends Component {
 
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
-      
 
 
         <div className='userBox'>
@@ -35,8 +34,8 @@ class LogIn extends Component {
             <a href="./#/signup">Sign Up</a>
 
           </div>
-          
-        </div>  
+
+        </div>
       </div>
     )
   }
