@@ -22,7 +22,7 @@ export default class Signup extends Component {
             <h1>SIGN UP</h1>
           </div>
           
-        <div className="inputContainer">
+        <div className="signup-inputContainer">
           <input
             className="user"
             type="text"
@@ -95,8 +95,16 @@ export default class Signup extends Component {
             onChange={this.props.updateFormEmail}
           />
           <br/>
-          <button onClick={this.props.handleFormSubmit}>Sign Up</button>
+          <input
+            className="other-email"
+            type="text"
+            placeholder="Other Email"
+            value={this.props.userFormEmail}
+            onChange={this.props.updateFormEmail}
+          />
           <br/>
+          <button onClick={this.props.handleFormSubmit}>Sign Up</button>
+
         </div>
       </div>
       </div>

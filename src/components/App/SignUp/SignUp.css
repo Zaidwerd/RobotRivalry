@@ -1,25 +1,27 @@
 body {
-	background-color: blue;
+	background-color: #1b1c1e;
 	background-image: url(futurama_bg.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+/*	background-size: cover;*/
 	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
 	background-size: 200% 200%;
 	font-family: 'Oswald', sans-serif;
-
+	/*overflow: scroll;*/
 	/*what is making page static?*/
 	background-attachment: initial;
 }
 
 
 #container {
-
+	/*background-size: 200% 200%;*/
+	height: 200%;
+	overflow: scroll;
 }
 
 .formBox {
 	background-color: rgba(27,28,30,0.5);
 	align-self: center;
-	width: 500px;
+	width: 600px;
 	height: 500px;
 	display: flex;
 	flex-direction: column;
@@ -28,7 +30,7 @@ body {
 	margin: 60px auto;
 	border-radius: 8px;
 	border: 1px solid #444444;
-	overflow: scroll;
+	/*overflow: scroll;*/
 	animation: shwoop .3s ease-in-out;
   	transform: scaleY(1);
 }
@@ -44,12 +46,15 @@ body {
 }
 
 
-.inputContainer {
+.signup-inputContainer {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 30px;
-	padding: 50px;
+	padding: 0px;
+	height: 800px;
+	width: 600px;
 }
 
 .user {
@@ -335,6 +340,41 @@ body {
 }
 
 
+
+.other-email {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;	
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
+}
+.other-email:hover {
+	color: #FFFFFF;	
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.other-email:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+
+
 button {
 	width: 100px;
 	height: 38px;
@@ -350,6 +390,8 @@ button {
 	margin-bottom: 50px;
 	background: transparent;
 	border: 1px solid white;
+
+	align-self: center;
 
 	transition: background-color 0.3s ease-out,
           		color 0.2s ease-out,

@@ -1,10 +1,10 @@
 body {
-	background-color: blue;
+	background-color: #1b1c1e;
 	background-image: url(futurama_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
-	background-size: 400% 400%;
+	background-size: 200% 200%;
 	font-family: 'Oswald', sans-serif;
 /*  background: #1b1c1e; 
     background: -webkit-linear-gradient(#1b1c1e, #3b595d); 
@@ -163,7 +163,7 @@ a {
 	font-weight: lighter;
 }
 a:hover {
-	color: #6e8c8f;
+	color: #7f9d9f;
 	font-weight: normal;
 	font-size: 14px;
 }
@@ -183,7 +183,7 @@ a:hover {
 	color: #4c6a6e;
 	font-size: 12px;
 	font-weight: lighter;
-	line-height: 20px;
+	/*line-height: 50px;*/
 }
 
 /*
