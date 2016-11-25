@@ -9,6 +9,7 @@ class Categories extends Component {
     return (
       <div id='container'>
 
+
       <div className='main-box'>
         <button className='category-box1 box'>General Knowledge</button>
         <button className='category-box2 box'>Celebrities</button>
@@ -22,6 +23,7 @@ class Categories extends Component {
       </div>
 
       </div>
+
     );
   }
 }

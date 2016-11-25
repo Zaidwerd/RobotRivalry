@@ -10,11 +10,12 @@ class StartPage extends Component {
     return (
 
       <div className="container">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
       <div className="bg">
-      <div className="robotrivalry">
-        <Link to="/categories">Go To Sample</Link>
-      </div>
+      <button className="robotrivalry">
+        <Link to="/categories"></Link>
+      </button>
 
       <div className="cookingmama">cookingmama coming soon</div>
       <div className="pokemon">pokemon coming soon</div>

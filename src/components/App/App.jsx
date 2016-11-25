@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import style from './App.css';
 import Login from './Login/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFoler/Trivia.jsx';
+// import Trivia from './Game/GameFolder/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
