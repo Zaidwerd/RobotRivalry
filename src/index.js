@@ -1,19 +1,19 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 import App from './components/App/App.jsx';
 import Login from './components/App/Login/Login.jsx';
 import SignUp from './components/App/SignUp/SignUp.jsx';
 import StartPage from './components/App/StartPage/StartPage.jsx';
 import Stats from './components/App/Stats/Stats.jsx';
-import Categories from './components/App/Game/Categories/categories.jsx';
+import Categories from './components/App/Game/Categories/Categories.jsx';
 import GameState from './components/App/Game/GameState/GameState.jsx';
 import Levels from './components/App/Game/Levels/Levels.jsx';
-import Question from './components/App/Game/Question/question.jsx';
+import Question from './components/App/Game/Question/Question.jsx';
 
 // mount our App at #container
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}/>
     <Route path="/login" component={Login}/>
     <Route path="/signup" component={SignUp}/>

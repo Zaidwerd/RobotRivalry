@@ -1,13 +1,13 @@
 
 import React, { Component } from 'react';
 import style from './App.css';
-import Login from './Login/LogIn.jsx';
+import Login from './Login/Login.jsx';
 import SignUp from './SignUp/SignUp.jsx';
 // import Trivia from './Game/GameFoler/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
-import Question from './Game/Question/question.jsx';
+import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
 // import AjaxAdapter from '../../helpers/AjaxAdapter';
@@ -300,7 +300,7 @@ class App extends Component {
           nextQuestionD={event => this.nextQuestionD(event)}
         />
 
-
+      {this.props.children}
       </div>
     );
   }

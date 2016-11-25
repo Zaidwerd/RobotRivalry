@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './LogIn.css';
+import style from './Login.css';
 
 class LogIn extends Component {
 
@@ -7,7 +7,7 @@ class LogIn extends Component {
     return (
 
       <div id="container">
-      
+
 
 
         <div className='userBox'>
@@ -30,8 +30,8 @@ class LogIn extends Component {
             />
             <button> Log In </button>
           </div>
-          
-        </div>  
+
+        </div>
       </div>
     )
   }
