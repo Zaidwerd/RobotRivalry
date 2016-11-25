@@ -52,15 +52,15 @@ class Categories extends Component {
 
 
       <div className='main-box'>
-        <button onClick={event => this.catMisc(event)} className='category-box1 box'>General Knowledge</button>
-        <button onClick={event => this.catSong(event)} className='category-box2 box'>Music</button>
-        <button onClick={event => this.catTele(event)} className='category-box3 box'>Television</button>
-        <button onClick={event => this.catSports(event)} className='category-box4 box'>Sports</button>
-        <button onClick={event => this.catGeo(event)} className='category-box5 box'>Geography</button>
-        <button onClick={event => this.catHistory(event)} className='category-box6 box'>History</button>
-        <button onClick={event => this.catPolitics(event)}className='category-box7 box'>Politics</button>
-        <button onClick={event => this.catCelebs(event)}className='category-box8 box'>Celebrities</button>
-        <button onClick={event => this.catAnimals(event)}className='category-box9 box'>Animals</button>
+        <button onClick={event => this.catMisc(event)}     className='category-box1 box'>General Knowledge</button>
+        <button onClick={event => this.catSong(event)}     className='category-box2 box'>Music</button>
+        <button onClick={event => this.catTele(event)}     className='category-box3 box'>Television</button>
+        <button onClick={event => this.catSports(event)}   className='category-box4 box'>Sports</button>
+        <button onClick={event => this.catGeo(event)}      className='category-box5 box'>Geography</button>
+        <button onClick={event => this.catHistory(event)}  className='category-box6 box'>History</button>
+        <button onClick={event => this.catPolitics(event)} className='category-box7 box'>Politics</button>
+        <button onClick={event => this.catCelebs(event)}   className='category-box8 box'>Celebrities</button>
+        <button onClick={event => this.catAnimals(event)}  className='category-box9 box'>Animals</button>
       </div>
 
       </div>
