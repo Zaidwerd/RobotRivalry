@@ -13,9 +13,7 @@ body {
 
 
 #container {
-	/*background-size: 200% 200%;*/
-	height: 200%;
-	overflow: scroll;
+
 }
 
 .formBox {
@@ -72,7 +70,7 @@ body {
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
           		color 0.2s ease-out,
-          		letter-spacing 0.1s ease-out;  
+          		letter-spacing 0.1s ease-out;
 }
 .user:hover {
 	background-color: rgba(255,255,255,0.3);
@@ -80,7 +78,7 @@ body {
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
               	color 0.5s ease-out,
-              	letter-spacing 0.2s ease-out;              	
+              	letter-spacing 0.2s ease-out;
 }
 .user:focus {
 	background-color: rgba(255,255,255,0.3);
@@ -96,7 +94,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -104,10 +102,10 @@ body {
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
           	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;  
+          	letter-spacing 0.1s ease-out;
 }
 .pass:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -127,7 +125,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -135,10 +133,10 @@ body {
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
           	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;  
+          	letter-spacing 0.1s ease-out;
 }
 .first:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -159,7 +157,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -167,10 +165,10 @@ body {
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
           	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;  
+          	letter-spacing 0.1s ease-out;
 }
 .last:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -191,7 +189,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -202,7 +200,7 @@ body {
           		letter-spacing 0.1s ease-out;  
 }
 .age:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -222,7 +220,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -233,7 +231,7 @@ body {
           		letter-spacing 0.1s ease-out;  
 }
 .gender:hover {
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -253,7 +251,7 @@ body {
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
 	font-size: 16px;
 	margin: 5px;
 	font-weight: lighter;
@@ -326,7 +324,6 @@ body {
           		letter-spacing 0.1s ease-out;  
 }
 .email:hover {
-	color: #FFFFFF;	
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
@@ -338,7 +335,6 @@ body {
 	color: #FFFFFF;
 	letter-spacing: 5px;
 }
-
 
 
 .other-email {
@@ -384,7 +380,7 @@ button {
 	color: #fafafa;
 	cursor: pointer;
 	font-variant: center;
-	letter-spacing: 0px;	
+	letter-spacing: 0px;
 	font-size: 16px;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -408,7 +404,7 @@ button:hover {
               	color 0.5s ease-out,
               	letter-spacing 0.1s ease-out,
               	font-weight 0.3s ease-out,
-              	text-transform 0.1s ease-out;	
+              	text-transform 0.1s ease-out;
 }
 
 .hOne h1 {
@@ -419,5 +415,5 @@ button:hover {
 	align-items: center;
 	letter-spacing: 5px;
 	text-align: center;
-	margin: 0px;
+	margin-top: 10px;
 }
