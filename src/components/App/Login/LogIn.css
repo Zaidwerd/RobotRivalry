@@ -1,52 +1,112 @@
 body {
-		background-color: blue;
+	background-color: blue;
 	background-image: url(futurama_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
+	background-size: 400% 400%;
+	font-family: 'Oswald', sans-serif;
+
+
+/*  background: #1b1c1e; 
+    background: -webkit-linear-gradient(#1b1c1e, #3b595d); 
+    background: -o-linear-gradient(#1b1c1e, #3b595d); 
+    background: -moz-linear-gradient(#1b1c1e, #3b595d);
+    background: linear-gradient(#1b1c1e, #3b595d);*/
+
+
+/*	-webkit-animation: animatedgrad 30s ease infinite;
+	-moz-animation: animatedgrad 30s ease infinite;
+	animation: animatedgrad 30s ease infinite;*/
 }
 
 
 #container {
-	background-color: #222222;
-	height: 500px;
+/*	height: 500px;
+	align-items: center;*/
 }
 
 .userBox {
+	background-color: rgba(27,28,30,0.5);
 	align-self: center;
-	width: 100%;
-	height: 600px;
+	width: 500px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
+	margin: 100px auto;
+	border-radius: 8px;
+	border: 1px solid #555555;
 }
 
 .inputContainer {
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: column;
 	align-items: center;
+	margin: 30px;
 }
 
 .user {
-	width: 200px;
+	width: 230px;
 	height: 30px;
-	border: none;
+	border: 1px solid white;
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
 	letter-spacing: 2px;
 	font-size: 16px;
+	font-weight: lighter;
+	margin: 5px;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
+}
+.user:hover {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;              	
+}
+.user:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
 }
 
+
 .pass {
-	width: 200px;
+	width: 230px;
 	height: 30px;
-	border: none;
+	border: 1px solid white;
 	border-radius: 2px;
 	padding: 5px;
 	margin: 10px;
 	letter-spacing: 2px;	
 	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;  
+}
+.pass:hover {
+	color: #FFFFFF;	
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.pass:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
 }
 
 button {
@@ -55,19 +115,58 @@ button {
 	border: none;
 	border-radius: 2px;
 	padding: 5px;
+	color: #fafafa;
 	cursor: pointer;
 	font-variant: center;
-	letter-spacing: 2px;	
-	font-size: 16px
+	letter-spacing: 0px;	
+	font-size: 16px;
+	margin-top: 50px;
+	background: transparent;
+	border: 1px solid white;
+
+	transition: background-color 0.3s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.2s ease-out,
+          		text-transform 0.2s ease-out;
+}
+button:hover {
+	background-color: rgba(255,255,255,0.8);
+	color: #333333;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: background-color 0.5s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.1s ease-out,
+              	font-weight 0.3s ease-out,
+              	text-transform 0.1s ease-out;	
 }
 
-h1 {
-	font-size: 100px;
+.hOne h1 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 70px;
 	align-self: flex-start;
 	align-items: center;
 	letter-spacing: 5px;
+	text-align: center;
+	margin-top: 10px;
 }
 
-.hOne h1{
-	text-align: center;
+
+
+/*
+@-webkit-keyframes animatedgrad {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
+@-moz-keyframes animatedgrad {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes animatedgrad { 
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}*/
