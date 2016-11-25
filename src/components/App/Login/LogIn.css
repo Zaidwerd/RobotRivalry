@@ -3,7 +3,7 @@ body {
 	background-image: url(futurama_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background: linear-gradient(180deg, #1b1c1e, #3b595d);
+	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
 	background-size: 400% 400%;
 	font-family: 'Oswald', sans-serif;
 
@@ -30,12 +30,13 @@ body {
 	background-color: rgba(27,28,30,0.5);
 	align-self: center;
 	width: 500px;
-	height: 400px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 100px auto;
 	border-radius: 8px;
+	border: 1px solid #555555;
 }
 
 .inputContainer {
@@ -46,7 +47,7 @@ body {
 }
 
 .user {
-	width: 200px;
+	width: 230px;
 	height: 30px;
 	border: 1px solid white;
 	border-radius: 2px;
@@ -59,27 +60,26 @@ body {
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;  
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
 }
-
 .user:hover {
 	background-color: rgba(255,255,255,0.3);
-	color: black;
+	color: #FFFFFF;
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
               	color 0.5s ease-out,
               	letter-spacing 0.2s ease-out;              	
 }
-.user:active {
+.user:focus {
 	background-color: rgba(255,255,255,0.3);
-	color: black;
-	letter-spacing: 2px;
+	color: #FFFFFF;
+	letter-spacing: 5px;
 }
 
 
 .pass {
-	width: 200px;
+	width: 230px;
 	height: 30px;
 	border: 1px solid white;
 	border-radius: 2px;
@@ -96,12 +96,17 @@ body {
           	letter-spacing 0.1s ease-out;  
 }
 .pass:hover {
-	color: black;	
+	color: #FFFFFF;	
 	background-color: rgba(255,255,255,0.3);
 	letter-spacing: 5px;
 	transition: background-color 0.3s ease-out,
               	color 0.5s ease-out,
               	letter-spacing 0.2s ease-out;
+}
+.pass:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
 }
 
 button {
@@ -120,9 +125,9 @@ button {
 	border: 1px solid white;
 
 	transition: background-color 0.3s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.2s ease-out,
-          	text-transform 0.2s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.2s ease-out,
+          		text-transform 0.2s ease-out;
 }
 button:hover {
 	background-color: rgba(255,255,255,0.8);
@@ -133,6 +138,7 @@ button:hover {
 	transition: background-color 0.5s ease-out,
               	color 0.5s ease-out,
               	letter-spacing 0.1s ease-out,
+              	font-weight 0.3s ease-out,
               	text-transform 0.1s ease-out;	
 }
 

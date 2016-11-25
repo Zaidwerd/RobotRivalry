@@ -31,6 +31,9 @@ class LogIn extends Component {
             />
             <br/>
             <button> Log In </button>
+            <br/>
+            <a href="./#/signup">Sign Up</a>
+
           </div>
           
         </div>  
