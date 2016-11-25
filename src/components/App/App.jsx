@@ -194,6 +194,8 @@ class App extends Component {
       answerC: shuffledAnswerArray[2],
       answerD: shuffledAnswerArray[3],
       counter: this.state.counter +1,
+      category: this.state.questions[this.state.counter].category,
+      difficulty: this.state.questions[this.state.counter].difficulty,
     })
   };
 
