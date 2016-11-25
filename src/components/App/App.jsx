@@ -267,7 +267,12 @@ class App extends Component {
     return (
       <div id="app-container">
 
-        <h1>hey</h1>
+        <nav>
+          <ul>
+          <li><img className="logo" src="./logo.png"/></li>
+          <li>hello</li>
+          </ul>
+        </nav>
 
         <SignUp
           userFormUsername={this.state.userFormUsername}

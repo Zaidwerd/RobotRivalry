@@ -6,14 +6,11 @@ body {
 	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
 	background-size: 400% 400%;
 	font-family: 'Oswald', sans-serif;
-
-
 /*  background: #1b1c1e; 
     background: -webkit-linear-gradient(#1b1c1e, #3b595d); 
     background: -o-linear-gradient(#1b1c1e, #3b595d); 
     background: -moz-linear-gradient(#1b1c1e, #3b595d);
     background: linear-gradient(#1b1c1e, #3b595d);*/
-
 
 /*	-webkit-animation: animatedgrad 30s ease infinite;
 	-moz-animation: animatedgrad 30s ease infinite;
@@ -34,10 +31,25 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 100px auto;
+	margin: 60px auto;
 	border-radius: 8px;
-	border: 1px solid #555555;
+	border: 1px solid #444444;
+	animation: shwoop .3s ease-in-out;
+  	transform: scaleY(1);
 }
+
+@keyframes shwoop {
+  0% {
+    top: (0px);
+    transform: scaleY(0);
+  }
+  100% {
+    bottom: (100px);
+    transform: scaleY(1);
+  }
+}
+
+
 
 .inputContainer {
 	display: flex;
@@ -92,8 +104,8 @@ body {
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;  
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;  
 }
 .pass:hover {
 	color: #FFFFFF;	
@@ -142,6 +154,20 @@ button:hover {
               	text-transform 0.1s ease-out;	
 }
 
+a {
+	letter-spacing: 2px;
+	font-style: none;
+	text-decoration: none;
+	color: #4c6a6e;
+	font-size: 12px;
+	font-weight: lighter;
+}
+a:hover {
+	color: #6e8c8f;
+	font-weight: normal;
+	font-size: 14px;
+}
+
 .hOne h1 {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 70px;
@@ -152,7 +178,13 @@ button:hover {
 	margin-top: 10px;
 }
 
-
+.or {
+	letter-spacing: 2px;
+	color: #4c6a6e;
+	font-size: 12px;
+	font-weight: lighter;
+	line-height: 20px;
+}
 
 /*
 @-webkit-keyframes animatedgrad {
