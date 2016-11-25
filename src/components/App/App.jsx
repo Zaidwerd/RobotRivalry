@@ -248,11 +248,11 @@ class App extends Component {
 
     getCategories() {
       console.log('working!!');
-      fetch(`https://www.opentdb.com/api.php?amount=10&type=multiple`)
+      fetch(`https://www.opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`)
       .then(r => r.json())
       .then((data) => {
         this.setState({
-          categories: data
+          categories: data.results
         });
         console.log(this.state.categories);
       })
