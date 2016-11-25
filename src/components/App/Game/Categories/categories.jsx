@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../../normalize.css';
-import style from './categories.css';
+import style from './Categories.css';
 
 // create a React Component called _App_
 class Categories extends Component {
