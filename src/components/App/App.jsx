@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import style from './App.css';
-import Login from './Login/Login.jsx';
+import Login from './LogIn/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFoler/Trivia.jsx';
+// import Trivia from './Game/GameFolder/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
@@ -32,6 +32,8 @@ class App extends Component {
       userFormState: '',
       userFormEmail: '',
       questions: [],
+      categories:[],
+      difficulty:[],
       q_correct: 0,
       q_incorrect: 0,
       UserName: '',
@@ -157,7 +159,7 @@ class App extends Component {
 
   getQuestions() {
     console.log('clicked!');
-    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
+    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&category=${this.state.categories}&difficulty=${this.state.difficulty}&type=multiple`)
       .then(r => r.json())
       .then((data) => {
         this.setState({
@@ -245,16 +247,20 @@ class App extends Component {
   }
 
 
-  updateName(e) {
-    this.setState({
-      signUpUserName: e.target.value,
-    });
-  }
+    // getCategories() {
+    //   console.log('working!!');
+    //   fetch(`https://www.opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`)
+    //   .then(r => r.json())
+    //   .then((data) => {
+    //     this.setState({
+    //       categories: data.results
+    //     });
+    //     console.log(this.state.categories);
+    //   })
+    //   .catch(err => console.log(err));
+    // }
 
-  getCategories() {
 
-
-  }
 
 
   render(){

@@ -2,7 +2,7 @@ import React    from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router'
 import App from './components/App/App.jsx';
-import Login from './components/App/Login/Login.jsx';
+import LogIn from './components/App/LogIn/LogIn.jsx';
 import SignUp from './components/App/SignUp/SignUp.jsx';
 import StartPage from './components/App/StartPage/StartPage.jsx';
 import Stats from './components/App/Stats/Stats.jsx';
@@ -15,7 +15,7 @@ import Question from './components/App/Game/Question/Question.jsx';
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}/>
-    <Route path="/login" component={Login}/>
+    <Route path="/login" component={LogIn}/>
     <Route path="/signup" component={SignUp}/>
     <Route path="/startpage" component={StartPage}/>
     <Route path="/stats" component={Stats}/>
