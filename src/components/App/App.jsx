@@ -33,6 +33,7 @@ class App extends Component {
       userFormEmail: '',
       questions: [],
       difficulty:[],
+      category:[],
       q_correct: 0,
       q_incorrect: 0,
       UserName: '',
