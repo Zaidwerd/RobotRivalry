@@ -1,6 +1,6 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router'
 import App from './components/App/App.jsx';
 import Login from './components/App/Login/Login.jsx';
 import SignUp from './components/App/SignUp/SignUp.jsx';
@@ -13,7 +13,7 @@ import Question from './components/App/Game/Question/Question.jsx';
 
 // mount our App at #container
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={App}/>
     <Route path="/login" component={Login}/>
     <Route path="/signup" component={SignUp}/>

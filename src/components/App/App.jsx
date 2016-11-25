@@ -299,8 +299,6 @@ class App extends Component {
           nextQuestionC={event => this.nextQuestionC(event)}
           nextQuestionD={event => this.nextQuestionD(event)}
         />
-
-      {this.props.children}
       </div>
     );
   }
