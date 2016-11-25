@@ -32,7 +32,6 @@ class App extends Component {
       userFormState: '',
       userFormEmail: '',
       questions: [],
-      category:[],
       difficulty:[],
       q_correct: 0,
       q_incorrect: 0,
@@ -249,40 +248,40 @@ class App extends Component {
 
 //added categories
 
-  catMisc(){
-    this.setState({category: 9})
-  }
+  // catMisc(){
+  //   this.setState({category: 9})
+  // }
 
-  catMusic(){
-    this.setState({category: 12})
-  }
+  // catMusic(){
+  //   this.setState({category: 12})
+  // }
 
-  catTele(){
-    this.setState({category: 14})
-  }
+  // catTele(){
+  //   this.setState({category: 14})
+  // }
 
-  catSports(){
-    this.setState({category: 21})
-  }
-  catGeo(){
-    this.setState({category: 22})
-  }
+  // catSports(){
+  //   this.setState({category: 21})
+  // }
+  // catGeo(){
+  //   this.setState({category: 22})
+  // }
 
-  catHistory(){
-    this.setState({category: 23})
-  }
+  // catHistory(){
+  //   this.setState({category: 23})
+  // }
 
-  catPolitics(){
-    this.setState({category: 24})
-  }
+  // catPolitics(){
+  //   this.setState({category: 24})
+  // }
 
-  catCelebs(){
-    this.setState({category: 26})
-  }
+  // catCelebs(){
+  //   this.setState({category: 26})
+  // }
 
-  catAnimals(){
-    this.setState({category: 27})
-  }
+  // catAnimals(){
+  //   this.setState({category: 27})
+  // }
 
 
 
@@ -313,7 +312,7 @@ class App extends Component {
           updateFormEmail={event => this.updateFormEmail(event)}
           handleFormSubmit={() => this.handleFormSubmit()}
         />
-        <Categories />
+
         <GameState
           questions={this.state.questions}
           getQuestions={event => this.getQuestions(event)}
