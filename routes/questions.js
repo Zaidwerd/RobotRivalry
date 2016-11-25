@@ -4,7 +4,7 @@ const { authenticate }   = require('../lib/auth');
 
 const questionsRouter  = express.Router();
 
-usersRouter.post('/', createQuestion, (req, res) => {
+questionsRouter.post('/', createQuestion, (req, res) => {
   res.redirect('/#/login');
 });
 

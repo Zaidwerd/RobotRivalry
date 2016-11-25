@@ -10,6 +10,7 @@ import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
+import AddQuestions from './AddQuestions/AddQuestions';
 // import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
@@ -45,10 +46,20 @@ class App extends Component {
       answerD: '',
       counter: 0,
       token:'',
+      selectedQuestion: '',
+      selectedCorrectAnswer: '',
+      selectedIncorrectAnswer1: '',
+      selectedIncorrectAnswer2: '',
+      selectedIncorrectAnswer3: '',
+      selectedCategory: '',
+      selectedDifficulty: '',
     };
 
     // this.addUser = this.addUser.bind(this);
   }
+
+  // ADDING QUESTIONS
+
 
 
   // SIGN UP PAGE
@@ -157,7 +168,7 @@ class App extends Component {
 
   getQuestions() {
     console.log('clicked!');
-    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&type=multiple`)
+    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=50&type=multiple`)
       .then(r => r.json())
       .then((data) => {
         this.setState({
@@ -300,6 +311,9 @@ class App extends Component {
           nextQuestionD={event => this.nextQuestionD(event)}
         />
 
+        <AddQuestions
+          questions={this.state.questions}
+        />
 
       </div>
     );
