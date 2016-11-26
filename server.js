@@ -15,6 +15,7 @@ const cookieParser    = require('cookie-parser');
 const methodOverride  = require('method-override');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
+const questionsRouter = require('./routes/questions');
 
 const secret = 'secret'
 
@@ -50,6 +51,7 @@ app.use(cookieParser());
 
 app.use('/login', authRouter);
 app.use('/users', usersRouter);
+app.use('/questions', questionsRouter);
 
 app.listen(PORT, () => {
   console.log('woof! 🐶');

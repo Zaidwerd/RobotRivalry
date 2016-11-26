@@ -18,6 +18,7 @@ function createUser(req, res, next) {
   .catch(error => next(error));
 }
 
+
 function getUserById(id) {
   const promise = new Promise((resolve, reject) => {
   db.one(

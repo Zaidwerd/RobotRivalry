@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import style from './App.css';
 import Login from './LogIn/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFolder/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
@@ -11,6 +10,7 @@ import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
 import Home from './Home.jsx'
+import Nav from './Nav.jsx'
 // import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
@@ -46,28 +46,39 @@ class App extends Component {
       answerB: '',
       answerC: '',
       answerD: '',
+      category: '',
+      difficulty: '',
       counter: 0,
       token:'',
     };
-
-    // this.addUser = this.addUser.bind(this);
   }
 
+  // ADDING QUESTIONS
+
+
+  submitQuestion() {
+    console.log('NUMBER: ', this.state.counter);
+    fetch('/questions', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        question: this.state.currentQuestion,
+        correct_answer: this.state.currentCorrectAnswer,
+        answerA: this.state.answerA,
+        answerB: this.state.answerB,
+        answerC: this.state.answerC,
+        answerD: this.state.answerD,
+        category: this.state.category,
+        difficulty: this.state.difficulty,
+      })
+    })
+    .catch(err => console.log(err));
+  }
 
   // SIGN UP PAGE
 
-  // addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
-  //   AjaxAdapter.createUser({ username, first_name, last_name, password, age, gender, zodiac, state, email })
-  //   .then((newUser) => {
-  //     // clone existing state
-  //     // const newState = { ...this.state.users };
-  //     // newState[newUser.id] = newUser;
-  //     this.setState({ users: newUser });
-  //   })
-  //   .catch((error) => {
-  //     throw error;
-  //   });
-  // }
 
   // Scott's Sign Up
 
@@ -193,6 +204,8 @@ class App extends Component {
       answerC: shuffledAnswerArray[2],
       answerD: shuffledAnswerArray[3],
       counter: this.state.counter +1,
+      category: this.state.questions[this.state.counter].category,
+      difficulty: this.state.questions[this.state.counter].difficulty,
     })
   };
 
@@ -207,7 +220,7 @@ class App extends Component {
       counter: this.state.counter + 1,
     })
     this.getOneQuestion();
-}
+  }
 
 
     nextQuestionB() {
@@ -249,7 +262,6 @@ class App extends Component {
     this.getOneQuestion();
   }
 
-
 //added categories
 
 
@@ -287,6 +299,7 @@ class App extends Component {
   // catAnimals(){
   //   this.setState({category: 27})
   // }
+
 
    // <SignUp
    //        userFormUsername={this.state.userFormUsername}
@@ -327,18 +340,23 @@ class App extends Component {
 
 
 
-
   render(){
     return (
       <div id="app-container">
 
-        <h1>hey</h1>
+        <Nav />
+
+
+
+
+
+
         {this.props.children}
-      </div>
+
+    </div>
     );
   }
-}
-
+};
 
 export default App;
 
