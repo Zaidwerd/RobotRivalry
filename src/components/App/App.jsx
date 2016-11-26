@@ -267,8 +267,6 @@ class App extends Component {
 
   }
 
-
-
   render(){
     return (
       <div id="app-container">
@@ -321,10 +319,6 @@ class App extends Component {
     );
   }
 }
-
-        // <AddQuestions
-        //   questions={this.state.questions}
-        // />
 
 export default App;
 
