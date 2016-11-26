@@ -5,12 +5,12 @@ import style from './Categories.css';
 
 // create a React Component called _App_
 class Categories extends Component {
-  // constructor(props) {
-  //   super();
+  constructor(props) {
+    super();
   //   this.state{
   //     category: []
   //   };
-  // }
+  }
 
   // catMisc(){
   //   this.setState({category: 9})
@@ -47,6 +47,34 @@ class Categories extends Component {
   //   this.setState({category: 27})
   // }
 
+  getKnow(){
+    console.log('General Knowledge');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+      GeneralKnowledge: this.state.GeneralKnowledge,
+      })
+    })
+    .catch(error => console.log(err));
+  }
+
+  getMusic(){
+    console.log('music');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+
+      })
+    })
+
+  }
+
   render(){
     return (
       <div id='container'>
@@ -54,7 +82,7 @@ class Categories extends Component {
 
 
         <div className="ugh">
-        
+
           <div className='hOne'>
             <h1>CHOOSE A CATEGORY</h1>
           </div>
