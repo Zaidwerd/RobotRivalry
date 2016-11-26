@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS user_stats;
 DROP TABLE IF EXISTS trivia_stats;
 DROP TABLE IF EXISTS global_stats;
 DROP TABLE IF EXISTS game_stats;
+DROP TABLE IF EXISTS questions;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -52,4 +53,16 @@ CREATE TABLE game_stats (
   difficulty VARCHAR(20) NOT NULL,
   num_q_correct INT NOT NULL,
   num_q_incorrect INT NOT NULL
+);
+
+CREATE TABLE questions (
+  id SERIAL PRIMARY KEY,
+  category VARCHAR(50) NOT NULL,
+  difficulty VARCHAR(10) NOT NULL,
+  question text NOT NULL,
+  correct_answer text NOT NULL,
+  answerA text NOT NULL,
+  answerB text NOT NULL,
+  answerC text NOT NULL,
+  answerD text NOT NULL
 );
