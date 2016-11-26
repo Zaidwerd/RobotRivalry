@@ -1,0 +1,296 @@
+body {
+	background-color: blue;
+	background-image: url(futurama_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
+	background-size: 400% 400%;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+#container {
+}
+
+.formBox {
+	background-color: rgba(27,28,30,0.5);
+	align-self: center;
+	width: 500px;
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 100px auto;
+	border-radius: 8px;
+	border: 1px solid #444444;
+}
+
+/*.inputContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 30px;
+}*/
+
+.user {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	font-weight: lighter;
+	margin: 5px;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;
+}
+.user:hover {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.user:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+.pass {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.pass:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.pass:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+.first {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.first:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.first:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+.last {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.last:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.last:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+
+.age {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.age:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.age:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+.gender {
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.gender:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.gender:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+.zodiac .state .email{
+	width: 230px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	margin: 5px;
+	font-weight: lighter;
+	color: #555555;
+	background-color: rgba(255,255,255,0.1);
+	transition: background-color 0.2s ease-out,
+          	color 0.2s ease-out,
+          	letter-spacing 0.1s ease-out;
+}
+.zodiac .state .email:hover {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	transition: background-color 0.3s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.2s ease-out;
+}
+.zodiac, .state, .email:focus {
+	background-color: rgba(255,255,255,0.3);
+	color: #FFFFFF;
+	letter-spacing: 5px;
+}
+
+button {
+	width: 100px;
+	height: 38px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	color: #fafafa;
+	cursor: pointer;
+	font-variant: center;
+	letter-spacing: 0px;
+	font-size: 16px;
+	margin-top: 50px;
+	background: transparent;
+	border: 1px solid white;
+
+	transition: background-color 0.3s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.2s ease-out,
+          		text-transform 0.2s ease-out;
+}
+button:hover {
+	background-color: rgba(255,255,255,0.8);
+	color: #333333;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: background-color 0.5s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.1s ease-out,
+              	font-weight 0.3s ease-out,
+              	text-transform 0.1s ease-out;
+}
+
+.signup h1 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 70px;
+	align-self: flex-start;
+	align-items: center;
+	letter-spacing: 5px;
+	text-align: center;
+	margin-top: 10px;
+}
