@@ -5,12 +5,12 @@ import style from './Categories.css';
 
 // create a React Component called _App_
 class Categories extends Component {
-  // constructor(props) {
-  //   super();
+  constructor(props) {
+    super();
   //   this.state{
   //     category: []
   //   };
-  // }
+  }
 
   // catMisc(){
   //   this.setState({category: 9})
@@ -47,6 +47,76 @@ class Categories extends Component {
   //   this.setState({category: 27})
   // }
 
+  getKnow(){
+    console.log('General Knowledge');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        GeneralKnowledge: this.state.GeneralKnowledge
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getMusic(){
+    console.log('music');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Music: this.state.Music
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getTV(){
+    console.log('tv');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Television: this.state.Television
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getSports(){
+    console.log('sports');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Sports: this.state.Sports
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getGeo(){
+    console.log('geography');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
   render(){
     return (
       <div id='container'>
@@ -54,7 +124,7 @@ class Categories extends Component {
 
 
         <div className="ugh">
-        
+
           <div className='hOne'>
             <h1 className="catH1">CHOOSE A CATEGORY</h1>
           </div>

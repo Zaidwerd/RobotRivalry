@@ -13,6 +13,84 @@ function createQuestion(req, res, next) {
     .catch(error => next(error));
 }
 
+function getAllMisc(req, res, next){
+  console.log('Knowledge Yes!')
+  db.any('SELECT * from questions WHERE category = General Knowledge;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllSongs(req,res, next){
+  console.log('Music Rocks!')
+  db.any('SELECT * from questions WHERE category = Entertainment: Music;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllTv(req, res, next){
+  console.log('TV!!')
+  db.any('SELECT * from questions WHERE category = Entertainment: Televsion;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllSports(req, res, next){
+  console.log('ESPN!')
+  db.any('SELECT * from questions WHERE category = Sports;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllGeo(req, res, next){
+  console.log('Geography!!!')
+  db.any('SELECT * from questions WHERE category = Geography;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+
+function getAllHistory(req, res, next){
+  console.log('History yay')
+  db.any('SELECT * from questions WHERE category = History;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllPolitics(req, res, next){
+  console.log('Obama')
+  db.any('SELECT * from questions WHERE category = Politics;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllCelebs(req, res, next){
+  console.log('Hollywood')
+  db.any('SELECT * from questions WHERE category = Celebrities;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+function getAllAnimals(req, res, next){
+  console.log('Kitties!!')
+  db.any('SELECT * from questions WHERE category = Animals;')
+    .then(next())
+    .catch(error => next(error));
+}
+
+
+  // catAnimals(){
+  //   this.setState({category: 27})
+  // }
+
 module.exports = {
-  createQuestion
+  createQuestion,
+  getAllMisc,
+  getAllSongs,
+  getAllTv,
+  getAllSports,
+  getAllGeo,
+  getAllHistory,
+  getAllPolitics,
+  getAllCelebs,
+  getAllAnimals
 }

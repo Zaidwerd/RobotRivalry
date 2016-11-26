@@ -272,6 +272,7 @@ class App extends Component {
 
 //added categories
 
+
   // catMisc(){
   //   this.setState({category: 9})
   // }
@@ -364,7 +365,7 @@ class App extends Component {
     </div>
     );
   }
-}
+};
 
 export default App;
 
