@@ -47,14 +47,14 @@ function editUser(req, res, next) {
 // }
 
 function getUserByUsername(username) {
-    db.one(
+    return db.one(
     `SELECT * FROM users WHERE username=$1;`, [username])
-  .then((user) => {
-    res.user = user;
+  // .then((user) => {
+  //   res.user = user;
   //   console.log(user)
   //   next();
-  })
-  .catch(error => next(error));
+  // })
+  // .catch(error => next(error));
   }
 
 function listUsers(req, res, next) {

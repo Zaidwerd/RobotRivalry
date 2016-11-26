@@ -126,14 +126,14 @@ export default class Signup extends Component {
           <div className='hOne'>
             <h1>SIGN UP</h1>
           </div>
-          
+
         <div className="signup-inputContainer">
           <input
             className="user"
             type="text"
             placeholder="Create Username"
             value={this.props.userFormUsername}
-            onChange={this.props.updateFormUsername}
+            onChange={event => this.updateFormUsername(event)}
           />
           <br/>
           <input
@@ -141,7 +141,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Create Password"
             value={this.props.userFormPassword}
-            onChange={this.props.updateFormPassword}
+            onChange={event => this.updateFormPassword(event)}
           />
           <br/>
           <input
@@ -149,7 +149,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="First Name"
             value={this.props.userFormFirstName}
-            onChange={this.props.updateFormFirstName}
+            onChange={event => this.updateFormFirstName(event)}
           />
           <br/>
           <input
@@ -157,7 +157,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Last Name"
             value={this.props.userFormLastName}
-            onChange={this.props.updateFormLastName}
+            onChange={event => this.updateFormLastName(event)}
           />
           <br/>
           <input
@@ -165,7 +165,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Age"
             value={this.props.userFormAge}
-            onChange={this.props.updateFormAge}
+            onChange={event => this.updateFormAge(event)}
           />
           <br/>
           <input
@@ -173,7 +173,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Gender"
             value={this.props.userFormGender}
-            onChange={this.props.updateFormGender}
+            onChange={event => this.updateFormGender(event)}
           />
           <br/>
           <input
@@ -181,7 +181,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Zodiac Sign"
             value={this.props.userFormZodiac}
-            onChange={this.props.updateFormZodiac}
+            onChange={event => this.updateFormZodiac(event)}
           />
           <br/>
           <input
@@ -189,7 +189,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="State"
             value={this.props.userFormState}
-            onChange={this.props.updateFormState}
+            onChange={event => this.updateFormState(event)}
           />
           <br/>
           <input
@@ -197,7 +197,7 @@ export default class Signup extends Component {
             type="text"
             placeholder="Email"
             value={this.props.userFormEmail}
-            onChange={this.props.updateFormEmail}
+            onChange={event => this.updateFormEmail(event)}
           />
           <br/>
           <input
@@ -205,10 +205,10 @@ export default class Signup extends Component {
             type="text"
             placeholder="Other Email"
             value={this.props.userFormEmail}
-            onChange={this.props.updateFormEmail}
+            onChange={event => this.updateFormEmail(event)}
           />
           <br/>
-          <button onClick={this.props.handleFormSubmit}>Sign Up</button>
+          <a href='/#/login'><button onClick={event => this.handleFormSubmit(event)}>Sign Up</button></a>
 
         </div>
 

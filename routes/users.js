@@ -2,14 +2,14 @@
 
 const express      = require('express');
 const { createUser, getUserByUsername, listUsers, deleteUser }    = require('../models/user.js');
-const { authenticate }   = require('../lib/auth');
+// const { authenticate }   = require('../lib/auth');
 
 const usersRouter  = express.Router();
 
 usersRouter.get('/', listUsers, (req, res) => {
   res.json(res.users.map((user) => {
-    const { id, username } = user;
-    return { id, username };
+    const { id, username, password } = user;
+    return { id, username, password };
   }));
 });
 

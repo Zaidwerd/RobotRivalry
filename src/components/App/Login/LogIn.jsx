@@ -7,32 +7,44 @@ class LogIn extends Component {
 
   this.state = {
     currentUser: null,
-    username: '',
-    password: '',
-    loggedIn: false,
+    login: {
+      username: '',
+      password: '',
+      loggedIn: false,
+    }
   }
 }
   onSuccessfulLogIn(a) {
-    this.alertInfo('Youre logged in!');
+    alert('Logged in to Robot Rivalry!');
     console.log(a);
     this.setState({
       currentUser: a.id,
+      login: {
         username: '',
         password: '',
         loggedIn: true,
+      },
     });
   }
 
 // grab password from
   updatePassword(e) {
     this.setState({
-      password: e.target.value,
+      login: {
+        username: this.state.login.username,
+        password: e.target.value,
+        loggedIn: false,
+      }
     });
   }
 
   updateUsername(e) {
     this.setState({
-      username: e.target.value,
+       login: {
+        username: e.target.value,
+        password: this.state.login.password,
+        loggedIn: false,
+      }
     });
   }
 
@@ -43,23 +55,22 @@ class LogIn extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-        username: this.state.username,
-        password: this.state.password,
+        username: this.state.login.username,
+        password: this.state.login.password,
       }),
     })
     .then(r => r.json())
     .then(this.setState({
+      login: {
         username: '',
         password: '',
         loggedIn: false,
+      }
     }))
     .then(this.onSuccessfulLogIn.bind(this))
     .catch(err => console.log(err));
   }
 
-   alertInfo(msg) {
-    alert(msg);
-  }
 
   render(){
     return (
@@ -89,7 +100,7 @@ class LogIn extends Component {
             onChange={event => this.updatePassword(event)}
             />
             <br/>
-            <button onClick={event => this.simpleAuth(event)}> Log In </button>
+            <button onClick={() => this.simpleAuth()}> Log In </button>
             <br/>
 
             <p className="or">-or-</p>
