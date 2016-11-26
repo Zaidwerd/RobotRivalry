@@ -1,10 +1,10 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
 const db = require('../lib/dbConnect');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken')
+// const bcrypt = require('bcryptjs');
+// const jwt = require('jsonwebtoken')
 
-const SALTROUNDS = 10;
+// const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
   console.log('entering data into users');
@@ -18,37 +18,63 @@ function createUser(req, res, next) {
   .catch(error => next(error));
 }
 
-
-function getUserById(id) {
-  const promise = new Promise((resolve, reject) => {
-  db.one(
-    `SELECT * FROM users Where id = $/id/`, req.body)
-  .then((user) => {
-    res.rows = user;
-    next();
-  })
+function deleteUser(req, res, next) {
+  console.log('entering data into users');
+  db.none(`DELETE FROM users WHERE id = $1`, [req.body.id])
+  .then(next())
   .catch(error => next(error));
-  });
-  return promise;
 }
+
+function editUser(req, res, next) {
+  console.log('entering data into users');
+  db.none(`UPDATE users SET(first_name = $1, last_name = $2, age = $3, state = $4`, [req.body.first_name, req.body.last_name, req.body.age, req.body.state])
+  .then(next())
+  .catch(error => next(error));
+}
+
+
+// function getUserById(id) {
+//   const promise = new Promise((resolve, reject) => {
+//   db.one(
+//     `SELECT * FROM users Where id = $/id/`, req.body)
+//   .then((user) => {
+//     res.rows = user;
+//     next();
+//   })
+//   .catch(error => next(error));
+//   });
+//   return promise;
+// }
 
 function getUserByUsername(username) {
-  const promise = new Promise((resolve, reject) => {
-    db.one(
-    `SELECT * FROM users Where username = $/username/`, req.body)
-  .then((user) => {
-    res.rows = user;
-    next();
-  })
-  .catch(error => next(error));
-  });
-  return promise;
-}
+    return db.one(
+    `SELECT * FROM users WHERE username=$1;`, [username])
+  // .then((user) => {
+  //   res.user = user;
+  //   console.log(user)
+  //   next();
+  // })
+  // .catch(error => next(error));
+  }
 
+function listUsers(req, res, next) {
+  db.any('SELECT * FROM users;')
+    .then((users) => {
+      res.users = users;
+      next();
+    })
+    .catch((error) => {
+      console.error('Error ', error);
+      next(error);
+    });
+}
 
 
 module.exports = {
   createUser,
-  getUserById,
+  deleteUser,
+  editUser,
+  listUsers,
+  // getUserById,
   getUserByUsername
 };
