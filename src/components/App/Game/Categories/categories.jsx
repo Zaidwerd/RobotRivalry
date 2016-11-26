@@ -55,10 +55,10 @@ class Categories extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-      GeneralKnowledge: this.state.GeneralKnowledge,
+        GeneralKnowledge: this.state.GeneralKnowledge
       })
     })
-    .catch(error => console.log(err));
+    .catch(error => console.log(error));
   }
 
   getMusic(){
@@ -69,10 +69,52 @@ class Categories extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
+        Music: this.state.Music
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getTV(){
+    console.log('tv');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Television: this.state.Television
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getSports(){
+    console.log('sports');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Sports: this.state.Sports
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getGeo(){
+    console.log('geography');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
 
       })
     })
-
+    .catch(error => console.log(error));
   }
 
   render(){
