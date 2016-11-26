@@ -10,7 +10,9 @@ class Home extends Component {
 	      <div className="welcome-box">
 	      	<h1>WELCOME</h1>
 	      	<div className="links-area">
-			      <a className="welcome-button" href="./#/login">LOG IN</a><span> || </span><a className="welcome-button" href="./#/signup">SIGN UP</a>
+			      <a className="welcome-button" href="./#/login">LOG IN</a>
+			      <span>  ||  </span>
+			      <a className="welcome-button" href="./#/signup">SIGN UP</a>
 		      </div>
 	      </div>
 
