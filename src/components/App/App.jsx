@@ -10,7 +10,7 @@ import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
-import AddQuestions from './AddQuestions/AddQuestions';
+// import AddQuestions from './AddQuestions/AddQuestions';
 // import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
@@ -163,7 +163,7 @@ class App extends Component {
 
   getQuestions() {
     console.log('clicked!');
-    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=50&type=multiple`)
+    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=7&category=27&difficulty=hard&type=multiple`)
       .then(r => r.json())
       .then((data) => {
         this.setState({
@@ -265,6 +265,7 @@ class App extends Component {
   }
 
   submitQuestion() {
+    console.log('NUMBER: ', this.state.counter);
     fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
