@@ -111,11 +111,63 @@ class Categories extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-
+        Geography: this.state.Geography
       })
     })
     .catch(error => console.log(error));
   }
+
+  getHistory(){
+    console.log('history')
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        History: this.state.History
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getPolitics(){
+    console.log('politics');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Politics: this.state.Politics
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getCelebs(){
+    console.log('celebrities');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Celebs: this.state.Celebs
+      })
+    })
+    .catch(error => console.log(error));
+  }
+
+  getAnimals(){
+    console.log('animals');
+    fetch('/category', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+    })
+  }
+
 
   render(){
     return (

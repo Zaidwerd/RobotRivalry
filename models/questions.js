@@ -29,7 +29,7 @@ function getAllSongs(req,res, next){
 
 function getAllTv(req, res, next){
   console.log('TV!!')
-  db.any('SELECT * from questions WHERE category = Entertainment: Televsion;')
+  db.any('SELECT * from questions WHERE category = Entertainment: Television;')
     .then(next())
     .catch(error => next(error));
 }
