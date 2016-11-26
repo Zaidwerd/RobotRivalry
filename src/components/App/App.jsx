@@ -9,9 +9,9 @@ import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
-import Home from './Home.jsx'
-import Nav from './Nav.jsx'
-// import AjaxAdapter from '../../helpers/AjaxAdapter';
+import Home from './Home.jsx';
+import Nav from './Nav.jsx';
+import AddQuestions from './AddQuestions/AddQuestions';
 import './../normalize.css';
 
 
@@ -50,32 +50,40 @@ class App extends Component {
       difficulty: '',
       counter: 0,
       token:'',
+      // newQuestion: '',
+      // newCorrectAnswer: '',
+      // newAnswerA: '',
+      // newAnswerB: '',
+      // newAnswerC: '',
+      // newAnswerD: '',
+      // newCategory: '',
+      // newDifficulty: '',
     };
   }
 
   // ADDING QUESTIONS
 
 
-  submitQuestion() {
-    console.log('NUMBER: ', this.state.counter);
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        question: this.state.currentQuestion,
-        correct_answer: this.state.currentCorrectAnswer,
-        answerA: this.state.answerA,
-        answerB: this.state.answerB,
-        answerC: this.state.answerC,
-        answerD: this.state.answerD,
-        category: this.state.category,
-        difficulty: this.state.difficulty,
-      })
-    })
-    .catch(err => console.log(err));
-  }
+  // submitQuestion() {
+  //   console.log('NUMBER: ', this.state.counter);
+  //   fetch('/questions', {
+  //     headers: {
+  //       'Content-type': 'application/json; charset=UTF-8',
+  //     },
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       question: this.state.newQuestion,
+  //       correct_answer: this.state.newCorrectAnswer,
+  //       answerA: this.state.newAnswerA,
+  //       answerB: this.state.newAnswerB,
+  //       answerC: this.state.newAnswerC,
+  //       answerD: this.state.newAnswerD,
+  //       category: this.state.newCategory,
+  //       difficulty: this.state.newDifficulty,
+  //     })
+  //   })
+  //   .catch(err => console.log(err));
+  // }
 
   // SIGN UP PAGE
 
@@ -346,9 +354,9 @@ class App extends Component {
 
         <Nav />
 
-      
 
-    
+
+
 
 
         {this.props.children}

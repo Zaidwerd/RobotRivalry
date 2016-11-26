@@ -11,6 +11,7 @@ import GameState from './components/App/Game/GameState/GameState.jsx';
 import Levels from './components/App/Game/Levels/Levels.jsx';
 import Question from './components/App/Game/Question/Question.jsx';
 import Home from './components/App/Home.jsx';
+import AddQuestion from './components/App/AddQuestions/AddQuestions';
 
 // mount our App at #container
 ReactDOM.render((
@@ -25,6 +26,7 @@ ReactDOM.render((
       <Route path="/gamestate" component={GameState}/>
       <Route path="/levels" component={Levels}/>
       <Route path="/question" component={Question}/>
+      <Route path="/addQuestions" component={AddQuestion}/>
     </Route>
   </Router>
 ), document.querySelector('#root-container'))
