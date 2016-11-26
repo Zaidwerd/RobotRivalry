@@ -17,8 +17,6 @@ export default class Signup extends Component {
       userFormState: '',
       userFormEmail: '',
     };
-
-    // this.addUser = this.addUser.bind(this);
   }
 
   updateFormUsername(e) {
@@ -126,7 +124,7 @@ export default class Signup extends Component {
           <div className='hOne'>
             <h1>SIGN UP</h1>
           </div>
-          
+
         <div className="signup-inputContainer">
           <input
             className="user"

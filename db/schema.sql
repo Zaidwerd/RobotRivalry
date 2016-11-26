@@ -64,5 +64,19 @@ CREATE TABLE questions (
   answerA text NOT NULL,
   answerB text NOT NULL,
   answerC text NOT NULL,
-  answerD text NOT NULL
+  answerD text NOT NULL,
+  created_by text
+);
+
+CREATE TABLE new_questions (
+  id SERIAL PRIMARY KEY,
+  category VARCHAR(50) NOT NULL,
+  difficulty VARCHAR(10) NOT NULL,
+  question text NOT NULL,
+  correct_answer text NOT NULL,
+  answerA text NOT NULL,
+  answerB text NOT NULL,
+  answerC text NOT NULL,
+  answerD text NOT NULL,
+  created_by text
 );
