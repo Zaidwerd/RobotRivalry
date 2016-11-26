@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 import style from './App.css';
 import Login from './Login/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
-// import Trivia from './Game/GameFoler/Trivia.jsx';
 import GameState from './Game/GameState/GameState.jsx';
 import Categories from './Game/Categories/Categories.jsx';
 import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
-// import AddQuestions from './AddQuestions/AddQuestions';
-// import AjaxAdapter from '../../helpers/AjaxAdapter';
 import './../normalize.css';
 
 
@@ -49,28 +46,34 @@ class App extends Component {
       counter: 0,
       token:'',
     };
-
-    // this.addUser = this.addUser.bind(this);
   }
 
   // ADDING QUESTIONS
 
 
+  submitQuestion() {
+    console.log('NUMBER: ', this.state.counter);
+    fetch('/questions', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        question: this.state.currentQuestion,
+        correct_answer: this.state.currentCorrectAnswer,
+        answerA: this.state.answerA,
+        answerB: this.state.answerB,
+        answerC: this.state.answerC,
+        answerD: this.state.answerD,
+        category: this.state.category,
+        difficulty: this.state.difficulty,
+      })
+    })
+    .catch(err => console.log(err));
+  }
 
   // SIGN UP PAGE
 
-  // addUser(username, first_name, last_name, password, age, gender, zodiac, state, email) {
-  //   AjaxAdapter.createUser({ username, first_name, last_name, password, age, gender, zodiac, state, email })
-  //   .then((newUser) => {
-  //     // clone existing state
-  //     // const newState = { ...this.state.users };
-  //     // newState[newUser.id] = newUser;
-  //     this.setState({ users: newUser });
-  //   })
-  //   .catch((error) => {
-  //     throw error;
-  //   });
-  // }
 
   updateFormUsername(e) {
     this.setState({
@@ -264,26 +267,6 @@ class App extends Component {
 
   }
 
-  submitQuestion() {
-    console.log('NUMBER: ', this.state.counter);
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        question: this.state.currentQuestion,
-        correct_answer: this.state.currentCorrectAnswer,
-        answerA: this.state.answerA,
-        answerB: this.state.answerB,
-        answerC: this.state.answerC,
-        answerD: this.state.answerD,
-        category: this.state.category,
-        difficulty: this.state.difficulty,
-      })
-    })
-    .catch(err => console.log(err));
-  }
 
 
   render(){
