@@ -56,7 +56,7 @@ class Categories extends Component {
         <div className="ugh">
         
           <div className='hOne'>
-            <h1>CHOOSE A CATEGORY</h1>
+            <h1 className="catH1">CHOOSE A CATEGORY</h1>
           </div>
           <div className="box-container">
             <div className='main-box'>
