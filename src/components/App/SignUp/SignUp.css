@@ -127,13 +127,13 @@ body {
 	margin: 10px;
 	letter-spacing: 2px;
 	font-size: 16px;
-	margin: 5px;
 	font-weight: lighter;
+	margin: 5px;
 	color: #555555;
 	background-color: rgba(255,255,255,0.1);
 	transition: background-color 0.2s ease-out,
-          	color 0.2s ease-out,
-          	letter-spacing 0.1s ease-out;
+          		color 0.2s ease-out,
+          		letter-spacing 0.1s ease-out;
 }
 .first:hover {
 	color: #FFFFFF;
