@@ -17,8 +17,6 @@ export default class Signup extends Component {
       userFormState: '',
       userFormEmail: '',
     };
-
-    // this.addUser = this.addUser.bind(this);
   }
 
   updateFormUsername(e) {

@@ -6,6 +6,8 @@ class Nav extends Component {
   render() {
     return (
       <div className="container">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
+
         <nav className="navi">
           <ul>
             <li><h1 className="navhead">Robot Rivalry</h1></li>
