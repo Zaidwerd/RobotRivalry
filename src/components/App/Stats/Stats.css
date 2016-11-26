@@ -1,17 +1,34 @@
 body {
-	background-color: #101010;
-	overflow: hidden;
+	height: 100%;
+	background-color: #1b1c1e;
+	/*background-image: url(futurama_bg.jpg);*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: linear-gradient(#1b1c1e, #4c6a6e);
+	/*background-size: 800% 400%;*/
+	font-family: 'Oswald', sans-serif;
+	/*overflow: scroll;*/
+	/*what is making page static?*/
+	background-attachment: fixed;
 }
 
 #container {
 	width: 100%;
 	height: 100%;
+}
+
+.stat-box {
+	width: 100%;
+	height: 100%;
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: row;
+	justify-content: center;
+	/*flex-flow: row wrap;*/
 }
 
 .UserStats {
-	background-color: orange;
+	border: 1px white solid;
+	background-color: rgba(27,28,30,0.5);
 	color: white;
 	height: 500px;
 	width: 400px;
@@ -19,8 +36,17 @@ body {
 }
 
 .GlobalStats {
-	background-color: orange;
+	border: 1px white solid;	
+	background-color: rgba(27,28,30,0.5);
 	color: white;
 	width: 400px;
 	margin: 50px;
+}
+
+.user-top, .global-top {
+	font-family: 'Titillium Web', sans-serif;
+	text-align: center;
+	padding: 10px;
+	font-size: 50px;
+	letter-spacing: 2px;
 }
