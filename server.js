@@ -49,7 +49,7 @@ app.use(cookieParser());
 // // map our apiRouter to the '/api' route
 // app.use('/api/puppies', apiPuppiesRouter);
 
-app.use('/login', authRouter);
+app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 app.use('/questions', questionsRouter);
 
