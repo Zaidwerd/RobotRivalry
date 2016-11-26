@@ -26,7 +26,7 @@ ReactDOM.render((
       <Route path="/gamestate" component={GameState}/>
       <Route path="/levels" component={Levels}/>
       <Route path="/question" component={Question}/>
-      <Route path="/addQuestion" component={AddQuestion}/>
+      <Route path="/addQuestions" component={AddQuestion}/>
     </Route>
   </Router>
 ), document.querySelector('#root-container'))

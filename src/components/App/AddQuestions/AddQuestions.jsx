@@ -72,6 +72,7 @@ export default class AddQuestion extends Component {
     }
 
     submitQuestion() {
+      console.log('adding question!');
       fetch('/questions', {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -107,15 +108,71 @@ export default class AddQuestion extends Component {
     return(
       <container>
         <div className="submit-question">
-          <input type="text" value={this.props.question} />
-          <input type="text" value={this.props.correct_answer} />
-          <input type="text" value={this.props.answerA} />
-          <input type="text" value={this.props.answerB} />
-          <input type="text" value={this.props.answerC} />
-          <input type="text" value={this.props.answerD} />
-          <input type="text" value={this.props.category} />
-          <input type="text" value={this.props.difficulty} />
-          <button onClick={this.props.submitQuestion}> Submit Question </button>
+
+          <input
+            type="text"
+            placeholder="Create Question"
+            value={this.props.newQuestion}
+            onChange={event => this.updateNewQuestion(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter correct answer"
+            value={this.props.newCorrectAnswer}
+            onChange={event => this.updateNewCorrectAnswer(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter first answer choice"
+            value={this.props.newAnswerA}
+            onChange={event => this.updateNewAnswerA(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter second answer choice"
+            value={this.props.answerB}
+            onChange={event => this.updateNewAnswerB(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter third answer choice"
+            value={this.props.newAnswerC}
+            onChange={event => this.updateNewAnswerC(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter fourth answer choice"
+            value={this.props.newAnswerD}
+            onChange={event => this.updateNewAnswerD(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter category"
+            value={this.props.newCategory}
+            onChange={event => this.updateNewCategory(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter difficulty"
+            value={this.props.newDifficulty}
+            onChange={event => this.updateNewDifficulty(event)}
+          />
+
+          <input
+            type="text"
+            placeholder="Enter username"
+            value={this.props.createdBy}
+            onChange={event => this.updateCreatedBy(event)}
+          />
+
+          <button onClick={event => this.submitQuestion(event)}> Submit Question </button>
         </div>
       </container>
       );

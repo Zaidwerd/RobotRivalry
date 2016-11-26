@@ -65,7 +65,7 @@ CREATE TABLE questions (
   answerB text NOT NULL,
   answerC text NOT NULL,
   answerD text NOT NULL,
-  created_by text,
+  created_by text
 );
 
 CREATE TABLE new_questions (
@@ -78,5 +78,5 @@ CREATE TABLE new_questions (
   answerB text NOT NULL,
   answerC text NOT NULL,
   answerD text NOT NULL,
-  created_by text,
+  created_by text
 );
