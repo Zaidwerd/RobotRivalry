@@ -78,9 +78,6 @@ function getAllAnimals(req, res, next){
 }
 
 
-  // catAnimals(){
-  //   this.setState({category: 27})
-  // }
 
 module.exports = {
   createQuestion,

@@ -164,8 +164,13 @@ class Categories extends Component {
     fetch('/category', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-      }
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        Animals: this.state.Animals
+      })
     })
+    .catch(error => console.log(error));
   }
 
 
