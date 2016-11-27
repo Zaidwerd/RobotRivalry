@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS trivia_stats;
 DROP TABLE IF EXISTS global_stats;
 DROP TABLE IF EXISTS game_stats;
 DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS new_questions;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
