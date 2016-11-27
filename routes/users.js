@@ -1,7 +1,7 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 
 const express      = require('express');
-const { createUser, getUserByUsername, listUsers, deleteUser, editUser }    = require('../models/user.js');
+const { createUser, getUserByUsername, listUsers, deleteUser, editUser, getUserStats }    = require('../models/user.js');
 // const { authenticate }   = require('../lib/auth');
 
 const usersRouter  = express.Router();
@@ -13,10 +13,6 @@ usersRouter.get('/', listUsers, (req, res) => {
   }));
 });
 
-/**
- * Creates a new user by handling the POST request from a form with action `/users`
- * It uses the createUser middleware from the user model
- */
 usersRouter.post('/', createUser, (req, res) => {
   res.redirect('/#/login');
 });
@@ -29,16 +25,11 @@ usersRouter.put('/:username', editUser,  (req, res) => {
   res.redirect('/user');
 });
 
-/**
- * Takes the user to its profile by handling any GET request to `/users/profile`
- * It redirects to /login when attempted to be reached by a non logged in user
- * It is "protected" by the authenticate middleware from the auth library
- */
 // usersRouter.get('/profile', (req, res) => {
 //   res.json(res.user);
 // });
 
-usersRouter.get('/:username', getUserByUsername, (req, res) => {
+usersRouter.get('/:username', getUserByUsername, getUserStats, (req, res) => {
   res.json(res.user);
 });
 
