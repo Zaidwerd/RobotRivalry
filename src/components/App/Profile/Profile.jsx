@@ -82,6 +82,10 @@ class Profile extends Component {
       .catch(err => console.log(err));
     }
 
+  deleteUser() {
+
+  }
+
   render() {
     return(
       <div id="container">
@@ -99,7 +103,7 @@ class Profile extends Component {
       </div>
 
       <button>Edit</button>
-
+      <button onClick={event => this.deleteUser(event)}>Delete</button>
       <Edit
 
         first_name={this.state.first_name}
