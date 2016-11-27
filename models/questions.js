@@ -1,10 +1,10 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
 const db = require('../lib/dbConnect');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken')
+// const bcrypt = require('bcryptjs');
+// const jwt = require('jsonwebtoken')
 
-const SALTROUNDS = 10;
+// const SALTROUNDS = 10;
 
 function createQuestion(req, res, next) {
   console.log('enter question!')

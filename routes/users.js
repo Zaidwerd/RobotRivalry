@@ -1,7 +1,7 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 
 const express      = require('express');
-const { createUser, getUserByUsername, listUsers, deleteUser }    = require('../models/user.js');
+const { createUser, getUserByUsername, listUsers, deleteUser, editUser }    = require('../models/user.js');
 // const { authenticate }   = require('../lib/auth');
 
 const usersRouter  = express.Router();
@@ -21,21 +21,25 @@ usersRouter.post('/', createUser, (req, res) => {
   res.redirect('/#/login');
 });
 
-// usersRouter.delete('/', deleteUser,  (req, res) => {
-//   res.redirect('/user');
-// });
+usersRouter.delete('/:username', deleteUser,  (req, res) => {
+  res.redirect('/user');
+});
+
+usersRouter.put('/:username', editUser,  (req, res) => {
+  res.redirect('/user');
+});
 
 /**
  * Takes the user to its profile by handling any GET request to `/users/profile`
  * It redirects to /login when attempted to be reached by a non logged in user
  * It is "protected" by the authenticate middleware from the auth library
  */
-usersRouter.get('/profile', (req, res) => {
+// usersRouter.get('/profile', (req, res) => {
+//   res.json(res.user);
+// });
+
+usersRouter.get('/:username', getUserByUsername, (req, res) => {
   res.json(res.user);
 });
-
-// usersRouter.get('/:username', getUserByUsername, (req, res) => {
-//   res.send(res.user);
-// });
 
 module.exports = usersRouter;
