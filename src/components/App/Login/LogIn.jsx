@@ -14,7 +14,7 @@ class LogIn extends Component {
     }
   }
 }
-  onSuccessfulLogIn(a) {
+  LogIn(a) {
     alert('Logged in to Robot Rivalry!');
     console.log(a);
     this.setState({
@@ -67,7 +67,7 @@ class LogIn extends Component {
         loggedIn: false,
       }
     }))
-    .then(this.onSuccessfulLogIn.bind(this))
+    .then(this.LogIn.bind(this))
     .catch(err => console.log(err));
   }
 

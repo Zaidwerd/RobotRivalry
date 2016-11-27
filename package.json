@@ -9,7 +9,7 @@
     "heroku-postbuild": "scripts/deployment_cleanup.sh",
     "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
     "rebuild": "webpack -d --progress --colors",
-    "watch": "webpack -d --progress --watch"
+    "watch": "webpack -d --progress --watch --history-api-fallback"
   },
   "repository": {
     "type": "git",

@@ -8,10 +8,11 @@ import StartPage from './components/App/StartPage/StartPage.jsx';
 import Stats from './components/App/Stats/Stats.jsx';
 import Categories from './components/App/Game/Categories/Categories.jsx';
 import GameState from './components/App/Game/GameState/GameState.jsx';
-import Levels from './components/App/Game/Levels/Levels.jsx';
+// import Levels from './components/App/Game/Levels/Levels.jsx';
 import Question from './components/App/Game/Question/Question.jsx';
 import Home from './components/App/Home.jsx';
 import AddQuestion from './components/App/AddQuestions/AddQuestions';
+import Profile from './components/App/Profile/Profile.jsx';
 
 // mount our App at #container
 ReactDOM.render((
@@ -24,9 +25,9 @@ ReactDOM.render((
       <Route path="/stats" component={Stats}/>
       <Route path="/categories" component={Categories}/>
       <Route path="/gamestate" component={GameState}/>
-      <Route path="/levels" component={Levels}/>
       <Route path="/question" component={Question}/>
       <Route path="/addQuestions" component={AddQuestion}/>
+      <Route path="/profile" component={Profile}/>
     </Route>
   </Router>
 ), document.querySelector('#root-container'))
