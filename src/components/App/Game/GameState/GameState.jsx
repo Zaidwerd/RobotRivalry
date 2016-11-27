@@ -9,7 +9,7 @@ class GameState extends Component {
 
   getKnow(){
     console.log('General Knowledge');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -23,7 +23,7 @@ class GameState extends Component {
 
   getMusic(){
     console.log('music');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -37,7 +37,7 @@ class GameState extends Component {
 
   getTV(){
     console.log('tv');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -51,7 +51,7 @@ class GameState extends Component {
 
   getSports(){
     console.log('sports');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -65,7 +65,7 @@ class GameState extends Component {
 
   getGeo(){
     console.log('geography');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -79,7 +79,7 @@ class GameState extends Component {
 
   getHistory(){
     console.log('history')
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -93,7 +93,7 @@ class GameState extends Component {
 
   getPolitics(){
     console.log('politics');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -107,7 +107,7 @@ class GameState extends Component {
 
   getCelebs(){
     console.log('celebrities');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -121,7 +121,7 @@ class GameState extends Component {
 
   getAnimals(){
     console.log('animals');
-    fetch('/category', {
+    fetch('/questions', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -151,8 +151,7 @@ class GameState extends Component {
         <button onClick={this.props.nextQuestionC}>{this.props.answerC}</button>
         <button onClick={this.props.nextQuestionD}>{this.props.answerD}</button>
 
-      </container>
-      <div id='container'>
+      <div id='new-container'>
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
 
@@ -177,6 +176,8 @@ class GameState extends Component {
 
         </div>
       </div>
+      </container>
+
 
       );
   }

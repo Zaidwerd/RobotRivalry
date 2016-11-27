@@ -16,7 +16,7 @@ questionsRouter.post('/', createQuestion, (req, res) => {
   res.redirect('/#/addQuestions');
 });
 
-questionsRouter.get('/category', getAllMisc, getAllSongs, getAllTv,
+questionsRouter.get('/questions', getAllMisc, getAllSongs, getAllTv,
   getAllSports, getAllGeo, getAllHistory, getAllPolitics,
   getAllCelebs, getAllAnimals, (req, res ) => {
   res.json(res.questions || []);
