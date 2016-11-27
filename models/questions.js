@@ -15,35 +15,35 @@ function createQuestion(req, res, next) {
 
 function getAllMisc(req, res, next){
   console.log('Knowledge Yes!')
-  db.any('SELECT * from questions WHERE category = General Knowledge;')
+  db.any('SELECT * from questions WHERE category = General Knowledge  ORDER BY RANDOM() LIMIT 10ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllSongs(req,res, next){
   console.log('Music Rocks!')
-  db.any('SELECT * from questions WHERE category = Entertainment: Music;')
+  db.any('SELECT * from questions WHERE category = Entertainment: Music ORDER BYE RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllTv(req, res, next){
   console.log('TV!!')
-  db.any('SELECT * from questions WHERE category = Entertainment: Televsion;')
+  db.any('SELECT * from questions WHERE category = Entertainment: Television ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllSports(req, res, next){
   console.log('ESPN!')
-  db.any('SELECT * from questions WHERE category = Sports;')
+  db.any('SELECT * from questions WHERE category = Sports ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllGeo(req, res, next){
   console.log('Geography!!!')
-  db.any('SELECT * from questions WHERE category = Geography;')
+  db.any('SELECT * from questions WHERE category = Geography ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
@@ -51,36 +51,33 @@ function getAllGeo(req, res, next){
 
 function getAllHistory(req, res, next){
   console.log('History yay')
-  db.any('SELECT * from questions WHERE category = History;')
+  db.any('SELECT * from questions WHERE category = History ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllPolitics(req, res, next){
   console.log('Obama')
-  db.any('SELECT * from questions WHERE category = Politics;')
+  db.any('SELECT * from questions WHERE category = Politics ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllCelebs(req, res, next){
   console.log('Hollywood')
-  db.any('SELECT * from questions WHERE category = Celebrities;')
+  db.any('SELECT * from questions WHERE category = Celebrities ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 function getAllAnimals(req, res, next){
   console.log('Kitties!!')
-  db.any('SELECT * from questions WHERE category = Animals;')
+  db.any('SELECT * from questions WHERE category = Animals ORDER BY RANDOM() LIMIT 10;')
     .then(next())
     .catch(error => next(error));
 }
 
 
-  // catAnimals(){
-  //   this.setState({category: 27})
-  // }
 
 module.exports = {
   createQuestion,
