@@ -360,6 +360,10 @@ class App extends Component {
 
   }
 
+  editButton() {
+    document.querySelector('.edit-modal').style.display = 'block';
+  }
+
   // GAME LOGIC
 
   getKnow(){
@@ -867,7 +871,6 @@ class App extends Component {
 
 
 
-
   render(){
     return (
       <div id="app-container">
@@ -928,7 +931,7 @@ class App extends Component {
           updateNewDifficulty: (() => this.updateNewDifficulty()),
           updateCreateBy: (() => this.updateCreatedBy()),
           submitQuestion: (() => this.submitQuestion()),
-
+          editButton: (() => this.editButton()),
 
         })}
 
