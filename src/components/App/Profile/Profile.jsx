@@ -91,6 +91,16 @@ class Profile extends Component {
       <div id="container">
         <div className="profile-cont">
           <ul className="pro-list">
+
+            <li className="profile-li">Username: {this.state.username}</li>
+            <li className="profile-li">First Name: {this.state.first_name}</li>
+            <li className="profile-li">Last Name: {this.state.last_name}</li>
+            <li className="profile-li">age: {this.state.age}</li>
+            <li className="profile-li">gender: {this.state.gender}</li>
+            <li className="profile-li">zodiac: {this.state.zodiac}</li>
+            <li className="profile-li">state: {this.state.state}</li>
+            <li className="profile-li">email: {this.state.email}</li>
+
             <li>Username: {this.props.state.username}</li>
             <li>First Name: {this.props.state.first_name}</li>
             <li>Last Name: {this.props.state.last_name}</li>
@@ -99,7 +109,28 @@ class Profile extends Component {
             <li>zodiac: {this.props.state.zodiac}</li>
             <li>state: {this.props.state.state}</li>
             <li>email: {this.props.state.email}</li>
+
           </ul>
+          <div className="edit-button-cont">
+        <button className="edit-user">Edit User</button>
+        <button className="delete-user" onClick={event => this.deleteUser(event)}>Delete User</button>
+          </div>
+      </div>
+
+
+
+        <div className="edit-modal">
+        <Edit
+          first_name={this.state.first_name}
+          last_name={this.state.last_name}
+          age={this.state.age}
+          state={this.state.state}
+          updateFirstName={event => this.updateFirstName(event)}
+          updateLastName={event => this.updateLastName(event)}
+          updateAge={event => this.updateAge(event)}
+          updateState={event => this.updateState(event)}
+          submitEdit={event => this.submitEdit(event)}
+          />
         </div>
 
         <button>Edit</button>
@@ -145,6 +176,7 @@ class Profile extends Component {
           </button>
 
         </div>
+
 
       </div>
 
