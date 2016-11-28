@@ -17,6 +17,7 @@ class GameState extends Component {
       answerC: '',
       answerD: '',
       counter: 0,
+      category: '',
     };
 
   }
@@ -167,6 +168,7 @@ class GameState extends Component {
       answerB: shuffledAnswerArray[1],
       answerC: shuffledAnswerArray[2],
       answerD: shuffledAnswerArray[3],
+      category: this.state.questions[this.state.counter].category,
       counter: this.state.counter +1,
     })
   };
