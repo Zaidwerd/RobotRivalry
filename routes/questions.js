@@ -18,12 +18,15 @@ questionsRouter.post('/', createQuestion, (req, res) => {
   res.redirect('/#/addQuestions');
 });
 
+questionsRouter.get('/misc', getAllMisc, sendJSONresp);
 questionsRouter.get('/music', getAllSongs, sendJSONresp);
+questionsRouter.get('/tv', getAllTv, sendJSONresp);
+questionsRouter.get('/sports', getAllSports, sendJSONresp);
+questionsRouter.get('/geo', getAllGeo, sendJSONresp);
+questionsRouter.get('/history', getAllHistory, sendJSONresp);
+questionsRouter.get('/politics', getAllPolitics, sendJSONresp);
+questionsRouter.get('/celebs', getAllCelebs, sendJSONresp);
+questionsRouter.get('/animals', getAllAnimals, sendJSONresp);
+
 
 module.exports = questionsRouter;
-
-// getAllMisc, getAllSongs, getAllTv,
-//   getAllSports, getAllGeo, getAllHistory, getAllPolitics,
-//   getAllCelebs, getAllAnimals, (req, res ) => {
-//   res.json(res.questions || []);
-//   });
