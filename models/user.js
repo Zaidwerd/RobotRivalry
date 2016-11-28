@@ -48,7 +48,7 @@ function editUser(req, res, next) {
 
 function getUserByUsername(username) {
     return db.one(
-    `SELECT * FROM users WHERE username=$1;`, [username])
+    `SELECT * FROM users WHERE username=$1;`, [req.body.username])
   // .then((user) => {
   //   res.user = user;
   //   console.log(user)
@@ -69,6 +69,17 @@ function listUsers(req, res, next) {
     });
 }
 
+function getUserStats(username) {
+  return db.one(
+  `SELECT * FROM users WHERE username=$1;`, [req.body.username])
+  .then((user) => {
+    res.user = user;
+    console.log(user)
+    next();
+  })
+  .catch(error => next(error));
+}
+
 
 module.exports = {
   createUser,
@@ -76,5 +87,6 @@ module.exports = {
   editUser,
   listUsers,
   // getUserById,
+  getUserStats,
   getUserByUsername
 };

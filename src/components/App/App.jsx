@@ -179,43 +179,43 @@ class App extends Component {
 
   // GAME LOGIC
 
-  getQuestions() {
-    console.log('clicked!');
-    fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&category=${this.state.category}&difficulty=${this.state.difficulty}&type=multiple`)
-      .then(r => r.json())
-      .then((data) => {
-        this.setState({
-          questions: data.results
-        })
-        console.log(this.state.questions);
-        this.getOneQuestion();
-      })
-      .catch(error => console.log('Error: ', error));
-  }
+  // getQuestions() {
+  //   console.log('clicked!');
+  //   fetch(`http://cors.io/?https://www.opentdb.com/api.php?amount=10&category=${this.state.category}&difficulty=${this.state.difficulty}&type=multiple`)
+  //     .then(r => r.json())
+  //     .then((data) => {
+  //       this.setState({
+  //         questions: data.results
+  //       })
+  //       console.log(this.state.questions);
+  //       this.getOneQuestion();
+  //     })
+  //     .catch(error => console.log('Error: ', error));
+  // }
 
-  getOneQuestion() {
-    // put all answers into one array
-    let answerArray = [this.state.questions[this.state.counter].correct_answer, this.state.questions[this.state.counter].incorrect_answers[0], this.state.questions[this.state.counter].incorrect_answers[1], this.state.questions[this.state.counter].incorrect_answers[2]];
-    let shuffledAnswerArray = _.shuffle(answerArray);
+  // getOneQuestion() {
+  //   // put all answers into one array
+  //   let answerArray = [this.state.questions[this.state.counter].correct_answer, this.state.questions[this.state.counter].incorrect_answers[0], this.state.questions[this.state.counter].incorrect_answers[1], this.state.questions[this.state.counter].incorrect_answers[2]];
+  //   let shuffledAnswerArray = _.shuffle(answerArray);
 
-    // clean question text
-    let questionDirty1 = this.state.questions[this.state.counter].question;
-    let questionClean1 = questionDirty1.replace(/&#039;/g , "'");
-    let questionClean2 = questionClean1.replace(/&quot;/g , '"');
+  //   // clean question text
+  //   let questionDirty1 = this.state.questions[this.state.counter].question;
+  //   let questionClean1 = questionDirty1.replace(/&#039;/g , "'");
+  //   let questionClean2 = questionClean1.replace(/&quot;/g , '"');
 
-    this.setState({
-      currentQuestion: questionClean2,
-      currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
-      currentAnswers: shuffledAnswerArray,
-      answerA: shuffledAnswerArray[0],
-      answerB: shuffledAnswerArray[1],
-      answerC: shuffledAnswerArray[2],
-      answerD: shuffledAnswerArray[3],
-      counter: this.state.counter +1,
-      category: this.state.questions[this.state.counter].category,
-      difficulty: this.state.questions[this.state.counter].difficulty,
-    })
-  };
+  //   this.setState({
+  //     currentQuestion: questionClean2,
+  //     currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
+  //     currentAnswers: shuffledAnswerArray,
+  //     answerA: shuffledAnswerArray[0],
+  //     answerB: shuffledAnswerArray[1],
+  //     answerC: shuffledAnswerArray[2],
+  //     answerD: shuffledAnswerArray[3],
+  //     counter: this.state.counter +1,
+  //     category: this.state.questions[this.state.counter].category,
+  //     difficulty: this.state.questions[this.state.counter].difficulty,
+  //   })
+  // };
 
   // nextQuestionA() {
   //   console.log('clicked');
