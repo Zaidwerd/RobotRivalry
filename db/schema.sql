@@ -17,6 +17,7 @@ CREATE TABLE users (
   zodiac VARCHAR(12) NOT NULL,
   state VARCHAR(2) NOT NULL,
   email text NOT NULL,
+  image text,
   num_games_played INT DEFAULT 0,
   total_num_correct INT DEFAULT 0,
   total_num_incorrect INT DEFAULT 0,
