@@ -44,6 +44,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -57,6 +58,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -70,6 +72,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -83,6 +86,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -96,6 +100,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -109,6 +114,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -122,6 +128,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -135,6 +142,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -169,7 +177,6 @@ class GameState extends Component {
 
     return(
       <container>
-        <h2> Scott hello </h2>
 
         <h3>{this.state.currentQuestion}</h3>
 
