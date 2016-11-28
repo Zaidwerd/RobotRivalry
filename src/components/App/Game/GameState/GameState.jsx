@@ -181,7 +181,12 @@ class GameState extends Component {
     this.setState({
       counter: this.state.counter + 1,
     })
+    if(this.state.counter < 10) {
     this.getOneQuestion();
+    } else {
+      alert('Game done!');
+      location.reload();
+    }
   }
 
 
@@ -195,7 +200,12 @@ class GameState extends Component {
     this.setState({
       counter: this.state.counter + 1,
     })
+    if(this.state.counter < 10) {
     this.getOneQuestion();
+    } else {
+      alert('Game done!');
+      location.reload();
+    }
   }
 
     nextQuestionC() {
@@ -208,7 +218,12 @@ class GameState extends Component {
     this.setState({
       counter: this.state.counter + 1,
     })
+    if(this.state.counter < 10) {
     this.getOneQuestion();
+    } else {
+      alert('Game done!');
+      location.reload();
+    }
   }
 
     nextQuestionD() {
@@ -221,7 +236,12 @@ class GameState extends Component {
     this.setState({
       counter: this.state.counter + 1,
     })
+    if(this.state.counter < 10) {
     this.getOneQuestion();
+    } else {
+      alert('Game done!');
+      location.reload();
+    }
   }
 
 
