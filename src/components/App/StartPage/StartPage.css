@@ -8,7 +8,7 @@ body {
 	/*overflow: hidden;*/
 }
 
-.container {
+#container {
 }
 
 .bg {
@@ -54,14 +54,20 @@ no maintain ratio w/ window size*/
 	margin: auto;
 		/*font-size: 36px;*/
 }
-
-.robotrivalry:hover {
+/*.robotrivalry:hover {
 	background-color: transparent;
-	color: #101010;
-
-}
+	color: #000000;
+}*/
 .start-game {
+	font-family: 'Titillium Web', sans-serif;
+	text-decoration: none;
 	color: transparent;
+	font-size: 35px;
+	font-weight: bold;
+}
+.start-game:hover {
+	background-color: transparent;
+	color: #000000;
 }
 
 .cookingmama {
@@ -86,10 +92,11 @@ no maintain ratio w/ window size*/
 	left: 455px;
 	text-align: center;
 	padding-top: 10px;
+	font-size: 30px;
 }
 .pokemon:hover {
 	background-color: transparent;
 	color: #dddddd;
-	font-size: 30px;
+
 
 }

@@ -53,8 +53,58 @@ body {
 	letter-spacing: 2px;
 }
 
-.stat-buttons {
-	background-color: black;
+.stat-ul {
+	list-style: none;
+}
+.stat-li {
+	vertical-align: center;
+}
+
+
+.stat-button-cont {
+	/*background-color: black;*/
 	text-align: center;
-	margin: 0px 10px 0px 10px;
+	/*margin-bottom: 30px;*/
+}
+.sb {
+  margin: 0px 15px 0px 15px;
+	/*margin: 50px;*/
+  width: 100px;
+  height: 38px;
+  border-radius: 2px;
+  padding: 5px;
+  color: #fafafa;
+  cursor: pointer;
+  font-variant: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin: 50px;
+  background: transparent;
+  border: 1px solid white;
+
+  text-decoration: none;
+
+  align-self: center;
+
+  transition: background-color 0.3s ease-out,
+              color 0.2s ease-out,
+              letter-spacing 0.2s ease-out,
+              text-transform 0.2s ease-out;
+}
+.sb:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease-out,
+                color 0.5s ease-out,
+                letter-spacing 0.1s ease-out,
+                font-weight 0.3s ease-out,
+                text-transform 0.1s ease-out;
+}
+
+.stata {
+	text-decoration: none;
+	color: #1b1c1e;
 }

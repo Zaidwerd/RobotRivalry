@@ -23,7 +23,7 @@ body {
 	height: 500px;
 	display: flex;
 	flex-direction: column;
-	/*flex-wrap: wrap;*/8
+	/*flex-wrap: wrap;*/
 	align-items: center;
 	margin: 60px auto;
 	border-radius: 8px;
@@ -49,7 +49,7 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 30px;
+	margin: 0px;
 	padding: 0px;
 	height: 800px;
 	width: 600px;
@@ -371,7 +371,7 @@ body {
 
 
 
-button {
+.signup-button {
 	width: 100px;
 	height: 38px;
 	border: none;
@@ -380,7 +380,7 @@ button {
 	color: #fafafa;
 	cursor: pointer;
 	font-variant: center;
-	letter-spacing: 0px;
+	letter-spacing: 1px;
 	font-size: 16px;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -394,7 +394,9 @@ button {
           		letter-spacing 0.2s ease-out,
           		text-transform 0.2s ease-out;
 }
-button:hover {
+
+.signup-button:hover {
+		/*font-family: 'Oswald', sans-serif;*/
 	background-color: rgba(255,255,255,0.8);
 	color: #333333;
 	font-weight: bold;
