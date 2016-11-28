@@ -494,8 +494,8 @@ class GameState extends Component {
           <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
           <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
           <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+          <div class="line"></div>
         <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
-
 
         </div>
 
