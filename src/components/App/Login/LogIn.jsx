@@ -89,14 +89,14 @@ class LogIn extends Component {
             <input className='user'
             type="text"
             placeholder="Username"
-            value={this.props.Username}
+            value={this.props.state.Username}
             onChange={this.props.updateUsername}
             />
 
             <input className='pass'
             type="text"
             placeholder="Password"
-            value={this.props.Password}
+            value={this.props.state.Password}
             onChange={this.props.updatePassword}
             />
             <br/>
