@@ -6,6 +6,11 @@ const db = require('../lib/dbConnect');
 
 // const SALTROUNDS = 10;
 
+// ALL QUESTIONS WITHOUT A 'CREATED BY' TAG WERE DOWNLOADED FROM
+// OPEN TRIVIA DATABASE'S API (https://opentdb.com/). WE CHOSE TO POPULATE OUR OWN DATABSE
+// BECAUSE THE API WOULD HAVE BREAK EVERY SO OFTEN.
+
+
 function createQuestion(req, res, next) {
   console.log('enter question!')
   db.none(`INSERT INTO new_questions (question, correct_answer, answerA, answerB, answerC, answerD, category, difficulty, created_by) Values ($1, $2, $3, $4, $5, $6, $7, $8, $9)`, [req.body.question, req.body.correct_answer, req.body.answerA, req.body.answerB, req.body.answerC, req.body.answerD, req.body.category, req.body.difficulty, req.body.created_by])
