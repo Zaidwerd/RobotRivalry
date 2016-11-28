@@ -1,15 +1,31 @@
-/*#container {
+#container {
 	width: 100%;
 	height: 100%;
-}*/
+}
 
 .edit-content {
 	display: flex;
+	width: 50%;
 	flex-direction: column;
+	margin-left: 50px;
+	margin-top: 50px;
+		line-height: 30px;
 }
 
-.edit-first {
+.edit-first, .edit-last, .edit-age, .edit-state {
 	width: 300px;
-	height: 30px;
+	height: 20px;
 }
 
+.edit-button {
+	width: 110px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 0px;
+	margin: 0 auto;
+	background-color: white;
+}
+.edit-button:hover {
+	font-weight: bold;
+}

@@ -9,6 +9,7 @@ class Edit extends Component {
       <div id="container">
 
         <div className="edit-content">
+          first name:
           <input
             className="edit-first"
             type="text"
@@ -16,6 +17,7 @@ class Edit extends Component {
             value={this.props.first_name}
             onChange={this.props.updateFirstName}
             />
+            last name:
           <input
             className="edit-last"
             type="text"
@@ -23,7 +25,7 @@ class Edit extends Component {
             value={this.props.last_name}
             onChange={this.props.updateLastName}
             />
-
+            age:
           <input
             className="edit-age"
             type="text"
@@ -31,7 +33,7 @@ class Edit extends Component {
             value={this.props.age}
             onChange={this.props.updateAge}
             />
-
+            state:
           <input
             className="edit-state"
             type="text"
@@ -39,12 +41,13 @@ class Edit extends Component {
             value={this.props.state}
             onChange={this.props.updateState}
             />
-
+            <br/>
           <button 
             className="edit-button" 
             onClick={this.props.submitEdit}> Submit Edit
           </button>
         </div>
+
       </div>
     );
   }

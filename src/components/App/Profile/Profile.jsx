@@ -91,21 +91,24 @@ class Profile extends Component {
       <div id="container">
         <div className="profile-cont">
           <ul className="pro-list">
-            <li>Username: {this.state.username}</li>
-            <li>First Name: {this.state.first_name}</li>
-            <li>Last Name: {this.state.last_name}</li>
-            <li>age: {this.state.age}</li>
-            <li>gender: {this.state.gender}</li>
-            <li>zodiac: {this.state.zodiac}</li>
-            <li>state: {this.state.state}</li>
-            <li>email: {this.state.email}</li>
+            <li className="profile-li">Username: {this.state.username}</li>
+            <li className="profile-li">First Name: {this.state.first_name}</li>
+            <li className="profile-li">Last Name: {this.state.last_name}</li>
+            <li className="profile-li">age: {this.state.age}</li>
+            <li className="profile-li">gender: {this.state.gender}</li>
+            <li className="profile-li">zodiac: {this.state.zodiac}</li>
+            <li className="profile-li">state: {this.state.state}</li>
+            <li className="profile-li">email: {this.state.email}</li>
           </ul>
-        </div>
+          <div className="edit-button-cont">
+        <button className="edit-user">Edit User</button>
+        <button className="delete-user" onClick={event => this.deleteUser(event)}>Delete User</button>
+          </div>
+      </div>
 
-        <button>Edit</button>
-        <button onClick={event => this.deleteUser(event)}>Delete</button>
+
+        <div className="edit-modal">
         <Edit
-
           first_name={this.state.first_name}
           last_name={this.state.last_name}
           age={this.state.age}
@@ -116,6 +119,7 @@ class Profile extends Component {
           updateState={event => this.updateState(event)}
           submitEdit={event => this.submitEdit(event)}
           />
+        </div>
       </div>
     );
   }

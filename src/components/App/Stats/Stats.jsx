@@ -72,20 +72,20 @@ class Stats extends Component {
 
           <div className="GlobalStats">
             <div className="global-top">GLOBAL</div>
-            <ul>
-              <li>Questions Answered: {this.state.globalStats.total_q_answered}</li>
-              <li>Questions Correct: {this.state.globalStats.total_q_correct}</li>
-              <li>Questions Incorrect: {this.state.globalStats.total_q_incorrect}</li>
-              <li>Total Games: {this.state.globalStats.total_games}</li>
-              <li>Percent of Questions Correct: {this.state.globalStats.percent_q_correct}</li>
+            <ul className="stat-ul">
+              <li className="stat-li">Questions Answered: {this.state.globalStats.total_q_answered}</li>
+              <li className="stat-li">Questions Correct: {this.state.globalStats.total_q_correct}</li>
+              <li className="stat-li">Questions Incorrect: {this.state.globalStats.total_q_incorrect}</li>
+              <li className="stat-li">Total Games: {this.state.globalStats.total_games}</li>
+              <li className="stat-li">Percent of Questions Correct: {this.state.globalStats.percent_q_correct}</li>
             </ul>
           </div>
 
         </div>
 
-        <div className="stat-buttons">
-        <button><a href='/#/startpage'>BACK</a></button>
-        <button><a href='/#/gamestate'>AGAIN</a></button> 
+        <div className="stat-button-cont">
+        <button className="sb"><a className="stata" href='/#/startpage'>BACK</a></button>
+        <button className="sb"><a className="stata" href='/#/gamestate'>AGAIN</a></button> 
         </div>
 
       </div>

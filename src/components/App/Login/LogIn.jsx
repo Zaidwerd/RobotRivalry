@@ -99,13 +99,13 @@ class LogIn extends Component {
             value={this.props.Password}
             onChange={event => this.updatePassword(event)}
             />
-            <br/>
-            <button onClick={() => this.simpleAuth()}> Log In </button>
+            
+            <button className="login-button" onClick={() => this.simpleAuth()}> Log In </button>
             <br/>
 
             <p className="or">-or-</p>
 
-            <a href="./#/signup">Sign Up</a>
+            <a className="login-su" href="./#/signup">Sign Up</a>
 
           </div>
 

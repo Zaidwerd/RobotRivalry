@@ -388,10 +388,12 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -411,10 +413,12 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -433,10 +437,12 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -458,12 +464,20 @@ class GameState extends Component {
       // alert('Game done!');
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      location.reload();
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      // location.reload();
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
     }
+  }
+
+  pageReload() {
+    location.reload();
+  }
+
+  statsPageLoad() {
+
   }
 
 
@@ -472,40 +486,46 @@ class GameState extends Component {
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
+        
         <div className="q-cont">
-          <h3 className="theQuestion">{this.state.currentQuestion}</h3>
+          <div className="qq">
+            <h3 className="theQuestion">{this.state.currentQuestion}</h3>
 
-          <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
-          <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
-          <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
-          <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+            <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
+            <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
+            <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
+            <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+          </div>
         </div>
-
 
         <div id='modal'>
          
-          <div className="ugh-content">
+          <div className="cat-content">
             <div className='hOne'>
               <h1 className="catH1">CHOOSE A CATEGORY</h1>
             </div>
             <div className="box-container">
               <div className='main-box'>
-                <button onClick={event => this.getKnow(event)}     className='category-box1 box'>General Knowledge</button>
-                <button onClick={event => this.getMusic(event)}    className='category-box2 box'>Music</button>
-                <button onClick={event => this.getTV(event)}       className='category-box3 box'>Television</button>
-                <button onClick={event => this.getSports(event)}   className='category-box4 box'>Sports</button>
-                <button onClick={event => this.getGeo(event)}      className='category-box5 box'>Geography</button>
-                <button onClick={event => this.getHistory(event)}  className='category-box6 box'>History</button>
-                <button onClick={event => this.getPolitics(event)} className='category-box7 box'>Politics</button>
-                <button onClick={event => this.getCelebs(event)}   className='category-box8 box'>Celebrities</button>
-                <button onClick={event => this.getAnimals(event)}  className='category-box9 box'>Animals</button>
+                <button className="cat-button" onClick={event => this.getKnow(event)}>General Knowledge</button>
+                <button className="cat-button" onClick={event => this.getMusic(event)}>Music</button>
+                <button className="cat-button" onClick={event => this.getTV(event)}>Television</button>
+                <button className="cat-button" onClick={event => this.getSports(event)}>Sports</button>
+                <button className="cat-button" onClick={event => this.getGeo(event)}>Geography</button>
+                <button className="cat-button" onClick={event => this.getHistory(event)}>History</button>
+                <button className="cat-button" onClick={event => this.getPolitics(event)}>Politics</button>
+                <button className="cat-button" onClick={event => this.getCelebs(event)}>Celebrities</button>
+                <button className="cat-button" onClick={event => this.getAnimals(event)}>Animals</button>
               </div>
             </div>
           </div>
         </div>
 
         <div className="complete">
-          <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
+          <div className="cc">
+            <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
+              <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
+              <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button> 
+          </div>
         </div>
 
 
