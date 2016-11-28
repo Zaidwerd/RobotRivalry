@@ -46,14 +46,22 @@ no maintain ratio w/ window size*/
 	height: 100px;
 	width: 200px;
 	position: absolute;
-	top: 340px;
+	top: 310px;
 	left: 655px;
 	background: transparent;
-
+	color: transparent;
+	text-align: center;
+	margin: auto;
+		/*font-size: 36px;*/
 }
 
 .robotrivalry:hover {
 	background-color: transparent;
+	color: #101010;
+
+}
+.start-game {
+	color: transparent;
 }
 
 .cookingmama {
@@ -63,17 +71,25 @@ no maintain ratio w/ window size*/
 	height: 120px;
 	width: 145px;
 	position: absolute;
-	top: 290px;
+	top: 260px;
 	left: 5px;
 }
 
 .pokemon {
 	display: inline-block;
-	color: white;
+	color: transparent;
 	border: 1px solid white;
-	height: 100px;
+	height: 90px;
 	width: 130px;
 	position: absolute;
-	top: 330px;
+	top: 300px;
 	left: 455px;
+	text-align: center;
+	padding-top: 10px;
+}
+.pokemon:hover {
+	background-color: transparent;
+	color: #dddddd;
+	font-size: 36px;
+
 }
