@@ -25,9 +25,14 @@ body {
   margin: 30px;
   padding: 0px;
 }
-/*.ugh {
-  justify-content: space-around;
-}*/
+
+.ugh-content {
+  margin: 0;
+
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
 
 .box-container {
 display: flex;
@@ -68,7 +73,9 @@ justify-content: center;
 }
 
 .q-cont {
-  display: block;
+  z-index: 0;
+  background-color: black;
+  display: none;
   margin: 0;
   padding: 0;
   text-align: center;

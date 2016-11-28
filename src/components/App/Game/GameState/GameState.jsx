@@ -33,6 +33,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getMusic(){
@@ -47,6 +49,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getTV(){
@@ -61,6 +65,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getSports(){
@@ -75,6 +81,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getGeo(){
@@ -89,6 +97,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getHistory(){
@@ -103,6 +113,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getPolitics(){
@@ -117,6 +129,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getCelebs(){
@@ -131,6 +145,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
   getAnimals(){
@@ -145,6 +161,8 @@ class GameState extends Component {
       this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
+      document.querySelector('#modal').style.display = 'none';
+      document.querySelector('.q-cont').style.display = 'block';
   }
 
 
@@ -239,7 +257,9 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      alert('Game done!');
+      // alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
       location.reload();
     }
   }
@@ -262,7 +282,7 @@ class GameState extends Component {
 
         <div id='modal'>
          
-          <div className="ugh">
+          <div className="ugh-content">
             <div className='hOne'>
               <h1 className="catH1">CHOOSE A CATEGORY</h1>
             </div>
@@ -281,6 +301,11 @@ class GameState extends Component {
             </div>
           </div>
         </div>
+
+        <div className="complete">
+          
+        </div>
+
 
       </div>
 
