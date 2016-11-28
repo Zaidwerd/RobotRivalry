@@ -14,7 +14,7 @@ class GameState extends Component {
         <div className="q-cont">
           <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
 
-          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+          <button className="q-button" onClick={this.props.nextQuestionA}>{this.props.state.answerA}</button>
           <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
           <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
           <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>

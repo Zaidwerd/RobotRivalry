@@ -618,8 +618,11 @@ class App extends Component {
     this.setState({
       num_games_played: this.state.num_games_played + 1,
     })
-    fetch(`/users/${this.state.id}`, {
-      method: 'put'
+    fetch(`/users/update/${this.state.currentUser}`, {
+      method: 'put',
+      body: JSON.stringify({
+        num_games_played: this.state.num_games_played,
+      })
     })
   }
 
@@ -913,7 +916,7 @@ class App extends Component {
           incorrectAnswer: (() => this.incorrectAnswer()),
           finishGameAll: (() => this.finishGameAll()),
           finishGame: (() => this.finishGame()),
-          newAnswerA: (() => this.nextQuestionA()),
+          nextQuestionA: (() => this.nextQuestionA()),
           nextQuestionB: (() => this.nextQuestionB()),
           nextQuestionC: (() => this.nextQuestionC()),
           nextQuestionD: (() => this.nextQuestionD()),
