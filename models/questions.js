@@ -13,19 +13,34 @@ function createQuestion(req, res, next) {
     .catch(error => next(error));
 }
 
-function getAllMisc(req, res, next){
-  console.log('Knowledge Yes!')
-  db.any('SELECT * from questions WHERE category = General Knowledge  ORDER BY RANDOM() LIMIT 10ORDER BY RANDOM() LIMIT 10;')
-    .then(next())
+function getAllSongs(req,res, next){
+  console.log('Music Rocks!')
+  db.any(`
+    SELECT * FROM questions
+    WHERE category='Entertainment: Music'
+    ORDER BY RANDOM()
+    LIMIT 10;`)
+    .then((questions) => {
+      res.rows = questions;
+      next();
+    })
     .catch(error => next(error));
 }
 
 function getAllSongs(req,res, next){
   console.log('Music Rocks!')
-  db.any('SELECT * from questions WHERE category = Entertainment: Music ORDER BYE RANDOM() LIMIT 10;')
-    .then(next())
+  db.any(`
+    SELECT * FROM questions
+    WHERE category='Entertainment: Music'
+    ORDER BY RANDOM()
+    LIMIT 10;`)
+    .then((questions) => {
+      res.rows = questions;
+      next();
+    })
     .catch(error => next(error));
 }
+
 
 function getAllTv(req, res, next){
   console.log('TV!!')
@@ -81,13 +96,13 @@ function getAllAnimals(req, res, next){
 
 module.exports = {
   createQuestion,
-  getAllMisc,
+  // getAllMisc,
   getAllSongs,
-  getAllTv,
-  getAllSports,
-  getAllGeo,
-  getAllHistory,
-  getAllPolitics,
-  getAllCelebs,
-  getAllAnimals
+  // getAllTv,
+  // getAllSports,
+  // getAllGeo,
+  // getAllHistory,
+  // getAllPolitics,
+  // getAllCelebs,
+  // getAllAnimals
 }

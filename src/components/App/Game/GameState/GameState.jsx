@@ -23,16 +23,15 @@ class GameState extends Component {
 
   getMusic(){
     console.log('music');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Music: this.state.Music
+    fetch('/questions/music')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getTV(){
