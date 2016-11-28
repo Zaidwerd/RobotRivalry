@@ -110,6 +110,14 @@ class LogIn extends Component {
           </div>
 
         </div>
+        <div id='modal'>
+          <h3>Welcome {this.props.state.login.username} to Robot Rivalry</h3>
+
+          <a href="./#/profile">Account</a>
+          <a href="./#/startpage">Start Page</a>
+          <a href="./#/stats">Stats</a>
+
+        </div>
       </div>
     )
   }

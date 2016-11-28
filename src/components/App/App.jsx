@@ -124,6 +124,8 @@ class App extends Component {
         loggedIn: true,
       },
     });
+    window.location()
+
   }
 
   // grab password from
