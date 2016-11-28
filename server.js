@@ -16,7 +16,7 @@ const methodOverride  = require('method-override');
 const authRouter      = require('./routes/auth');
 const usersRouter     = require('./routes/users');
 const questionsRouter = require('./routes/questions');
-const robotsRouter    = require('./routes/robots');
+// const robotsRouter    = require('./routes/robots');
 // const secret = 'secret'
 
 
