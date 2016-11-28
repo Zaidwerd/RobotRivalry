@@ -9,128 +9,119 @@ class GameState extends Component {
 
   getKnow(){
     console.log('General Knowledge');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        GeneralKnowledge: this.state.GeneralKnowledge
+    fetch('/questions/misc')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getMusic(){
     console.log('music');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Music: this.state.Music
+    fetch('/questions/music')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getTV(){
     console.log('tv');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Television: this.state.Television
+    fetch('/questions/tv')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getSports(){
     console.log('sports');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Sports: this.state.Sports
+    fetch('/questions/sports')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getGeo(){
     console.log('geography');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Geography: this.state.Geography
+    fetch('/questions/geo')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getHistory(){
     console.log('history')
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        History: this.state.History
+    fetch('/questions/history')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getPolitics(){
     console.log('politics');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Politics: this.state.Politics
+    fetch('/questions/politics')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getCelebs(){
     console.log('celebrities');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Celebs: this.state.Celebs
+    fetch('/questions/celebs')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
   getAnimals(){
     console.log('animals');
-    fetch('/questions', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        Animals: this.state.Animals
+    fetch('/questions/animals')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        questions: data
       })
-    })
-    .catch(error => console.log(error));
+      console.log(this.state.questions);
+      })
+      .catch(error => console.log('Error: ', error));
   }
 
 
