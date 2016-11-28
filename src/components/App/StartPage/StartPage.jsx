@@ -13,12 +13,14 @@ class StartPage extends Component {
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
       <div className="bg">
+
       <button className="robotrivalry">
-        <Link to="/categories"></Link>
+        <Link className="start-game" to="/gamestate">ROBOT RIVALRY</Link>
       </button>
 
-      <div className="cookingmama">cookingmama coming soon</div>
-      <div className="pokemon">pokemon coming soon</div>
+
+      <div className="cookingmama">COMING SOON</div>
+      <div className="pokemon">COMING SOON</div>
       </div>
 
       </div>

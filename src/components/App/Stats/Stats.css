@@ -35,6 +35,7 @@ body {
 	margin: 50px;
 }
 
+
 .GlobalStats {
 	border: 1px white solid;	
 	background-color: rgba(27,28,30,0.5);
@@ -43,10 +44,17 @@ body {
 	margin: 50px;
 }
 
+
 .user-top, .global-top {
 	font-family: 'Titillium Web', sans-serif;
 	text-align: center;
 	padding: 10px;
 	font-size: 50px;
 	letter-spacing: 2px;
+}
+
+.stat-buttons {
+	background-color: black;
+	text-align: center;
+	margin: 0px 10px 0px 10px;
 }

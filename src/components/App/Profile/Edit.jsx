@@ -7,35 +7,44 @@ class Edit extends Component {
   render() {
     return(
       <div id="container">
-        <input
-          type="text"
-          placeholder={this.props.first_name}
-          value={this.props.first_name}
-          onChange={this.props.updateFirstName}
-          />
-        <input
-          type="text"
-          placeholder={this.props.last_name}
-          value={this.props.last_name}
-          onChange={this.props.updateLastName}
-          />
 
-        <input
-          type="text"
-          placeholder={this.props.age}
-          value={this.props.age}
-          onChange={this.props.updateAge}
-          />
+        <div className="edit-content">
+          <input
+            className="edit-first"
+            type="text"
+            placeholder={this.props.first_name}
+            value={this.props.first_name}
+            onChange={this.props.updateFirstName}
+            />
+          <input
+            className="edit-last"
+            type="text"
+            placeholder={this.props.last_name}
+            value={this.props.last_name}
+            onChange={this.props.updateLastName}
+            />
 
-        <input
-          type="text"
-          placeholder={this.props.state}
-          value={this.props.state}
-          onChange={this.props.updateState}
-          />
+          <input
+            className="edit-age"
+            type="text"
+            placeholder={this.props.age}
+            value={this.props.age}
+            onChange={this.props.updateAge}
+            />
 
-        <button onClick={this.props.submitEdit}> Submit Edit</button>
+          <input
+            className="edit-state"
+            type="text"
+            placeholder={this.props.state}
+            value={this.props.state}
+            onChange={this.props.updateState}
+            />
 
+          <button 
+            className="edit-button" 
+            onClick={this.props.submitEdit}> Submit Edit
+          </button>
+        </div>
       </div>
     );
   }

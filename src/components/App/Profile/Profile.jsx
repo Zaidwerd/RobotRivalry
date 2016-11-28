@@ -89,33 +89,33 @@ class Profile extends Component {
   render() {
     return(
       <div id="container">
-      <div>
-        <ul>
-          <li>Username: {this.state.username}</li>
-          <li>First Name: {this.state.first_name}</li>
-          <li>Last Name: {this.state.last_name}</li>
-          <li>age: {this.state.age}</li>
-          <li>gender: {this.state.gender}</li>
-          <li>zodiac: {this.state.zodiac}</li>
-          <li>state: {this.state.state}</li>
-          <li>email: {this.state.email}</li>
-        </ul>
-      </div>
+        <div className="profile-cont">
+          <ul className="pro-list">
+            <li>Username: {this.state.username}</li>
+            <li>First Name: {this.state.first_name}</li>
+            <li>Last Name: {this.state.last_name}</li>
+            <li>age: {this.state.age}</li>
+            <li>gender: {this.state.gender}</li>
+            <li>zodiac: {this.state.zodiac}</li>
+            <li>state: {this.state.state}</li>
+            <li>email: {this.state.email}</li>
+          </ul>
+        </div>
 
-      <button>Edit</button>
-      <button onClick={event => this.deleteUser(event)}>Delete</button>
-      <Edit
+        <button>Edit</button>
+        <button onClick={event => this.deleteUser(event)}>Delete</button>
+        <Edit
 
-        first_name={this.state.first_name}
-        last_name={this.state.last_name}
-        age={this.state.age}
-        state={this.state.state}
-        updateFirstName={event => this.updateFirstName(event)}
-        updateLastName={event => this.updateLastName(event)}
-        updateAge={event => this.updateAge(event)}
-        updateState={event => this.updateState(event)}
-        submitEdit={event => this.submitEdit(event)}
-        />
+          first_name={this.state.first_name}
+          last_name={this.state.last_name}
+          age={this.state.age}
+          state={this.state.state}
+          updateFirstName={event => this.updateFirstName(event)}
+          updateLastName={event => this.updateLastName(event)}
+          updateAge={event => this.updateAge(event)}
+          updateState={event => this.updateState(event)}
+          submitEdit={event => this.submitEdit(event)}
+          />
       </div>
     );
   }

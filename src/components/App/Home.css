@@ -10,7 +10,7 @@ body {
 	/*overflow: scroll;*/
 	/*what is making page static?*/
 	background-attachment: fixed;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 /*#cont {
@@ -29,7 +29,28 @@ body {
 	/*justify-content: center;*/
 	/*align-content: center;*/
 
+	animation: shadow 1s ease-in-out;	
+	transform: scaleY(1);
+  	/*transition: text-shadow 1s ease-out;*/
 }
+/*.welcome-box::after {
+	animation: shadow 1s ease-in-out;	
+	transform: scaleY(1);
+}*/
+
+@keyframes shadow {
+  0% {
+    top: (0px);
+    transform: scaleY(1);
+	text-shadow: 0px 0px #000000;
+  }
+  100% {
+    bottom: (100px);
+    transform: scaleY(1);
+    text-shadow: 0px 13px #000000;
+  }
+}
+
 
 .links-area {
 	letter-spacing: 2px;
@@ -38,8 +59,24 @@ body {
 	/*flex-direction: row;*/
 	padding: 10px;
 	margin: 10px auto;
-	text-shadow: 0px 4px #000000;
+	text-shadow: 0px 4px #000000;	
+	animation: shadowlinks 1s ease-in-out;	
+	/*transform: scaleY(1);*/
 }
+@keyframes shadowlinks {
+  0% {
+    top: (0px);
+    transform: scaleY(1);
+	text-shadow: 0px 0px #000000;
+  }
+  100% {
+    bottom: (100px);
+    transform: scaleY(1);
+    text-shadow: 0px 4px #000000;
+  }
+}
+
+
 .welcome-button {
 	display: inline;
 	font-size: 16px;
