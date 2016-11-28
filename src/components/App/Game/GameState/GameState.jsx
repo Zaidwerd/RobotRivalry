@@ -251,10 +251,10 @@ class GameState extends Component {
         <div id="q-cont">
           <h3>{this.state.currentQuestion}</h3>
 
-          <button onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
-          <button onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
-          <button onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
-          <button onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+          <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
+          <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
+          <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
+          <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
         </div>
 
         <div id='new-container'>

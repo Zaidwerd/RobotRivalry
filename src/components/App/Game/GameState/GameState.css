@@ -56,6 +56,13 @@ justify-content: center;
 }
 
 .q-cont {
-
+  display: inline-block;
+  column-count: 2;
 }
 
+.q-button {
+  width: 250px;
+  height: 100px;
+  margin: 10px;
+  padding: 0;
+}
