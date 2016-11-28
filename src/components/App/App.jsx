@@ -41,24 +41,6 @@ class App extends Component {
       answerD: '',
       counter: 0,
       category: '',
-      // questions: [],
-      // currentQuestion: '',
-      // currentAnswers: [],
-      // currentCorrectAnswer: '',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
-      // category: '',
-      // difficulty: '',
-      // counter: 0,
-      // newQuestion: '',
-      // newCorrectAnswer: '',
-      // newAnswerA: '',
-      // newAnswerB: '',
-      // newAnswerC: '',
-      // newAnswerD: '',
-      // newCategory: '',
       currentUser: null,
       login: {
         username: '',
@@ -118,9 +100,39 @@ class App extends Component {
     console.log(a);
     this.setState({
       currentUser: a.id,
+      num_games_played: a.num_games_played,
+      total_num_correct: a.total_num_correct,
+      total_num_incorrect: a.total_num_incorrect,
+      num_generalknowledge_played: a.num_generalknowledge_played,
+      num_generalknowledge_correct: a.num_generalknowledge_correct,
+      num_generalknowledge_incorrect: a.num_generalknowledge_incorrect,
+      num_music_played: a.num_music_played,
+      num_music_correct: a.num_music_correct,
+      num_music_incorrect: a.num_music_incorrect,
+      num_sports_played: a.num_sports_played,
+      num_sports_correct: a.num_sports_correct,
+      num_sports_incorrect: a.num_sports_incorrect,
+      num_television_played: a.num_television_played,
+      num_television_correct: a.num_television_correct,
+      num_television_incorrect: a.num_television_incorrect,
+      num_geography_played: a.num_geography_played,
+      num_geography_correct: a.num_geography_correct,
+      num_geography_incorrect: a.num_geography_incorrect,
+      num_history_played: a.num_history_played,
+      num_history_correct: a.num_history_correct,
+      num_history_incorrect: a.num_history_incorrect,
+      num_politics_played: a.num_politics_played,
+      num_politics_correct: a.num_politics_correct,
+      num_politics_incorrect: a.num_politics_incorrect,
+      num_celebrities_played: a.num_celebrities_played,
+      num_celebrities_correct: a.num_celebrities_correct,
+      num_celebrtities_incorrect: a.num_celebrtities_incorrect,
+      num_animals_played: a.num_animals_played,
+      num_animals_correct: a.num_animals_correct,
+      num_animals_incorrect: a.num_animals_incorrect,
       login: {
-        username: '',
-        password: '',
+        username: a.username,
+        password: a.password,
         loggedIn: true,
       },
     });
@@ -171,30 +183,6 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
-
-  // ADDING QUESTIONS
-
-
-  // submitQuestion() {
-  //   console.log('NUMBER: ', this.state.counter);
-  //   fetch('/questions', {
-  //     headers: {
-  //       'Content-type': 'application/json; charset=UTF-8',
-  //     },
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       question: this.state.newQuestion,
-  //       correct_answer: this.state.newCorrectAnswer,
-  //       answerA: this.state.newAnswerA,
-  //       answerB: this.state.newAnswerB,
-  //       answerC: this.state.newAnswerC,
-  //       answerD: this.state.newAnswerD,
-  //       category: this.state.newCategory,
-  //       difficulty: this.state.newDifficulty,
-  //     })
-  //   })
-  //   .catch(err => console.log(err));
-  // }
 
   // SIGN UP PAGE
 
@@ -630,6 +618,9 @@ class App extends Component {
     this.setState({
       num_games_played: this.state.num_games_played + 1,
     })
+    fetch(`/users/${this.state.id}`, {
+      method: 'put'
+    })
   }
 
   finishGame() {
@@ -698,6 +689,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -721,6 +715,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -743,6 +740,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -766,6 +766,9 @@ class App extends Component {
     this.getOneQuestion();
     } else {
       // alert('Game done!');
+      this.setState({
+        counter: 0,
+      })
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
       location.reload();
@@ -874,10 +877,6 @@ class App extends Component {
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
         <Nav />
-
-
-
-
 
 
         {this.props.children && React.cloneElement(this.props.children,{
