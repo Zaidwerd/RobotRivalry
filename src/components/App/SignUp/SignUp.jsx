@@ -3,121 +3,6 @@ import style from './SignUp.css';
 
 export default class Signup extends Component {
 
-  //   constructor(state) {
-  //   super();
-
-  //   this.state = {
-  //     userFormUsername: '',
-  //     userFormPassword: '',
-  //     userFormFirstName: '',
-  //     userFormLastName: '',
-  //     userFormAge: '',
-  //     userFormGender: '',
-  //     userFormZodiac: '',
-  //     userFormState: '',
-  //     userFormEmail: '',
-  //     image: '',
-  //   };
-  // }
-
-  // updateFormUsername(e) {
-  //   this.setState({
-  //     userFormUsername: e.target.value,
-  //     image: 'https://robohash.org/' + e.target.value,
-  //   });
-  // }
-
-  // updateFormPassword(e) {
-  //   this.setState({
-  //     userFormPassword: e.target.value,
-  //   });
-  // }
-
-  // updateFormFirstName(e) {
-  //   this.setState({
-  //     userFormFirstName: e.target.value,
-  //   });
-  // }
-
-  // updateFormLastName(e) {
-  //   this.setState({
-  //     userFormLastName: e.target.value,
-  //   });
-  // }
-
-  // updateFormAge(e) {
-  //   this.setState({
-  //     userFormAge: e.target.value,
-  //   });
-  // }
-
-  // updateFormGender(e) {
-  //   this.setState({
-  //     userFormGender: e.target.value,
-  //   });
-  // }
-
-  // updateFormZodiac(e) {
-  //   this.setState({
-  //     userFormZodiac: e.target.value,
-  //   });
-  // }
-
-  // updateFormState(e) {
-  //   this.setState({
-  //     userFormState: e.target.value,
-  //   });
-  // }
-
-  // updateFormEmail(e) {
-  //   this.setState({
-  //     userFormEmail: e.target.value,
-  //   });
-  // }
-
-  // handleFormSubmit() {
-  //   fetch('/users', {
-  //     headers: {
-  //       'Content-type': 'application/json; charset=UTF-8',
-  //     },
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       username: this.state.userFormUsername,
-  //       password: this.state.userFormPassword,
-  //       first_name: this.state.userFormFirstName,
-  //       last_name: this.state.userFormLastName,
-  //       age: this.state.userFormAge,
-  //       gender: this.state.userFormGender,
-  //       zodiac: this.state.userFormZodiac,
-  //       state: this.state.userFormState,
-  //       email: this.state.userFormEmail,
-  //       image: this.state.image,
-  //     })
-  //   })
-  //   .then(this.setState({
-  //     userFormUsername: '',
-  //     userFormPassword: '',
-  //     userFormFirstName: '',
-  //     userFormLastName: '',
-  //     userFormAge: '',
-  //     userFormGender: '',
-  //     userFormZodiac: '',
-  //     userFormState: '',
-  //     userFormEmail: '',
-  //     image: '',
-  //   }))
-  //   .catch(err => console.log(err));
-  // }
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const myForm = event.target;
-
-  // props.addUser(
-  //   myForm.username.value,
-  // );
-
-  // }
   render() {
     return (
       <div id="container">
@@ -210,7 +95,9 @@ export default class Signup extends Component {
             onChange={this.props.updateFormEmail}
           />
           <br/>
+
           <a href='/#/login'><button onClick={this.props.handleFormSubmit}>Sign Up</button></a>
+
 
         </div>
 

@@ -2,75 +2,6 @@ import React, { Component } from 'react';
 import style from './Login.css';
 
 class LogIn extends Component {
-//   constructor(props) {
-//   super();
-
-//   this.state = {
-//     currentUser: null,
-//     login: {
-//       username: '',
-//       password: '',
-//       loggedIn: false,
-//     }
-//   }
-// }
-  // LogIn(a) {
-  //   alert('Logged in to Robot Rivalry!');
-  //   console.log(a);
-  //   this.setState({
-  //     currentUser: a.id,
-  //     login: {
-  //       username: '',
-  //       password: '',
-  //       loggedIn: true,
-  //     },
-  //   });
-  // }
-
-// // grab password from
-  // updatePassword(e) {
-  //   this.setState({
-  //     login: {
-  //       username: this.state.login.username,
-  //       password: e.target.value,
-  //       loggedIn: false,
-  //     }
-  //   });
-  // }
-
-  // updateUsername(e) {
-  //   this.setState({
-  //      login: {
-  //       username: e.target.value,
-  //       password: this.state.login.password,
-  //       loggedIn: false,
-  //     }
-  //   });
-  // }
-
-//   simpleAuth() {
-//     fetch('/auth', {
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       method: 'POST',
-//       body: JSON.stringify({
-//         username: this.state.login.username,
-//         password: this.state.login.password,
-//       }),
-//     })
-//     .then(r => r.json())
-//     .then(this.setState({
-//       login: {
-//         username: '',
-//         password: '',
-//         loggedIn: false,
-//       }
-//     }))
-//     .then(this.LogIn.bind(this))
-//     .catch(err => console.log(err));
-//   }
-
 
   render(){
     return (
@@ -99,15 +30,29 @@ class LogIn extends Component {
             value={this.props.state.login.password}
             onChange={this.props.updatePassword}
             />
+
+
             <br/>
             <button onClick={this.props.simpleAuth}> Log In </button>
+
             <br/>
 
             <p className="or">-or-</p>
 
-            <a href="./#/signup">Sign Up</a>
+            <a className="login-su" href="./#/signup">Sign Up</a>
 
           </div>
+
+        </div>
+        <div id='modal2'>
+          <h3>Welcome {this.props.state.login.username} to Robot Rivalry</h3>
+
+          <a href="./#/profile">Account</a>
+          <br/>
+          <a href="./#/startpage">Start Page</a>
+          <br/>
+          <a href="./#/stats">Stats</a>
+          <br/>
 
         </div>
       </div>

@@ -83,7 +83,7 @@ function listUsers(req, res, next) {
 
 function getUserStats(username) {
   return db.one(
-  `SELECT * FROM users WHERE username=$1;`, [req.body.username])
+  `SELECT * FROM users WHERE username=$1;`, [username])
   .then((user) => {
     res.user = user;
     console.log(user)
