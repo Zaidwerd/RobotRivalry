@@ -914,7 +914,7 @@ class App extends Component {
           incorrectAnswer: (() => this.incorrectAnswer()),
           finishGameAll: (() => this.finishGameAll()),
           finishGame: (() => this.finishGame()),
-          newAnswerA: (() => this.nextQuestionA()),
+          nextQuestionA: (() => this.nextQuestionA()),
           nextQuestionB: (() => this.nextQuestionB()),
           nextQuestionC: (() => this.nextQuestionC()),
           nextQuestionD: (() => this.nextQuestionD()),

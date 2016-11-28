@@ -45,6 +45,8 @@ class GameState extends Component {
 
         <div className="complete">
           <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
+          <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
+          <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button>
         </div>
 
 
