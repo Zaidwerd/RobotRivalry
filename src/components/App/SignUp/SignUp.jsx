@@ -16,12 +16,14 @@ export default class Signup extends Component {
       userFormZodiac: '',
       userFormState: '',
       userFormEmail: '',
+      image: '',
     };
   }
 
   updateFormUsername(e) {
     this.setState({
       userFormUsername: e.target.value,
+      image: 'https://robohash.org/' + e.target.value,
     });
   }
 
@@ -89,6 +91,7 @@ export default class Signup extends Component {
         zodiac: this.state.userFormZodiac,
         state: this.state.userFormState,
         email: this.state.userFormEmail,
+        image: this.state.image,
       })
     })
     .then(this.setState({
@@ -101,6 +104,7 @@ export default class Signup extends Component {
       userFormZodiac: '',
       userFormState: '',
       userFormEmail: '',
+      image: '',
     }))
     .catch(err => console.log(err));
   }
