@@ -301,7 +301,7 @@ class GameState extends Component {
 
   finishGameAll() {
     this.setState({
-
+      num_games_played: this.state.num_games_played + 1,
     })
   }
 
@@ -372,6 +372,7 @@ class GameState extends Component {
     this.getOneQuestion();
     } else {
       this.finishGame();
+      this.finishGameAll();
       alert('Game done!');
       // location.reload();
     }
@@ -394,6 +395,7 @@ class GameState extends Component {
     this.getOneQuestion();
     } else {
       this.finishGame();
+      this.finishGameAll();
       alert('Game done!');
       // location.reload();
     }
@@ -415,6 +417,7 @@ class GameState extends Component {
     this.getOneQuestion();
     } else {
       this.finishGame();
+      this.finishGameAll();
       alert('Game done!');
       // location.reload();
     }
@@ -436,6 +439,7 @@ class GameState extends Component {
     this.getOneQuestion();
     } else {
       this.finishGame();
+      this.finishGameAll();
       alert('Game done!');
       // location.reload();
     }
