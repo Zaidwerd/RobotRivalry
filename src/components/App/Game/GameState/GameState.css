@@ -8,6 +8,7 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 #new-container {
+  /*modal*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,5 +53,9 @@ justify-content: center;
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
+}
+
+.q-cont {
+
 }
 
