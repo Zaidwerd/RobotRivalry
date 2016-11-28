@@ -4,6 +4,7 @@ import style from './GameState.css';
 let _ = require('underscore');
 
 class GameState extends Component {
+
   constructor(props){
     super();
 
@@ -472,6 +473,7 @@ class GameState extends Component {
     }
   }
 
+
   pageReload() {
     location.reload();
   }
@@ -488,6 +490,7 @@ class GameState extends Component {
 
         
         <div className="q-cont">
+
           <div className="qq">
             <h3 className="theQuestion">{this.state.currentQuestion}</h3>
 
@@ -496,25 +499,37 @@ class GameState extends Component {
             <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
             <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
           </div>
+
+          <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+
+          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+          <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
+          <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
+          <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
+
         </div>
 
         <div id='modal'>
          
           <div className="cat-content">
+
+          <div className="ugh-content">
+
             <div className='hOne'>
               <h1 className="catH1">CHOOSE A CATEGORY</h1>
             </div>
             <div className="box-container">
               <div className='main-box'>
-                <button className="cat-button" onClick={event => this.getKnow(event)}>General Knowledge</button>
-                <button className="cat-button" onClick={event => this.getMusic(event)}>Music</button>
-                <button className="cat-button" onClick={event => this.getTV(event)}>Television</button>
-                <button className="cat-button" onClick={event => this.getSports(event)}>Sports</button>
-                <button className="cat-button" onClick={event => this.getGeo(event)}>Geography</button>
-                <button className="cat-button" onClick={event => this.getHistory(event)}>History</button>
-                <button className="cat-button" onClick={event => this.getPolitics(event)}>Politics</button>
-                <button className="cat-button" onClick={event => this.getCelebs(event)}>Celebrities</button>
-                <button className="cat-button" onClick={event => this.getAnimals(event)}>Animals</button>
+
+                <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
+                <button  className="cat-button" onClick={this.props.getMusic}>Music</button>
+                <button  className="cat-button" onClick={this.props.getTV}>Television</button>
+                <button  className="cat-button" onClick={this.props.getSports}>Sports</button>
+                <button  className="cat-button" onClick={this.props.getGeo}>Geography</button>
+                <button  className="cat-button" onClick={this.props.getHistory}>History</button>
+                <button  className="cat-button" onClick={this.props.getPolitics}>Politics</button>
+                <button  className="cat-button" onClick={this.props.getCelebs}>Celebrities</button>
+                <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
               </div>
             </div>
           </div>
