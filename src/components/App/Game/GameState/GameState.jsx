@@ -303,7 +303,7 @@ class GameState extends Component {
         </div>
 
         <div className="complete">
-          
+          <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
         </div>
 
 

@@ -93,3 +93,8 @@ justify-content: center;
   letter-spacing: 5px;
   text-align: center;
 }
+
+.complete {
+  z-index: -1;
+  background-color: orange;
+}
