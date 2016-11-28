@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Question from '../Question/question';
 import style from './GameState.css';
 let _ = require('underscore');
 
