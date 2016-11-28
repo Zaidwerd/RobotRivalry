@@ -3,111 +3,111 @@ import style from './SignUp.css';
 
 export default class Signup extends Component {
 
-    constructor(state) {
-    super();
+  //   constructor(state) {
+  //   super();
 
-    this.state = {
-      userFormUsername: '',
-      userFormPassword: '',
-      userFormFirstName: '',
-      userFormLastName: '',
-      userFormAge: '',
-      userFormGender: '',
-      userFormZodiac: '',
-      userFormState: '',
-      userFormEmail: '',
-      image: '',
-    };
-  }
+  //   this.state = {
+  //     userFormUsername: '',
+  //     userFormPassword: '',
+  //     userFormFirstName: '',
+  //     userFormLastName: '',
+  //     userFormAge: '',
+  //     userFormGender: '',
+  //     userFormZodiac: '',
+  //     userFormState: '',
+  //     userFormEmail: '',
+  //     image: '',
+  //   };
+  // }
 
-  updateFormUsername(e) {
-    this.setState({
-      userFormUsername: e.target.value,
-      image: 'https://robohash.org/' + e.target.value,
-    });
-  }
+  // updateFormUsername(e) {
+  //   this.setState({
+  //     userFormUsername: e.target.value,
+  //     image: 'https://robohash.org/' + e.target.value,
+  //   });
+  // }
 
-  updateFormPassword(e) {
-    this.setState({
-      userFormPassword: e.target.value,
-    });
-  }
+  // updateFormPassword(e) {
+  //   this.setState({
+  //     userFormPassword: e.target.value,
+  //   });
+  // }
 
-  updateFormFirstName(e) {
-    this.setState({
-      userFormFirstName: e.target.value,
-    });
-  }
+  // updateFormFirstName(e) {
+  //   this.setState({
+  //     userFormFirstName: e.target.value,
+  //   });
+  // }
 
-  updateFormLastName(e) {
-    this.setState({
-      userFormLastName: e.target.value,
-    });
-  }
+  // updateFormLastName(e) {
+  //   this.setState({
+  //     userFormLastName: e.target.value,
+  //   });
+  // }
 
-  updateFormAge(e) {
-    this.setState({
-      userFormAge: e.target.value,
-    });
-  }
+  // updateFormAge(e) {
+  //   this.setState({
+  //     userFormAge: e.target.value,
+  //   });
+  // }
 
-  updateFormGender(e) {
-    this.setState({
-      userFormGender: e.target.value,
-    });
-  }
+  // updateFormGender(e) {
+  //   this.setState({
+  //     userFormGender: e.target.value,
+  //   });
+  // }
 
-  updateFormZodiac(e) {
-    this.setState({
-      userFormZodiac: e.target.value,
-    });
-  }
+  // updateFormZodiac(e) {
+  //   this.setState({
+  //     userFormZodiac: e.target.value,
+  //   });
+  // }
 
-  updateFormState(e) {
-    this.setState({
-      userFormState: e.target.value,
-    });
-  }
+  // updateFormState(e) {
+  //   this.setState({
+  //     userFormState: e.target.value,
+  //   });
+  // }
 
-  updateFormEmail(e) {
-    this.setState({
-      userFormEmail: e.target.value,
-    });
-  }
+  // updateFormEmail(e) {
+  //   this.setState({
+  //     userFormEmail: e.target.value,
+  //   });
+  // }
 
-  handleFormSubmit() {
-    fetch('/users', {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        username: this.state.userFormUsername,
-        password: this.state.userFormPassword,
-        first_name: this.state.userFormFirstName,
-        last_name: this.state.userFormLastName,
-        age: this.state.userFormAge,
-        gender: this.state.userFormGender,
-        zodiac: this.state.userFormZodiac,
-        state: this.state.userFormState,
-        email: this.state.userFormEmail,
-        image: this.state.image,
-      })
-    })
-    .then(this.setState({
-      userFormUsername: '',
-      userFormPassword: '',
-      userFormFirstName: '',
-      userFormLastName: '',
-      userFormAge: '',
-      userFormGender: '',
-      userFormZodiac: '',
-      userFormState: '',
-      userFormEmail: '',
-      image: '',
-    }))
-    .catch(err => console.log(err));
-  }
+  // handleFormSubmit() {
+  //   fetch('/users', {
+  //     headers: {
+  //       'Content-type': 'application/json; charset=UTF-8',
+  //     },
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       username: this.state.userFormUsername,
+  //       password: this.state.userFormPassword,
+  //       first_name: this.state.userFormFirstName,
+  //       last_name: this.state.userFormLastName,
+  //       age: this.state.userFormAge,
+  //       gender: this.state.userFormGender,
+  //       zodiac: this.state.userFormZodiac,
+  //       state: this.state.userFormState,
+  //       email: this.state.userFormEmail,
+  //       image: this.state.image,
+  //     })
+  //   })
+  //   .then(this.setState({
+  //     userFormUsername: '',
+  //     userFormPassword: '',
+  //     userFormFirstName: '',
+  //     userFormLastName: '',
+  //     userFormAge: '',
+  //     userFormGender: '',
+  //     userFormZodiac: '',
+  //     userFormState: '',
+  //     userFormEmail: '',
+  //     image: '',
+  //   }))
+  //   .catch(err => console.log(err));
+  // }
 
   // const handleSubmit = (event) => {
   //   event.preventDefault();
@@ -134,83 +134,83 @@ export default class Signup extends Component {
             className="user"
             type="text"
             placeholder="Create Username"
-            value={this.props.userFormUsername}
-            onChange={event => this.updateFormUsername(event)}
+            value={this.props.state.userFormUsername}
+            onChange={this.props.updateFormUsername}
           />
           <br/>
           <input
             className="pass"
             type="text"
             placeholder="Create Password"
-            value={this.props.userFormPassword}
-            onChange={event => this.updateFormPassword(event)}
+            value={this.props.state.userFormPassword}
+            onChange={this.props.updateFormPassword}
           />
           <br/>
           <input
             className="first"
             type="text"
             placeholder="First Name"
-            value={this.props.userFormFirstName}
-            onChange={event => this.updateFormFirstName(event)}
+            value={this.props.state.userFormFirstName}
+            onChange={this.props.updateFormFirstName}
           />
           <br/>
           <input
             className="last"
             type="text"
             placeholder="Last Name"
-            value={this.props.userFormLastName}
-            onChange={event => this.updateFormLastName(event)}
+            value={this.props.state.userFormLastName}
+            onChange={this.props.updateFormLastName}
           />
           <br/>
           <input
             className="age"
             type="text"
             placeholder="Age"
-            value={this.props.userFormAge}
-            onChange={event => this.updateFormAge(event)}
+            value={this.props.state.userFormAge}
+            onChange={this.props.updateFormAge}
           />
           <br/>
           <input
             className="gender"
             type="text"
             placeholder="Gender"
-            value={this.props.userFormGender}
-            onChange={event => this.updateFormGender(event)}
+            value={this.props.state.userFormGender}
+            onChange={this.props.updateFormGender}
           />
           <br/>
           <input
             className="zodiac"
             type="text"
             placeholder="Zodiac Sign"
-            value={this.props.userFormZodiac}
-            onChange={event => this.updateFormZodiac(event)}
+            value={this.props.state.userFormZodiac}
+            onChange={this.props.updateFormZodiac}
           />
           <br/>
           <input
             className="state"
             type="text"
             placeholder="State"
-            value={this.props.userFormState}
-            onChange={event => this.updateFormState(event)}
+            value={this.props.state.userFormState}
+            onChange={this.props.updateFormState}
           />
           <br/>
           <input
             className="email"
             type="text"
             placeholder="Email"
-            value={this.props.userFormEmail}
-            onChange={event => this.updateFormEmail(event)}
+            value={this.props.state.userFormEmail}
+            onChange={this.props.updateFormEmail}
           />
           <br/>
           <input
             className="other-email"
             type="text"
             placeholder="Other Email"
-            value={this.props.userFormEmail}
-            onChange={event => this.updateFormEmail(event)}
+            value={this.props.state.userFormEmail}
+            onChange={this.props.updateFormEmail}
           />
           <br/>
-          <a href='/#/login'><button onClick={event => this.handleFormSubmit(event)}>Sign Up</button></a>
+          <a href='/#/login'><button onClick={this.props.handleFormSubmit}>Sign Up</button></a>
 
         </div>
 
