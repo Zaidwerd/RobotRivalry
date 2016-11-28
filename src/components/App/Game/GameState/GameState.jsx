@@ -249,6 +249,56 @@ class GameState extends Component {
     }
   }
 
+  incorrectAnswer() {
+    if(this.state.category === 'General Knowledge') {
+      console.log('GA matches');
+      this.setState({
+        num_generalknowledge_incorrect: this.state.num_generalknowledge_incorrect + 1,
+      })
+    } else if(this.state.category === 'Entertainment: Music') {
+      console.log('music matches!');
+      this.setState({
+        num_music_incorrect: this.state.num_music_incorrect + 1,
+      })
+    } else if(this.state.category === 'Sports') {
+      console.log('sports matches!');
+      this.setState({
+        num_sports_incorrect: this.state.num_sports_incorrect + 1,
+      })
+    } else if (this.state.category === 'Entertainment: Television') {
+      console.log('tv matches!');
+      this.setState({
+        num_television_incorrect: this.state.num_television_incorrect + 1,
+      })
+    } else if (this.state.category === 'Geography') {
+      console.log('geo matches!');
+      this.setState({
+        num_geography_incorrect: this.state.num_geography_incorrect + 1,
+      })
+    } else if (this.state.category === 'History') {
+      console.log('history matches!');
+      this.setState({
+        num_history_incorrect: this.state.num_history_incorrect + 1,
+      })
+    } else if (this.state.category === 'Politics') {
+      console.log('politics matches!');
+      this.setState({
+        num_politics_incorrect: this.state.num_politics_incorrect + 1,
+      })
+
+    } else if (this.state.category === 'Celebrities') {
+      console.log('celebrities match!');
+      this.setState({
+        num_celebrities_incorrect: this.state.num_celebrities_incorrect + 1,
+      })
+    } else if (this.state.category === 'Animals') {
+      console.log('Animals match!');
+      this.setState({
+        num_animals_incorrect: this.state.num_animals_incorrect + 1,
+      })
+    }
+  }
+
 
     nextQuestionA() {
     console.log('clicked');
@@ -256,6 +306,8 @@ class GameState extends Component {
     console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
     if(this.state.answerA === this.state.currentCorrectAnswer) {
       this.correctAnswer();
+    } else {
+      this.incorrectAnswer();
     }
     this.setState({
       counter: this.state.counter + 1,
@@ -275,6 +327,8 @@ class GameState extends Component {
     console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
     if(this.state.answerB === this.state.currentCorrectAnswer) {
       this.correctAnswer();
+    } else {
+      this.incorrectAnswer();
     }
     this.setState({
       counter: this.state.counter + 1,
@@ -293,6 +347,8 @@ class GameState extends Component {
     console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
     if(this.state.answerC === this.state.currentCorrectAnswer) {
       this.correctAnswer();
+    } else {
+      this.incorrectAnswer();
     }
     this.setState({
       counter: this.state.counter + 1,
@@ -311,6 +367,8 @@ class GameState extends Component {
     console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
     if(this.state.answerD === this.state.currentCorrectAnswer) {
       this.correctAnswer();
+    } else {
+      this.incorrectAnswer();
     }
     this.setState({
       counter: this.state.counter + 1,
