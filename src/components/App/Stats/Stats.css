@@ -52,3 +52,9 @@ body {
 	font-size: 50px;
 	letter-spacing: 2px;
 }
+
+.stat-buttons {
+	background-color: black;
+	text-align: center;
+	margin: 0px 10px 0px 10px;
+}

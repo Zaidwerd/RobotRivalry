@@ -22,7 +22,11 @@ class Stats extends Component {
           </div>
 
         </div>
-        
+        <div className="stat-buttons">
+        <button><a href='/#/startpage'>BACK</a></button>
+        <button><a href='/#/gamestate'>AGAIN</a></button> 
+        </div>
+
       </div>
     )
   }
