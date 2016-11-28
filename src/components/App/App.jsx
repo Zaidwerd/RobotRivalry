@@ -217,58 +217,58 @@ class App extends Component {
     })
   };
 
-  nextQuestionA() {
-    console.log('clicked');
-    console.log('ANSWER A: ', this.state.answerA);
-    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
-    if(this.state.answerA === this.state.currentCorrectAnswer) {
-      this.setState({q_correct: this.state.q_correct + 1});
-    }
-    this.setState({
-      counter: this.state.counter + 1,
-    })
-    this.getOneQuestion();
-  }
+  // nextQuestionA() {
+  //   console.log('clicked');
+  //   console.log('ANSWER A: ', this.state.answerA);
+  //   console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+  //   if(this.state.answerA === this.state.currentCorrectAnswer) {
+  //     this.setState({q_correct: this.state.q_correct + 1});
+  //   }
+  //   this.setState({
+  //     counter: this.state.counter + 1,
+  //   })
+  //   this.getOneQuestion();
+  // }
 
 
-    nextQuestionB() {
-    console.log('clicked');
-    console.log('ANSWER B: ', this.state.answerB);
-    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
-    if(this.state.answerB === this.state.currentCorrectAnswer) {
-      this.setState({q_correct: this.state.q_correct + 1});
-    }
-    this.setState({
-      counter: this.state.counter + 1,
-    })
-    this.getOneQuestion();
-  }
+  //   nextQuestionB() {
+  //   console.log('clicked');
+  //   console.log('ANSWER B: ', this.state.answerB);
+  //   console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+  //   if(this.state.answerB === this.state.currentCorrectAnswer) {
+  //     this.setState({q_correct: this.state.q_correct + 1});
+  //   }
+  //   this.setState({
+  //     counter: this.state.counter + 1,
+  //   })
+  //   this.getOneQuestion();
+  // }
 
-    nextQuestionC() {
-    console.log('clicked');
-    console.log('ANSWER C: ', this.state.answerC);
-    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
-    if(this.state.answerC === this.state.currentCorrectAnswer) {
-      this.setState({q_correct: this.state.q_correct + 1});
-    }
-    this.setState({
-      counter: this.state.counter + 1,
-    })
-    this.getOneQuestion();
-  }
+  //   nextQuestionC() {
+  //   console.log('clicked');
+  //   console.log('ANSWER C: ', this.state.answerC);
+  //   console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+  //   if(this.state.answerC === this.state.currentCorrectAnswer) {
+  //     this.setState({q_correct: this.state.q_correct + 1});
+  //   }
+  //   this.setState({
+  //     counter: this.state.counter + 1,
+  //   })
+  //   this.getOneQuestion();
+  // }
 
-    nextQuestionD() {
-    console.log('clicked');
-    console.log('ANSWER D: ', this.state.answerD);
-    console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
-    if(this.state.answerD === this.state.currentCorrectAnswer) {
-      this.setState({q_correct: this.state.q_correct + 1});
-    }
-    this.setState({
-      counter: this.state.counter + 1,
-    })
-    this.getOneQuestion();
-  }
+  //   nextQuestionD() {
+  //   console.log('clicked');
+  //   console.log('ANSWER D: ', this.state.answerD);
+  //   console.log('CORRECT ANSWER: ', this.state.currentCorrectAnswer);
+  //   if(this.state.answerD === this.state.currentCorrectAnswer) {
+  //     this.setState({q_correct: this.state.q_correct + 1});
+  //   }
+  //   this.setState({
+  //     counter: this.state.counter + 1,
+  //   })
+  //   this.getOneQuestion();
+  // }
 
 
 //added categories
