@@ -248,8 +248,10 @@ class GameState extends Component {
   render() {
     return(
       <div id="container">
-        <div id="q-cont">
-          <h3>{this.state.currentQuestion}</h3>
+      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
+
+        <div className="q-cont">
+          <h3 className="theQuestion">{this.state.currentQuestion}</h3>
 
           <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
           <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
@@ -257,8 +259,8 @@ class GameState extends Component {
           <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
         </div>
 
-        <div id='new-container'>
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
+
+        <div id='modal'>
          
           <div className="ugh">
             <div className='hOne'>
