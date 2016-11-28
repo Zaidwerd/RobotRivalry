@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Question from '../Question/question';
 import style from './GameState.css';
 let _ = require('underscore');
 
-class GameState extends Component {
 
   constructor(props){
     super();
@@ -17,6 +15,7 @@ class GameState extends Component {
       answerB: '',
       answerC: '',
       answerD: '',
+      boxPosition: 150,
       counter: 0,
       category: '',
       num_games_played: 0,
@@ -265,7 +264,20 @@ class GameState extends Component {
         num_animals_correct: this.state.num_animals_correct + 1,
       })
     }
+    const box = document.querySelector('#box')
+    console.log('worked')
+    // box.style.left += '300px'
+    this.setState({boxPosition: this.state.boxPosition + 150});
   }
+
+  // moveImage(){
+  //   if(currentCorrectAnswer){
+  //     const box = document.querySelector('#box')
+  //     let amountMoved = 10
+  //     let newPosition = 150 + amountMoved
+  //     box.style.left = newPosition
+  //   }
+  // }
 
   incorrectAnswer() {
     if(this.state.category === 'General Knowledge') {
@@ -374,6 +386,7 @@ class GameState extends Component {
   }
 
 
+
     nextQuestionA() {
     console.log('clicked');
     console.log('ANSWER A: ', this.state.answerA);
@@ -389,12 +402,10 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      // this.finishGame();
-      // this.finishGameAll();
-      // alert('Game done!');
+      this.finishGame();
+      this.finishGameAll();
+      alert('Game done!');
       // location.reload();
-      document.querySelector('.q-cont').style.display = 'none';
-      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -414,12 +425,10 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      // this.finishGame();
-      // this.finishGameAll();
-      // alert('Game done!');
+      this.finishGame();
+      this.finishGameAll();
+      alert('Game done!');
       // location.reload();
-      document.querySelector('.q-cont').style.display = 'none';
-      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -438,12 +447,10 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      // this.finishGame();
-      // this.finishGameAll();
-      // alert('Game done!');
+      this.finishGame();
+      this.finishGameAll();
+      alert('Game done!');
       // location.reload();
-      document.querySelector('.q-cont').style.display = 'none';
-      document.querySelector('.complete').style.display = 'block';
     }
   }
 
@@ -465,21 +472,12 @@ class GameState extends Component {
       // alert('Game done!');
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      // location.reload();
-      // this.finishGame();
-      // this.finishGameAll();
-      // alert('Game done!');
+      location.reload();
+      this.finishGame();
+      this.finishGameAll();
+      alert('Game done!');
       // location.reload();
     }
-  }
-
-
-  pageReload() {
-    location.reload();
-  }
-
-  statsPageLoad() {
-
   }
 
 
@@ -488,7 +486,6 @@ class GameState extends Component {
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
-        
         <div className="q-cont">
           <div className="qq">
             <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
@@ -511,31 +508,40 @@ class GameState extends Component {
                 </div>
                 <div className="box-container">
                   <div className='main-box'>
-
-                    <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
-                    <button  className="cat-button" onClick={this.props.getMusic}>Music</button>
-                    <button  className="cat-button" onClick={this.props.getTV}>Television</button>
-                    <button  className="cat-button" onClick={this.props.getSports}>Sports</button>
-                    <button  className="cat-button" onClick={this.props.getGeo}>Geography</button>
-                    <button  className="cat-button" onClick={this.props.getHistory}>History</button>
-                    <button  className="cat-button" onClick={this.props.getPolitics}>Politics</button>
-                    <button  className="cat-button" onClick={this.props.getCelebs}>Celebrities</button>
-                    <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
+                    <button  className="cat-button" onClick={this.props.getKnow}     className='category-box1 box'>General Knowledge</button>
+                    <button  className="cat-button" onClick={this.props.getMusic}    className='category-box2 box'>Music</button>
+                    <button  className="cat-button" onClick={this.props.getTV}       className='category-box3 box'>Television</button>
+                    <button  className="cat-button" onClick={this.props.getSports}   className='category-box4 box'>Sports</button>
+                    <button  className="cat-button" onClick={this.props.getGeo}      className='category-box5 box'>Geography</button>
+                    <button  className="cat-button" onClick={this.props.getHistory}  className='category-box6 box'>History</button>
+                    <button  className="cat-button" onClick={this.props.getPolitics} className='category-box7 box'>Politics</button>
+                    <button  className="cat-button" onClick={this.props.getCelebs}   className='category-box8 box'>Celebrities</button>
+                    <button  className="cat-button" onClick={this.props.getAnimals}  className='category-box9 box'>Animals</button>
                   </div>
                 </div>
+
+                <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+                <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+                <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
+                <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
+                <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
+                <div class="line"></div>
+                <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
               </div>
-            </div>
+
+
+       
 
             <div className="complete">
               <div className="cc">
                 <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
-                  <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
-                  <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button> 
+                <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
+                <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
       );
   }
 }

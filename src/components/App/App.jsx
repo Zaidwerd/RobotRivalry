@@ -114,7 +114,6 @@ class App extends Component {
 
   // LOG IN
     LogIn(a) {
-    alert('Logged in to Robot Rivalry!');
     console.log(a);
     this.setState({
       currentUser: a.id,
@@ -169,6 +168,7 @@ class App extends Component {
     }))
     .then(this.LogIn.bind(this))
     .catch(err => console.log(err));
+    document.querySelector('#modal2').style.display = 'block';
   }
 
 
@@ -358,6 +358,10 @@ class App extends Component {
 
   deleteUser() {
 
+  }
+
+  editButton() {
+    document.querySelector('.edit-modal').style.display = 'block';
   }
 
   // GAME LOGIC
@@ -867,7 +871,6 @@ class App extends Component {
 
 
 
-
   render(){
     return (
       <div id="app-container">
@@ -914,7 +917,7 @@ class App extends Component {
           incorrectAnswer: (() => this.incorrectAnswer()),
           finishGameAll: (() => this.finishGameAll()),
           finishGame: (() => this.finishGame()),
-          newAnswerA: (() => this.nextQuestionA()),
+          nextQuestionA: (() => this.nextQuestionA()),
           nextQuestionB: (() => this.nextQuestionB()),
           nextQuestionC: (() => this.nextQuestionC()),
           nextQuestionD: (() => this.nextQuestionD()),
@@ -928,7 +931,7 @@ class App extends Component {
           updateNewDifficulty: (() => this.updateNewDifficulty()),
           updateCreateBy: (() => this.updateCreatedBy()),
           submitQuestion: (() => this.submitQuestion()),
-
+          editButton: (() => this.editButton()),
 
         })}
 

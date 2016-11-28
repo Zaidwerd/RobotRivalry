@@ -18,15 +18,15 @@ body {
 
 .edit-modal {
 /*---TUTORIAL ON MODAL FROM W3SCHOOL---*/
-  display: block;
+  display: none;
   background-color: #1b1c1e;
   width: 100%;
   height: 100%;
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   top: 30px;
-  overflow: hidden; 
+  overflow: hidden;
   margin: 0px;
   padding: 0px;
 }
@@ -45,13 +45,13 @@ body {
   width: 100%;
   height: 100%;
   top: 30px;
-  position: fixed; 
+  position: fixed;
   /*overflow: hidden; */
 }
 
 .pro-list {
 	/*border: 1px solid white;*/
-  
+
 }
 
 .profile-li {
