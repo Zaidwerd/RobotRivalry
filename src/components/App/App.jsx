@@ -882,7 +882,6 @@ class App extends Component {
 
         {this.props.children && React.cloneElement(this.props.children,{
           state: this.state,
-          LogIn: (() => this.LogIn()),
           updatePassword: (event => this.updatePassword(event)),
           updateUsername: (event => this.updateUsername(event)),
           simpleAuth: (() => this.simpleAuth()),
