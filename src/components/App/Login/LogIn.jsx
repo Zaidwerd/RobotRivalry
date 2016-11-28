@@ -100,8 +100,6 @@ class LogIn extends Component {
             onChange={this.props.updatePassword}
             />
 
-            
-            <button className="login-button" onClick={() => this.simpleAuth()}> Log In </button>
 
             <br/>
             <button onClick={this.props.simpleAuth}> Log In </button>
@@ -115,12 +113,15 @@ class LogIn extends Component {
           </div>
 
         </div>
-        <div id='modal'>
+        <div id='modal2'>
           <h3>Welcome {this.props.state.login.username} to Robot Rivalry</h3>
 
           <a href="./#/profile">Account</a>
+          <br/>
           <a href="./#/startpage">Start Page</a>
+          <br/>
           <a href="./#/stats">Stats</a>
+          <br/>
 
         </div>
       </div>

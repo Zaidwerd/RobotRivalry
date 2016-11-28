@@ -114,7 +114,6 @@ class App extends Component {
 
   // LOG IN
     LogIn(a) {
-    alert('Logged in to Robot Rivalry!');
     console.log(a);
     this.setState({
       currentUser: a.id,
@@ -124,8 +123,6 @@ class App extends Component {
         loggedIn: true,
       },
     });
-    window.location()
-
   }
 
   // grab password from
@@ -171,6 +168,7 @@ class App extends Component {
     }))
     .then(this.LogIn.bind(this))
     .catch(err => console.log(err));
+    document.querySelector('#modal2').style.display = 'block';
   }
 
 

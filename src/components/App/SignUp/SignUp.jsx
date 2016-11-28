@@ -211,8 +211,6 @@ export default class Signup extends Component {
           />
           <br/>
 
-          <a href='/#/login'><button className="signup-button" onClick={event => this.handleFormSubmit(event)}>Sign Up</button></a>
-
           <a href='/#/login'><button onClick={this.props.handleFormSubmit}>Sign Up</button></a>
 
 
