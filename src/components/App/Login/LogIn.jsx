@@ -2,74 +2,74 @@ import React, { Component } from 'react';
 import style from './Login.css';
 
 class LogIn extends Component {
-  constructor(props) {
-  super();
+//   constructor(props) {
+//   super();
 
-  this.state = {
-    currentUser: null,
-    login: {
-      username: '',
-      password: '',
-      loggedIn: false,
-    }
-  }
-}
-  LogIn(a) {
-    alert('Logged in to Robot Rivalry!');
-    console.log(a);
-    this.setState({
-      currentUser: a.id,
-      login: {
-        username: '',
-        password: '',
-        loggedIn: true,
-      },
-    });
-  }
+//   this.state = {
+//     currentUser: null,
+//     login: {
+//       username: '',
+//       password: '',
+//       loggedIn: false,
+//     }
+//   }
+// }
+  // LogIn(a) {
+  //   alert('Logged in to Robot Rivalry!');
+  //   console.log(a);
+  //   this.setState({
+  //     currentUser: a.id,
+  //     login: {
+  //       username: '',
+  //       password: '',
+  //       loggedIn: true,
+  //     },
+  //   });
+  // }
 
-// grab password from
-  updatePassword(e) {
-    this.setState({
-      login: {
-        username: this.state.login.username,
-        password: e.target.value,
-        loggedIn: false,
-      }
-    });
-  }
+// // grab password from
+//   updatePassword(e) {
+//     this.setState({
+//       login: {
+//         username: this.state.login.username,
+//         password: e.target.value,
+//         loggedIn: false,
+//       }
+//     });
+//   }
 
-  updateUsername(e) {
-    this.setState({
-       login: {
-        username: e.target.value,
-        password: this.state.login.password,
-        loggedIn: false,
-      }
-    });
-  }
+//   updateUsername(e) {
+//     this.setState({
+//        login: {
+//         username: e.target.value,
+//         password: this.state.login.password,
+//         loggedIn: false,
+//       }
+//     });
+//   }
 
-  simpleAuth() {
-    fetch('/auth', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        username: this.state.login.username,
-        password: this.state.login.password,
-      }),
-    })
-    .then(r => r.json())
-    .then(this.setState({
-      login: {
-        username: '',
-        password: '',
-        loggedIn: false,
-      }
-    }))
-    .then(this.LogIn.bind(this))
-    .catch(err => console.log(err));
-  }
+//   simpleAuth() {
+//     fetch('/auth', {
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       method: 'POST',
+//       body: JSON.stringify({
+//         username: this.state.login.username,
+//         password: this.state.login.password,
+//       }),
+//     })
+//     .then(r => r.json())
+//     .then(this.setState({
+//       login: {
+//         username: '',
+//         password: '',
+//         loggedIn: false,
+//       }
+//     }))
+//     .then(this.LogIn.bind(this))
+//     .catch(err => console.log(err));
+//   }
 
 
   render(){
@@ -90,17 +90,17 @@ class LogIn extends Component {
             type="text"
             placeholder="Username"
             value={this.props.Username}
-            onChange={event => this.updateUsername(event)}
+            onChange={this.props.updateUsername}
             />
 
             <input className='pass'
             type="text"
             placeholder="Password"
             value={this.props.Password}
-            onChange={event => this.updatePassword(event)}
+            onChange={this.props.updatePassword}
             />
             <br/>
-            <button onClick={() => this.simpleAuth()}> Log In </button>
+            <button onClick={this.props.simpleAuth}> Log In </button>
             <br/>
 
             <p className="or">-or-</p>

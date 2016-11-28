@@ -4,8 +4,6 @@ import style from './App.css';
 import Login from './LogIn/LogIn.jsx';
 import SignUp from './SignUp/SignUp.jsx';
 import GameState from './Game/GameState/GameState.jsx';
-import Categories from './Game/Categories/Categories.jsx';
-import Levels from './Game/Levels/Levels.jsx';
 import Question from './Game/Question/Question.jsx';
 import StartPage from './StartPage/StartPage.jsx';
 import Stats from './Stats/Stats.jsx';
@@ -23,15 +21,16 @@ class App extends Component {
     super();
 
     this.state = {
-      // userFormUsername: '',
-      // userFormPassword: '',
-      // userFormFirstName: '',
-      // userFormLastName: '',
-      // userFormAge: '',
-      // userFormGender: '',
-      // userFormZodiac: '',
-      // userFormState: '',
-      // userFormEmail: '',
+      userFormUsername: '',
+      userFormPassword: '',
+      userFormFirstName: '',
+      userFormLastName: '',
+      userFormAge: '',
+      userFormGender: '',
+      userFormZodiac: '',
+      userFormState: '',
+      userFormEmail: '',
+      image: '',
       questions: [],
       difficulty:[],
       category:[],
@@ -50,16 +49,79 @@ class App extends Component {
       difficulty: '',
       counter: 0,
       token:'',
-      // newQuestion: '',
-      // newCorrectAnswer: '',
-      // newAnswerA: '',
-      // newAnswerB: '',
-      // newAnswerC: '',
-      // newAnswerD: '',
-      // newCategory: '',
-      // newDifficulty: '',
+      newQuestion: '',
+      newCorrectAnswer: '',
+      newAnswerA: '',
+      newAnswerB: '',
+      newAnswerC: '',
+      newAnswerD: '',
+      newCategory: '',
+      newDifficulty: '',
+      username: '',
+      password: '',
+      loggedIn: false,
     };
   }
+
+
+  // LOG IN
+    LogIn(a) {
+    alert('Logged in to Robot Rivalry!');
+    console.log(a);
+    this.setState({
+      currentUser: a.id,
+      login: {
+        username: '',
+        password: '',
+        loggedIn: true,
+      },
+    });
+  }
+
+  // grab password from
+  updatePassword(e) {
+    this.setState({
+      login: {
+        username: this.state.username,
+        password: e.target.value,
+        loggedIn: false,
+      }
+    });
+  }
+
+  updateUsername(e) {
+    this.setState({
+       login: {
+        username: e.target.value,
+        password: this.state.password,
+        loggedIn: false,
+      }
+    });
+  }
+
+  simpleAuth() {
+    fetch('/auth', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password,
+      }),
+    })
+    .then(r => r.json())
+    .then(this.setState({
+      login: {
+        username: '',
+        password: '',
+        loggedIn: false,
+      }
+    }))
+    .then(this.LogIn.bind(this))
+    .catch(err => console.log(err));
+  }
+
 
   // ADDING QUESTIONS
 
