@@ -66,6 +66,60 @@ class Stats extends Component {
               <li>Total Correct: {this.props.state.total_num_correct}</li>
               <li>Total Incorrect: {this.props.state.total_num_incorrect}</li>
               </ul>
+
+              <ul>
+              <li>General Knowledge Played: {this.props.state.num_generalknowledge_played}</li>
+              <li>General Knowledge Correct: {this.props.state.num_generalknowledge_correct}</li>
+              <li>General Knowledge Incorrect: {this.props.state.num_geography_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Music Played: {this.props.state.num_music_played}</li>
+              <li>Music Correct: {this.props.state.num_music_correct}</li>
+              <li>Music Incorrect: {this.props.state.num_music_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Sports Played: {this.props.state.num_sports_played}</li>
+              <li>Sports Correct: {this.props.state.num_sports_correct}</li>
+              <li>Sports Incorrect: {this.props.state.num_sports_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>TV Played: {this.props.state.num_television_played}</li>
+              <li>TV Correct: {this.props.state.num_television_correct}</li>
+              <li>TV Incorrect: {this.props.state.num_television_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Geography Played: {this.props.state.num_geography_played}</li>
+              <li>Geography Correct: {this.props.state.num_geography_correct}</li>
+              <li>Geography Incorrect: {this.props.state.num_geography_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>History Played: {this.props.state.num_history_played}</li>
+              <li>History Correct: {this.props.state.num_history_correct}</li>
+              <li>History Incorrect: {this.props.state.num_history_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Politics Played: {this.props.state.num_politics_played}</li>
+              <li>Politics Correct: {this.props.state.num_politics_correct}</li>
+              <li>Politics Incorrect: {this.props.state.num_politics_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Celebrities Played: {this.props.state.num_celebrities_played}</li>
+              <li>Celebrities Correct: {this.props.state.num_celebrities_correct}</li>
+              <li>Celebrities Incorrect: {this.props.state.num_celebrtities_incorrect}</li>
+              </ul>
+
+              <ul>
+              <li>Animals Played: {this.props.state.num_animals_played}</li>
+              <li>Animals Correct: {this.props.state.num_animals_correct}</li>
+              <li>Animals Incorrect: {this.props.state.num_animals_incorrect}</li>
+              </ul>
           </div>
 
           <div className="avi"></div>

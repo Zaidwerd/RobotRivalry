@@ -59,6 +59,7 @@ class App extends Component {
       // newAnswerC: '',
       // newAnswerD: '',
       // newCategory: '',
+      currentUser: null,
       login: {
         username: '',
         password: '',
@@ -127,7 +128,6 @@ class App extends Component {
 
   // grab password from
   updatePassword(e) {
-    console.log(this.state.username)
     this.setState({
       login: {
         username: this.state.login.username,
@@ -882,7 +882,7 @@ class App extends Component {
 
         {this.props.children && React.cloneElement(this.props.children,{
           state: this.state,
-          LogIn: (event => this.LogIn(event)),
+          LogIn: (() => this.LogIn()),
           updatePassword: (event => this.updatePassword(event)),
           updateUsername: (event => this.updateUsername(event)),
           simpleAuth: (() => this.simpleAuth()),

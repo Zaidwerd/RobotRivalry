@@ -28,25 +28,25 @@ class LogIn extends Component {
   // }
 
 // // grab password from
-//   updatePassword(e) {
-//     this.setState({
-//       login: {
-//         username: this.state.login.username,
-//         password: e.target.value,
-//         loggedIn: false,
-//       }
-//     });
-//   }
+  // updatePassword(e) {
+  //   this.setState({
+  //     login: {
+  //       username: this.state.login.username,
+  //       password: e.target.value,
+  //       loggedIn: false,
+  //     }
+  //   });
+  // }
 
-//   updateUsername(e) {
-//     this.setState({
-//        login: {
-//         username: e.target.value,
-//         password: this.state.login.password,
-//         loggedIn: false,
-//       }
-//     });
-//   }
+  // updateUsername(e) {
+  //   this.setState({
+  //      login: {
+  //       username: e.target.value,
+  //       password: this.state.login.password,
+  //       loggedIn: false,
+  //     }
+  //   });
+  // }
 
 //   simpleAuth() {
 //     fetch('/auth', {
@@ -89,14 +89,14 @@ class LogIn extends Component {
             <input className='user'
             type="text"
             placeholder="Username"
-            value={this.props.state.Username}
+            value={this.props.state.login.username}
             onChange={this.props.updateUsername}
             />
 
             <input className='pass'
             type="text"
             placeholder="Password"
-            value={this.props.state.Password}
+            value={this.props.state.login.password}
             onChange={this.props.updatePassword}
             />
             <br/>
