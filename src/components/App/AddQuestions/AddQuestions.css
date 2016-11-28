@@ -1,0 +1,82 @@
+body {
+  background-color: #1b1c1e;
+/*  background-image: url(futurama_bg.jpg);*/
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
+  background-size: 200% 200%;
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.submit-question {
+	display: block;
+
+}
+
+.submit-form {
+	padding: 0px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background: #1b1c1e;
+	flex-flow: column;
+	/*justify-content: center;*/
+		align-items: center;
+}
+
+.submitQ {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 100px;
+  margin: 20px 5px;
+}
+
+.newQ {
+	width: 500px;
+	height: 35px;
+	margin: 10px;
+	border: 1px solid white;
+	border-radius: 3px;
+	background-color: rgba(255,255,255, 0.2);
+	padding: 5px;
+	color: #000000;
+
+}
+
+.addQButton {
+	margin-left: 10px;
+	margin-bottom: 50px;
+	text-align: center;
+	width: auto;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 3px;
+	cursor: pointer;
+	background-color: transparent;
+
+	padding: 5px;
+	color: #fafafa;
+	font-variant: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	align-self: center;
+
+	transition: background-color 0.3s ease-out,
+          		color 0.2s ease-out,
+          		letter-spacing 0.2s ease-out,
+          		text-transform 0.2s ease-out;
+}
+.addQButton:hover {
+		/*font-family: 'Oswald', sans-serif;*/
+	background-color: rgba(255,255,255,0.8);
+	color: #333333;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: background-color 0.5s ease-out,
+              	color 0.5s ease-out,
+              	letter-spacing 0.1s ease-out,
+              	font-weight 0.3s ease-out,
+              	text-transform 0.1s ease-out;
+}
+

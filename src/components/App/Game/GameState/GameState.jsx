@@ -490,62 +490,51 @@ class GameState extends Component {
 
         
         <div className="q-cont">
-
           <div className="qq">
-            <h3 className="theQuestion">{this.state.currentQuestion}</h3>
-
-            <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
-            <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
-            <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
-            <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+            <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+            <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+            <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
+            <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
+            <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           </div>
-
-          <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
-
-          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
-          <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
-          <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
-          <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
-
         </div>
 
-        <div id='modal'>
-         
-          <div className="cat-content">
 
-          <div className="ugh-content">
+          <div id='modal'>
+           
+            <div className="cat-content">
 
-            <div className='hOne'>
-              <h1 className="catH1">CHOOSE A CATEGORY</h1>
+              <div className="ugh-content">
+
+                <div className='hOne'>
+                  <h1 className="catH1">CHOOSE A CATEGORY</h1>
+                </div>
+                <div className="box-container">
+                  <div className='main-box'>
+
+                    <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
+                    <button  className="cat-button" onClick={this.props.getMusic}>Music</button>
+                    <button  className="cat-button" onClick={this.props.getTV}>Television</button>
+                    <button  className="cat-button" onClick={this.props.getSports}>Sports</button>
+                    <button  className="cat-button" onClick={this.props.getGeo}>Geography</button>
+                    <button  className="cat-button" onClick={this.props.getHistory}>History</button>
+                    <button  className="cat-button" onClick={this.props.getPolitics}>Politics</button>
+                    <button  className="cat-button" onClick={this.props.getCelebs}>Celebrities</button>
+                    <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="box-container">
-              <div className='main-box'>
 
-                <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
-                <button  className="cat-button" onClick={this.props.getMusic}>Music</button>
-                <button  className="cat-button" onClick={this.props.getTV}>Television</button>
-                <button  className="cat-button" onClick={this.props.getSports}>Sports</button>
-                <button  className="cat-button" onClick={this.props.getGeo}>Geography</button>
-                <button  className="cat-button" onClick={this.props.getHistory}>History</button>
-                <button  className="cat-button" onClick={this.props.getPolitics}>Politics</button>
-                <button  className="cat-button" onClick={this.props.getCelebs}>Celebrities</button>
-                <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
+            <div className="complete">
+              <div className="cc">
+                <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
+                  <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
+                  <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button> 
               </div>
             </div>
           </div>
         </div>
-
-        <div className="complete">
-          <div className="cc">
-            <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
-              <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
-              <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button> 
-          </div>
-        </div>
-
-
-      </div>
-
 
       );
   }

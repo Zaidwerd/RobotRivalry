@@ -106,10 +106,12 @@ export default class AddQuestion extends Component {
 
   render() {
     return(
-      <container>
+      <div id="container">
         <div className="submit-question">
-
+        <div className="submit-form">
+        <h1 className="submitQ">SUBMIT A QUESTION</h1>
           <input
+            className="newQ"
             type="text"
             placeholder="Create Question"
             value={this.props.state.newQuestion}
@@ -117,6 +119,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter correct answer"
             value={this.props.state.newCorrectAnswer}
@@ -124,6 +127,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter first answer choice"
             value={this.props.state.newAnswerA}
@@ -131,6 +135,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter second answer choice"
             value={this.props.state.answerB}
@@ -138,6 +143,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter third answer choice"
             value={this.props.state.newAnswerC}
@@ -145,6 +151,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter fourth answer choice"
             value={this.props.state.newAnswerD}
@@ -152,6 +159,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter category"
             value={this.props.state.newCategory}
@@ -159,6 +167,7 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter difficulty"
             value={this.props.state.newDifficulty}
@@ -166,15 +175,17 @@ export default class AddQuestion extends Component {
           />
 
           <input
+            className="newQ"
             type="text"
             placeholder="Enter username"
             value={this.props.state.createdBy}
             onChange={this.props.updateCreatedBy}
           />
-
-          <button onClick={this.props.submitQuestion}> Submit Question </button>
+          <br/>
+          <button className="addQButton" onClick={this.props.submitQuestion}> Submit Question </button>
         </div>
-      </container>
+        </div>
+      </div>
       );
   }
 }
