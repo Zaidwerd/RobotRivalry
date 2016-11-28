@@ -5,6 +5,12 @@ import style from './Stats.css';
 
 
 class Stats extends Component {
+   constructor(props){
+    super();
+    setState{
+
+    }
+  }
 
   render() {
     return (
@@ -22,7 +28,7 @@ class Stats extends Component {
           </div>
 
         </div>
-        
+
       </div>
     )
   }
