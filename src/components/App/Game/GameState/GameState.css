@@ -7,13 +7,24 @@ body {
   background-size: 200% 200%;
   font-family: 'Oswald', sans-serif;
 }
+
+#container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 #modal {
   /*modal*/
   /*display: flex;
   flex-direction: column;
   justify-content: center;*/
-
+  display: block;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
 /*---TUTORIAL ON MODAL FROM W3SCHOOL---*/
+<<<<<<< HEAD
   /*display: none;*/ /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -23,15 +34,25 @@ body {
   height: 100%;
   overflow: hidden;
   margin: 30px;
+=======
+  /*display: none;*/ 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  top: 30px;
+  overflow: hidden; 
+  margin: 0px;
+>>>>>>> master
   padding: 0px;
 }
 
-.ugh-content {
+.cat-content {
+  display: block;
   margin: 0;
-
-  background-color: black;
-  width: 100%;
-  height: 100%;
+  /*padding: 50px;*/
+  /*background-size: cover;*/
+/*  width: 100%;
+  height: 100%;*/
 }
 
 .box-container {
@@ -43,7 +64,7 @@ justify-content: center;
 .main-box {
   width: 560px;
   height: 560px;
-  background-color: black;
+  background-color: #000000;
   margin: auto;
 
   position: absolute;
@@ -52,16 +73,9 @@ justify-content: center;
   justify-content: space-around;
 }
 
-.box {
-  position: relative;
-  width: 180px;
-  height: 180px;
+.hOne {
+margin: 0;
 }
-
-/*.hOne {
-  display: flex;
-  justify-content: center;
-}*/
 .catH1 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 70px;
@@ -72,13 +86,61 @@ justify-content: center;
   margin-bottom: 10px;
 }
 
+.cat-button {
+  position: relative;
+  width: 180px;
+  height: 180px;
+
+  border-radius: 2px;
+  padding: 5px;
+  color: #fafafa;
+  cursor: pointer;
+  font-variant: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid white;
+
+  align-self: center;
+
+  transition: background-color 0.3s ease-out,
+              color 0.2s ease-out,
+              letter-spacing 0.2s ease-out,
+              text-transform 0.2s ease-out;
+}
+.cat-button:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease-out,
+                color 0.5s ease-out,
+                letter-spacing 0.1s ease-out,
+                font-weight 0.3s ease-out,
+                text-transform 0.1s ease-out;
+}
+
+
+
 .q-cont {
   z-index: 0;
-  background-color: black;
-  display: none;
+  background-color: #000000;
+  display: block;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 30px;
+  position: fixed; 
+  /*overflow: hidden; */
+}
+.qq {
+  display: block;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
 }
 
 .q-button {
@@ -86,7 +148,35 @@ justify-content: center;
   height: 100px;
   margin: 10px;
   padding: 0;
+  position: relative;
+  border-radius: 2px;
+  color: #fafafa;
+  cursor: pointer;
+  font-variant: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid white;
+  align-self: center;
+
+  transition: background-color 0.3s ease-out,
+              color 0.2s ease-out,
+              letter-spacing 0.2s ease-out,
+              text-transform 0.2s ease-out;
 }
+.q-button:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease-out,
+                color 0.5s ease-out,
+                letter-spacing 0.1s ease-out,
+                font-weight 0.3s ease-out,
+                text-transform 0.1s ease-out;
+}
+
 
 .theQuestion {
   font-size: 50px;
@@ -95,8 +185,13 @@ justify-content: center;
 }
 
 .complete {
+  display: block;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   background-color: orange;
+<<<<<<< HEAD
 }
 
 #box {
@@ -112,3 +207,64 @@ justify-content: center;
   background-image: url("line.png");
   background-size: 500px;
 }*/
+=======
+  font-size: 50px;
+  padding-top: 0;
+  text-align: center;
+  top: 30px;
+  position: fixed; 
+}
+
+.ccbutton {
+  font-family: /*'Oswald', sans-serif;*/ georgia;
+  /*margin: 0px 10px;*/
+
+  width: 100px;
+  height: 38px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  color: #fafafa;
+  cursor: pointer;
+  font-variant: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin: 50px;
+  background: transparent;
+  border: 1px solid white;
+
+text-decoration: none;
+
+  align-self: center;
+
+  transition: background-color 0.3s ease-out,
+              color 0.2s ease-out,
+              letter-spacing 0.2s ease-out,
+              text-transform 0.2s ease-out;
+}
+.ccbutton:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease-out,
+                color 0.5s ease-out,
+                letter-spacing 0.1s ease-out,
+                font-weight 0.3s ease-out,
+                text-transform 0.1s ease-out;
+}
+
+.cclink {
+  text-decoration: none;
+  color: #fafafa;
+}
+.cclink:hover {
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+>>>>>>> master

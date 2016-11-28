@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Question from '../Question/question';
 import style from './GameState.css';
 let _ = require('underscore');
 
-class GameState extends Component {
+
   constructor(props){
     super();
 
@@ -480,6 +479,8 @@ class GameState extends Component {
       // location.reload();
     }
   }
+=======
+>>>>>>> master
 
 
   render() {
@@ -488,15 +489,13 @@ class GameState extends Component {
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
         <div className="q-cont">
-          <h3 className="theQuestion">{this.state.currentQuestion}</h3>
-
-          <button className="q-button" onClick={event => this.nextQuestionA(event)}> {this.state.answerA}</button>
-          <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
-          <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
-          <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+          <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+          <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
+          <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
+          <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           <div class="line"></div>
-        <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
-
+          <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
         </div>
 
 
@@ -508,15 +507,15 @@ class GameState extends Component {
             </div>
             <div className="box-container">
               <div className='main-box'>
-                <button onClick={event => this.getKnow(event)}     className='category-box1 box'>General Knowledge</button>
-                <button onClick={event => this.getMusic(event)}    className='category-box2 box'>Music</button>
-                <button onClick={event => this.getTV(event)}       className='category-box3 box'>Television</button>
-                <button onClick={event => this.getSports(event)}   className='category-box4 box'>Sports</button>
-                <button onClick={event => this.getGeo(event)}      className='category-box5 box'>Geography</button>
-                <button onClick={event => this.getHistory(event)}  className='category-box6 box'>History</button>
-                <button onClick={event => this.getPolitics(event)} className='category-box7 box'>Politics</button>
-                <button onClick={event => this.getCelebs(event)}   className='category-box8 box'>Celebrities</button>
-                <button onClick={event => this.getAnimals(event)}  className='category-box9 box'>Animals</button>
+                <button onClick={this.props.getKnow}     className='category-box1 box'>General Knowledge</button>
+                <button onClick={this.props.getMusic}    className='category-box2 box'>Music</button>
+                <button onClick={this.props.getTV}       className='category-box3 box'>Television</button>
+                <button onClick={this.props.getSports}   className='category-box4 box'>Sports</button>
+                <button onClick={this.props.getGeo}      className='category-box5 box'>Geography</button>
+                <button onClick={this.props.getHistory}  className='category-box6 box'>History</button>
+                <button onClick={this.props.getPolitics} className='category-box7 box'>Politics</button>
+                <button onClick={this.props.getCelebs}   className='category-box8 box'>Celebrities</button>
+                <button onClick={this.props.getAnimals}  className='category-box9 box'>Animals</button>
               </div>
             </div>
           </div>
@@ -524,6 +523,8 @@ class GameState extends Component {
 
         <div className="complete">
           <h2>YAY! YOU HAVE COMPLETED THE GAME</h2>
+          <button className="ccbutton"><a href="/#/stats" className="cclink">STATS</a></button>
+          <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button>
         </div>
 
 

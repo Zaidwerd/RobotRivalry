@@ -13,7 +13,7 @@ body {
 	/*overflow: hidden;*/
 }
 
-/*#cont {
+/*#container {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -83,16 +83,23 @@ body {
 	margin-left: 10px; 
 	margin-right: 10px;
 	padding: 10px;
+
 }
 .alink {
 	color: #ffffff;
+		text-decoration: none;
+		font-weight: lighter;
+}
+.alink:hover {
+	color: #7f9d9f;
+	font-weight: normal;
 }
 
-span {
+/*span {
 	padding: 5px;
-}
+}*/
 
-h1 {
+.welcome-hOne {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 150px;
 	letter-spacing: 2px;
