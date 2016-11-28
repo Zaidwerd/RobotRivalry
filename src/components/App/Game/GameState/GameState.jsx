@@ -264,7 +264,21 @@ class GameState extends Component {
         num_animals_correct: this.state.num_animals_correct + 1,
       })
     }
+    const box = document.querySelector('#box')
+    let startPosition = 150px;
+    let amountMoved = 50px;
+    let newPosition = startPosition + amountMoved;
+    box.style.left = newPosition
   }
+
+  // moveImage(){
+  //   if(currentCorrectAnswer){
+  //     const box = document.querySelector('#box')
+  //     let amountMoved = 10
+  //     let newPosition = 150 + amountMoved
+  //     box.style.left = newPosition
+  //   }
+  // }
 
   incorrectAnswer() {
     if(this.state.category === 'General Knowledge') {
@@ -373,6 +387,7 @@ class GameState extends Component {
   }
 
 
+
     nextQuestionA() {
     console.log('clicked');
     console.log('ANSWER A: ', this.state.answerA);
@@ -479,11 +494,12 @@ class GameState extends Component {
           <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
           <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
           <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
+        <div id="box"></div>
         </div>
 
 
         <div id='modal'>
-         
+
           <div className="ugh-content">
             <div className='hOne'>
               <h1 className="catH1">CHOOSE A CATEGORY</h1>
