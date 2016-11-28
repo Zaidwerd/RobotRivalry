@@ -16,6 +16,7 @@ class GameState extends Component {
       answerB: '',
       answerC: '',
       answerD: '',
+      boxPosition: 150,
       counter: 0,
       category: '',
       num_games_played: 0,
@@ -265,10 +266,9 @@ class GameState extends Component {
       })
     }
     const box = document.querySelector('#box')
-    let startPosition = 150px;
-    let amountMoved = 50px;
-    let newPosition = startPosition + amountMoved;
-    box.style.left = newPosition
+    console.log('worked')
+    // box.style.left += '300px'
+    this.setState({boxPosition: this.state.boxPosition + 150});
   }
 
   // moveImage(){
@@ -494,7 +494,9 @@ class GameState extends Component {
           <button className="q-button" onClick={event => this.nextQuestionB(event)}>{this.state.answerB}</button>
           <button className="q-button" onClick={event => this.nextQuestionC(event)}>{this.state.answerC}</button>
           <button className="q-button" onClick={event => this.nextQuestionD(event)}>{this.state.answerD}</button>
-        <div id="box"></div>
+        <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
+
+
         </div>
 
 
