@@ -299,6 +299,62 @@ class GameState extends Component {
     }
   }
 
+  finishGameAll() {
+    this.setState({
+
+    })
+  }
+
+  finishGame() {
+    if(this.state.category === 'General Knowledge') {
+      console.log('GA matches');
+      this.setState({
+        num_generalknowledge_played: this.state.num_generalknowledge_played + 1,
+      })
+    } else if(this.state.category === 'Entertainment: Music') {
+      console.log('music matches!');
+      this.setState({
+        num_music_played: this.state.num_music_played + 1,
+      })
+    } else if(this.state.category === 'Sports') {
+      console.log('sports matches!');
+      this.setState({
+        num_sports_played: this.state.num_sports_played + 1,
+      })
+    } else if (this.state.category === 'Entertainment: Television') {
+      console.log('tv matches!');
+      this.setState({
+        num_television_played: this.state.num_television_played + 1,
+      })
+    } else if (this.state.category === 'Geography') {
+      console.log('geo matches!');
+      this.setState({
+        num_geography_played: this.state.num_geography_played + 1,
+      })
+    } else if (this.state.category === 'History') {
+      console.log('history matches!');
+      this.setState({
+        num_history_played: this.state.num_history_played + 1,
+      })
+    } else if (this.state.category === 'Politics') {
+      console.log('politics matches!');
+      this.setState({
+        num_politics_played: this.state.num_politics_played + 1,
+      })
+
+    } else if (this.state.category === 'Celebrities') {
+      console.log('celebrities match!');
+      this.setState({
+        num_celebrities_played: this.state.num_celebrities_played + 1,
+      })
+    } else if (this.state.category === 'Animals') {
+      console.log('Animals match!');
+      this.setState({
+        num_animals_played: this.state.num_animals_played + 1,
+      })
+    }
+  }
+
 
     nextQuestionA() {
     console.log('clicked');
@@ -315,8 +371,9 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.finishGame();
       alert('Game done!');
-      location.reload();
+      // location.reload();
     }
   }
 
@@ -336,8 +393,9 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.finishGame();
       alert('Game done!');
-      location.reload();
+      // location.reload();
     }
   }
 
@@ -356,8 +414,9 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.finishGame();
       alert('Game done!');
-      location.reload();
+      // location.reload();
     }
   }
 
@@ -376,8 +435,9 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.finishGame();
       alert('Game done!');
-      location.reload();
+      // location.reload();
     }
   }
 
