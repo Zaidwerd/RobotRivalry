@@ -1,0 +1,9 @@
+
+.profile-cont {
+
+}
+
+.pro-list {
+	display: flex;
+	flex-direction: column;
+}

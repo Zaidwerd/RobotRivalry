@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import style from './Levels.css';
+// import React, { Component } from 'react';
+// import style from './Levels.css';
 
-class Levels extends Component {
-  render() {
-    return (
-      <div>Levels</div>
-      )
-  }
+// class Levels extends Component {
+//   render() {
+//     return (
+//       <div>Levels</div>
+//       )
+//   }
 
-}
-export default Levels;
+// }
+// export default Levels;

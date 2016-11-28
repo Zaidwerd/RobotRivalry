@@ -24,7 +24,6 @@ ReactDOM.render((
       <Route path="/startpage" component={StartPage}/>
       <Route path="/stats" component={Stats}/>
       <Route path="/categories" component={Categories}/>
-      <Route path="/levels" component={Levels}/>
       <Route path="/gamestate" component={GameState}/>
       <Route path="/question" component={Question}/>
       <Route path="/addQuestions" component={AddQuestion}/>
