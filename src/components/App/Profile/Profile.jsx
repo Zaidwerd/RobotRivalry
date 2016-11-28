@@ -89,9 +89,9 @@ class Profile extends Component {
   render() {
     return(
       <div id="container">
+
         <div className="profile-cont">
           <ul className="pro-list">
-
             <li className="profile-li">Username: {this.state.username}</li>
             <li className="profile-li">First Name: {this.state.first_name}</li>
             <li className="profile-li">Last Name: {this.state.last_name}</li>
@@ -109,13 +109,16 @@ class Profile extends Component {
             <li>zodiac: {this.props.state.zodiac}</li>
             <li>state: {this.props.state.state}</li>
             <li>email: {this.props.state.email}</li>
-
           </ul>
+        
+
           <div className="edit-button-cont">
-        <button className="edit-user">Edit User</button>
-        <button className="delete-user" onClick={event => this.deleteUser(event)}>Delete User</button>
+            <button className="edit-user">Edit User</button>
+            <button className="delete-user" onClick={event => this.deleteUser(event)}>Delete User</button>
+            <button className="submit-q"><a className="submitquest" href="/addQuestions"> Submit Question</a></button>
+
           </div>
-      </div>
+        </div>
 
 
 

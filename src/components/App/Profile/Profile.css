@@ -65,7 +65,7 @@ body {
     margin: 30px;
 }
 
-.edit-user, .delete-user {
+.edit-user, .delete-user, .submit-q {
   margin: 10px;
   position: relative;
   width: auto;
@@ -85,7 +85,7 @@ body {
               letter-spacing 0.2s ease-out,
               text-transform 0.2s ease-out;
 }
-.edit-user:hover, .delete-user:hover {
+.edit-user:hover, .delete-user:hover, .submit-q:hover {
   background-color: rgba(255,255,255,0.8);
   color: #333333;
   font-weight: bold;
