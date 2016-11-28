@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
 import Question from '../Question/question';
 import style from './GameState.css';
+let _ = require('underscore');
 
 class GameState extends Component {
   constructor(props){
     super();
+
+    this.state = {
+      questions: [],
+      currentQuestion: '',
+      currentAnswers: [],
+      currentCorrectAnswer: '',
+      answerA: '',
+      answerB: '',
+      answerC: '',
+      answerD: '',
+      counter: 0,
+    };
+
   }
 
   getKnow(){
@@ -16,6 +30,7 @@ class GameState extends Component {
         questions: data
       })
       console.log(this.state.questions);
+      this.getOneQuestion();
       })
       .catch(error => console.log('Error: ', error));
   }
@@ -125,6 +140,29 @@ class GameState extends Component {
   }
 
 
+  getOneQuestion() {
+    // put all answers into one array
+    let answerArray = [this.state.questions[this.state.counter].answera, this.state.questions[this.state.counter].answerb, this.state.questions[this.state.counter].answerc, this.state.questions[this.state.counter].answerd];
+    console.log(answerArray);
+    let shuffledAnswerArray = _.shuffle(answerArray);
+
+    // clean question text
+    // let questionDirty1 = this.state.questions[this.state.counter].question;
+    // let questionClean1 = questionDirty1.replace(/&#039;/g , "'");
+    // let questionClean2 = questionClean1.replace(/&quot;/g , '"');
+
+    this.setState({
+      currentQuestion: this.state.questions[this.state.counter].question,
+      currentCorrectAnswer: this.state.questions[this.state.counter].correct_answer,
+      currentAnswers: shuffledAnswerArray,
+      answerA: shuffledAnswerArray[0],
+      answerB: shuffledAnswerArray[1],
+      answerC: shuffledAnswerArray[2],
+      answerD: shuffledAnswerArray[3],
+      counter: this.state.counter +1,
+    })
+  };
+
 
   render() {
 
@@ -133,14 +171,12 @@ class GameState extends Component {
       <container>
         <h2> Scott hello </h2>
 
-        <button onClick={this.props.getQuestions}> Get questions </button>
+        <h3>{this.state.currentQuestion}</h3>
 
-        <h3>{this.props.question}</h3>
-
-        <button onClick={this.props.nextQuestionA}> {this.props.answerA}</button>
-        <button onClick={this.props.nextQuestionB}>{this.props.answerB}</button>
-        <button onClick={this.props.nextQuestionC}>{this.props.answerC}</button>
-        <button onClick={this.props.nextQuestionD}>{this.props.answerD}</button>
+        <button onClick={this.props.nextQuestionA}> {this.state.answerA}</button>
+        <button onClick={this.props.nextQuestionB}>{this.state.answerB}</button>
+        <button onClick={this.props.nextQuestionC}>{this.state.answerC}</button>
+        <button onClick={this.props.nextQuestionD}>{this.state.answerD}</button>
 
       <div id='new-container'>
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
