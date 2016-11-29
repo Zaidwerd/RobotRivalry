@@ -39,7 +39,7 @@ class Stats extends Component {
               <ul>
               <li>General Knowledge Played: {this.props.state.num_generalknowledge_played}</li>
               <li>General Knowledge Correct: {this.props.state.num_generalknowledge_correct}</li>
-              <li>General Knowledge Incorrect: {this.props.state.num_geography_incorrect}</li>
+              <li>General Knowledge Incorrect: {this.props.state.num_generalknowledge_incorrect}</li>
               </ul>
 
               <ul>
@@ -91,18 +91,18 @@ class Stats extends Component {
               </ul>
           </div>
           </div>
-        
+
         <div className="avi"></div>
 
-          
-        
+
+
 
 
 
         <div className="stat-button-cont">
 
           <button className="sb"><a className="stata" href='/#/startpage'>BACK</a></button>
-          <button className="sb"><a className="stata" href='/#/gamestate'>PLAY</a></button> 
+          <button className="sb"><a className="stata" href='/#/gamestate'>PLAY</a></button>
 
         </div>
 
