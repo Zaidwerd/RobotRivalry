@@ -403,8 +403,8 @@ class GameState extends Component {
     } else {
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      // this.finishGame();
-      // this.finishGameAll();
+      this.finishGame();
+      this.finishGameAll();
       // alert('Game done!');
       // location.reload();
     }
@@ -428,8 +428,8 @@ class GameState extends Component {
     } else {
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      // this.finishGame();
-      // this.finishGameAll();
+      this.finishGame();
+      this.finishGameAll();
       // alert('Game done!');
       // location.reload();
     }
@@ -452,8 +452,8 @@ class GameState extends Component {
     } else {
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      // this.finishGame();
-      // this.finishGameAll();
+      this.finishGame();
+      this.finishGameAll();
       // alert('Game done!');
       // location.reload();
     }
@@ -474,12 +474,10 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      // alert('Game done!');
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      // location.reload();
-      // this.finishGame();
-      // this.finishGameAll();
+      this.finishGame();
+      this.finishGameAll();
       // alert('Game done!');
       // location.reload();
     }
@@ -506,7 +504,7 @@ class GameState extends Component {
 
 
           <div id='modal'>
-           
+
             <div className="cat-content">
 
               <div className="ugh-content">
@@ -529,7 +527,7 @@ class GameState extends Component {
                   </div>
                 </div>
 
-       
+
 
             <div className="complete">
               <div className="cc">
