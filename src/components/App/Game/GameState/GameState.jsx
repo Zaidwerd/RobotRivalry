@@ -472,10 +472,10 @@ class GameState extends Component {
       // alert('Game done!');
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
-      location.reload();
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      // location.reload();
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -485,7 +485,7 @@ class GameState extends Component {
   render() {
     return(
       <div id="container">
-      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
         <div className="q-cont">
           <div className="qq">
@@ -495,18 +495,7 @@ class GameState extends Component {
             <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
             <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           </div>
-
-          <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
-
-          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
-          <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
-          <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
-          <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
-          <div class="line"></div>
-          <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
-
-        </div>
-
+          </div>
 
           <div id='modal'>
            
@@ -517,6 +506,7 @@ class GameState extends Component {
                 <div className='hOne'>
                   <h1 className="catH1">CHOOSE A CATEGORY</h1>
                 </div>
+
                 <div className="box-container">
                   <div className='main-box'>
                     <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
@@ -531,16 +521,6 @@ class GameState extends Component {
                   </div>
                 </div>
 
-                <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
-                <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
-                <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
-                <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
-                <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
-                <div class="line"></div>
-                <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
-              </div>
-
-
        
 
             <div className="complete">
@@ -550,9 +530,11 @@ class GameState extends Component {
                 <button className="ccbutton" onClick={event => this.pageReload(event)}>AGAIN</button>
               </div>
             </div>
+
           </div>
-        </div>
       </div>
+    </div>
+    </div>
       );
   }
 }
