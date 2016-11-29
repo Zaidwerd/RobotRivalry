@@ -136,6 +136,7 @@ class App extends Component {
         loggedIn: true,
       },
     });
+    document.querySelector('#modal2').style.display = 'block';
   }
 
   // grabs the password from the login form
@@ -182,7 +183,6 @@ class App extends Component {
     }))
     .then(this.LogIn.bind(this))
     .catch(err => console.log(err));
-    document.querySelector('#modal2').style.display = 'block';
   }
 
   // SIGN UP PAGE
