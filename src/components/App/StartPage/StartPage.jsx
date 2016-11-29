@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './starterBG.jpg';
+import './starterBG-edit.jpg';
 import style from './StartPage.css';
 import { Link } from 'react-router';
 
