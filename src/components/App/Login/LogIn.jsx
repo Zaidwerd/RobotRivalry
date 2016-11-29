@@ -44,16 +44,18 @@ class LogIn extends Component {
           </div>
 
         </div>
+
         <div id='modal2'>
-          <h3>Welcome {this.props.state.login.username} to Robot Rivalry</h3>
+          <div className="modal2cont">
+          <h3 className="welcometo">Welcome {this.props.state.login.username} to Robot Rivalry</h3>
 
-          <a href="./#/profile">Account</a>
+          <a className="loglink" href="./#/profile">Account</a>
           <br/>
-          <a href="./#/startpage">Start Page</a>
+          <a className="loglink" href="./#/startpage">Start Page</a>
           <br/>
-          <a href="./#/stats">Stats</a>
+          <a className="loglink" href="./#/stats">Stats</a>
           <br/>
-
+          </div>
         </div>
       </div>
     )

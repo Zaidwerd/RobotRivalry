@@ -41,24 +41,6 @@ class App extends Component {
       answerD: '',
       counter: 0,
       category: '',
-      // questions: [],
-      // currentQuestion: '',
-      // currentAnswers: [],
-      // currentCorrectAnswer: '',
-      // answerA: '',
-      // answerB: '',
-      // answerC: '',
-      // answerD: '',
-      // category: '',
-      // difficulty: '',
-      // counter: 0,
-      // newQuestion: '',
-      // newCorrectAnswer: '',
-      // newAnswerA: '',
-      // newAnswerB: '',
-      // newAnswerC: '',
-      // newAnswerD: '',
-      // newCategory: '',
       currentUser: null,
       login: {
         username: '',
@@ -112,20 +94,51 @@ class App extends Component {
   }
 
 
-  // LOG IN
+  // When a user logs in, pull all of their information in the database and save it in the state.
+  // This will enable the game to updatea  users play count / record across the various categories.
     LogIn(a) {
     console.log(a);
     this.setState({
       currentUser: a.id,
+      num_games_played: a.num_games_played,
+      total_num_correct: a.total_num_correct,
+      total_num_incorrect: a.total_num_incorrect,
+      num_generalknowledge_played: a.num_generalknowledge_played,
+      num_generalknowledge_correct: a.num_generalknowledge_correct,
+      num_generalknowledge_incorrect: a.num_generalknowledge_incorrect,
+      num_music_played: a.num_music_played,
+      num_music_correct: a.num_music_correct,
+      num_music_incorrect: a.num_music_incorrect,
+      num_sports_played: a.num_sports_played,
+      num_sports_correct: a.num_sports_correct,
+      num_sports_incorrect: a.num_sports_incorrect,
+      num_television_played: a.num_television_played,
+      num_television_correct: a.num_television_correct,
+      num_television_incorrect: a.num_television_incorrect,
+      num_geography_played: a.num_geography_played,
+      num_geography_correct: a.num_geography_correct,
+      num_geography_incorrect: a.num_geography_incorrect,
+      num_history_played: a.num_history_played,
+      num_history_correct: a.num_history_correct,
+      num_history_incorrect: a.num_history_incorrect,
+      num_politics_played: a.num_politics_played,
+      num_politics_correct: a.num_politics_correct,
+      num_politics_incorrect: a.num_politics_incorrect,
+      num_celebrities_played: a.num_celebrities_played,
+      num_celebrities_correct: a.num_celebrities_correct,
+      num_celebrtities_incorrect: a.num_celebrtities_incorrect,
+      num_animals_played: a.num_animals_played,
+      num_animals_correct: a.num_animals_correct,
+      num_animals_incorrect: a.num_animals_incorrect,
       login: {
-        username: '',
-        password: '',
+        username: a.username,
+        password: a.password,
         loggedIn: true,
       },
     });
   }
 
-  // grab password from
+  // grabs the password from the login form
   updatePassword(e) {
     this.setState({
       login: {
@@ -135,7 +148,7 @@ class App extends Component {
       }
     });
   }
-
+  // grabs the username from the login form
   updateUsername(e) {
     this.setState({
        login: {
@@ -146,6 +159,7 @@ class App extends Component {
     });
   }
 
+  // user authorization
   simpleAuth() {
     console.log("got here")
     fetch('/auth', {
@@ -171,36 +185,9 @@ class App extends Component {
     document.querySelector('#modal2').style.display = 'block';
   }
 
-
-  // ADDING QUESTIONS
-
-
-  // submitQuestion() {
-  //   console.log('NUMBER: ', this.state.counter);
-  //   fetch('/questions', {
-  //     headers: {
-  //       'Content-type': 'application/json; charset=UTF-8',
-  //     },
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       question: this.state.newQuestion,
-  //       correct_answer: this.state.newCorrectAnswer,
-  //       answerA: this.state.newAnswerA,
-  //       answerB: this.state.newAnswerB,
-  //       answerC: this.state.newAnswerC,
-  //       answerD: this.state.newAnswerD,
-  //       category: this.state.newCategory,
-  //       difficulty: this.state.newDifficulty,
-  //     })
-  //   })
-  //   .catch(err => console.log(err));
-  // }
-
   // SIGN UP PAGE
 
-
-  // Scott's Sign Up
-
+// updates each of the sign up fields
   updateFormUsername(e) {
     this.setState({
       userFormUsername: e.target.value,
@@ -256,6 +243,7 @@ class App extends Component {
     });
   }
 
+  // submits the registration form
   handleFormSubmit() {
     fetch('/users', {
       headers: {
@@ -314,25 +302,6 @@ class App extends Component {
     })
   }
 
-//   getUser(){
-//     console.log('User');
-//     fetch('/users/')
-//       .then(r => r.json())
-//       .then((user) => {
-//         this.setState({
-//           username: user.username,
-//           first_name: user.first_name,
-//           last_name: user.last_name,
-//           age: user.age,
-//           gender: user.gender,
-//           zodiac: user.zodiac,
-//           state: user.state,
-//           email: user.email,
-//         })
-//       })
-//     .catch(error => console.log(error));
-// }
-
   submitEdit() {
       console.log('adding question!');
       fetch('/users', {
@@ -356,6 +325,7 @@ class App extends Component {
       .catch(err => console.log(err));
     }
 
+  // will be finished at a later date... :)
   deleteUser() {
 
   }
@@ -366,6 +336,9 @@ class App extends Component {
 
   // GAME LOGIC
 
+  // Pulls ten questions from the Gereral Knowledge category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getKnow(){
     console.log('General Knowledge');
     fetch('/questions/misc')
@@ -382,6 +355,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Music category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getMusic(){
     console.log('music');
     fetch('/questions/music')
@@ -398,6 +374,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the TV category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getTV(){
     console.log('tv');
     fetch('/questions/tv')
@@ -414,6 +393,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Sports category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getSports(){
     console.log('sports');
     fetch('/questions/sports')
@@ -430,6 +412,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Geography category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getGeo(){
     console.log('geography');
     fetch('/questions/geo')
@@ -446,6 +431,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the History category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getHistory(){
     console.log('history')
     fetch('/questions/history')
@@ -462,6 +450,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Politics category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getPolitics(){
     console.log('politics');
     fetch('/questions/politics')
@@ -478,6 +469,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Celebrities category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getCelebs(){
     console.log('celebrities');
     fetch('/questions/celebs')
@@ -494,6 +488,9 @@ class App extends Component {
       document.querySelector('.q-cont').style.display = 'block';
   }
 
+  // Pulls ten questions from the Animals category and saves them in state as Questions.
+  // Once the category is selected, the category selection box will disappear and the first question
+  // will be displayed.
   getAnimals(){
     console.log('animals');
     fetch('/questions/animals')
@@ -511,6 +508,8 @@ class App extends Component {
   }
 
 
+  // Displays the question and answer choices on the page. The function also shuffles the answer choices
+  // so that they do not appear in the same order every time the function is called.
   getOneQuestion() {
     // put all answers into one array
     let answerArray = [this.state.questions[this.state.counter].answera, this.state.questions[this.state.counter].answerb, this.state.questions[this.state.counter].answerc, this.state.questions[this.state.counter].answerd];
@@ -530,6 +529,8 @@ class App extends Component {
     })
   };
 
+  // If the user answers a question correctly, the total number of questions answered
+  // correctly in that category (which is stored in the state) will increase by one.
   correctAnswer() {
     if(this.state.category === 'General Knowledge') {
       console.log('GA matches');
@@ -580,6 +581,8 @@ class App extends Component {
     }
   }
 
+  // If the user answers a question incorrectly, the total number of questions answered
+  // incorrectly in that category (which is stored in the state) will increase by one.
   incorrectAnswer() {
     if(this.state.category === 'General Knowledge') {
       console.log('GA matches');
@@ -630,12 +633,26 @@ class App extends Component {
     }
   }
 
+  // Once the user has answered all ten questions, the total number of games played
+  // by that user will increase by one. There is currently a put call that attempts to
+  // update the user's database record, but this is currently not working.
   finishGameAll() {
     this.setState({
       num_games_played: this.state.num_games_played + 1,
+    });
+    console.log(this.state.num_games_played);
+    fetch(`/users/update/${this.state.currentUser}`, {
+      method: 'put',
+      header: {
+        'Content-type': 'application/json; charset=UTF-8'
+      },
+      body: JSON.stringify({
+        num_games_played: parseInt(this.state.num_games_played),
+      })
     })
   }
 
+  // This function updates the total number of games played in the corresponding category.
   finishGame() {
     if(this.state.category === 'General Knowledge') {
       console.log('GA matches');
@@ -686,7 +703,10 @@ class App extends Component {
     }
   }
 
-
+    // When the user clicks on option A, if it is the correct answer, the correctAnswer function
+    // will fire. If it is the incorrect answer, the incorrectAnswer function will fire. It will also
+    // increase the question counter by 1. If ten questions have been asked, the finishGame functions wil;
+    // fire and the counter will be reset to 0.
     nextQuestionA() {
     console.log('clicked');
     console.log('ANSWER A: ', this.state.answerA);
@@ -702,6 +722,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -709,7 +732,10 @@ class App extends Component {
     }
   }
 
-
+    // When the user clicks on option B, if it is the correct answer, the correctAnswer function
+    // will fire. If it is the incorrect answer, the incorrectAnswer function will fire. It will also
+    // increase the question counter by 1. If ten questions have been asked, the finishGame functions wil;
+    // fire and the counter will be reset to 0.
     nextQuestionB() {
     console.log('clicked');
     console.log('ANSWER B: ', this.state.answerB);
@@ -725,6 +751,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -732,6 +761,10 @@ class App extends Component {
     }
   }
 
+    // When the user clicks on option C, if it is the correct answer, the correctAnswer function
+    // will fire. If it is the incorrect answer, the incorrectAnswer function will fire. It will also
+    // increase the question counter by 1. If ten questions have been asked, the finishGame functions wil;
+    // fire and the counter will be reset to 0.
     nextQuestionC() {
     console.log('clicked');
     console.log('ANSWER C: ', this.state.answerC);
@@ -747,6 +780,9 @@ class App extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
+      this.setState({
+        counter: 0,
+      })
       this.finishGame();
       this.finishGameAll();
       alert('Game done!');
@@ -754,6 +790,10 @@ class App extends Component {
     }
   }
 
+    // When the user clicks on option D, if it is the correct answer, the correctAnswer function
+    // will fire. If it is the incorrect answer, the incorrectAnswer function will fire. It will also
+    // increase the question counter by 1. If ten questions have been asked, the finishGame functions wil;
+    // fire and the counter will be reset to 0.
     nextQuestionD() {
     console.log('clicked');
     console.log('ANSWER D: ', this.state.answerD);
@@ -770,6 +810,9 @@ class App extends Component {
     this.getOneQuestion();
     } else {
       // alert('Game done!');
+      this.setState({
+        counter: 0,
+      })
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
       location.reload();
@@ -780,7 +823,7 @@ class App extends Component {
     }
   }
 
-  // ADD QUESTION
+  // This updates the add question form so that users can submit their own questions!
 
   updateNewQuestion(e) {
       this.setState({
@@ -877,10 +920,6 @@ class App extends Component {
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
         <Nav />
-
-
-
-
 
 
         {this.props.children && React.cloneElement(this.props.children,{
