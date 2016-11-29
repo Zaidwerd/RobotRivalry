@@ -401,9 +401,11 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -424,9 +426,11 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -446,9 +450,11 @@ class GameState extends Component {
     if(this.state.counter < 10) {
     this.getOneQuestion();
     } else {
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // this.finishGame();
+      // this.finishGameAll();
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -496,7 +502,7 @@ class GameState extends Component {
             <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
             <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           </div>
-          </div>
+        </div>
 
 
           <div id='modal'>

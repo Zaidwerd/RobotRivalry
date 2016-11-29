@@ -35,39 +35,41 @@ class Profile extends Component {
         <div id="edit-container">
 
         <div className="edit-content">
+            First Name:
           <input
-            className="edit-first"
+            className="inputcontent"
             type="text"
             placeholder={this.props.state.first_name}
             value={this.props.state.first_name}
             onChange={this.props.updateFirstName}
             />
+            Last Name:
           <input
-            className="edit-last"
+            className="inputcontent"
             type="text"
             placeholder={this.props.state.last_name}
             value={this.props.state.last_name}
             onChange={this.props.updateLastName}
             />
-
+            Age:
           <input
-            className="edit-age"
+            className="inputcontent"
             type="text"
             placeholder={this.props.state.age}
             value={this.props.state.age}
             onChange={this.props.updateAge}
             />
-
+            State:
           <input
-            className="edit-state"
+            className="inputcontent"
             type="text"
             placeholder={this.props.state.state}
             value={this.props.state.state}
             onChange={this.props.updateState}
             />
-
+            <br/>
           <button
-            className="edit-button"
+            className="editUserButton"
             onClick={this.props.submitEdit}> Submit Edit
           </button>
 
