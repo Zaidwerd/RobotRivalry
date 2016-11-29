@@ -21,6 +21,7 @@ body {
   width: 100%;
   height: 100%;
 /*---TUTORIAL ON MODAL FROM W3SCHOOL---*/
+
   /*display: none;*/ /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -30,30 +31,39 @@ body {
   height: 100%;
   overflow: hidden;
   margin: 30px;
+
   padding: 0px;
 }
 .cat-content {
   display: block;
   margin: 0;
+  /*z-index: 1;*/
   /*padding: 50px;*/
   /*background-size: cover;*/
-/*  width: 100%;
-  height: 100%;*/
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
-.box-container {
+
+
+.ugh-content {
 display: flex;
-height: 800px;
-justify-content: center;
+height: 100%;
+flex-flow: column;
+/*justify-content: center;*/
+background-color: black;
+margin: 0;
 }
 .main-box {
   width: 560px;
   height: 560px;
   background-color: #000000;
   margin: auto;
-  position: absolute;
+  /*position: absolute;*/
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
+
 }
 .hOne {
 margin: 0;
@@ -108,6 +118,7 @@ margin: 0;
   width: 100%;
   height: 100%;
   top: 30px;
+  left: 0;
   position: fixed;
   /*overflow: hidden; */
 }
@@ -155,21 +166,30 @@ margin: 0;
   text-align: center;
 }
 .complete {
-  display: block;
+  display: none;
   z-index: -1;
   width: 100%;
   height: 100%;
   margin: 0;
   background-color: orange;
+
+  font-size: 50px;
+  padding-top: 0;
+  text-align: center;
+  top: 30px;
+  left: 0;
+  position: fixed; 
 }
-#box {
+
+
+/*#box {
     background-color: red;
     height: 50px;
     width: 50px;
     position: absolute;
     top: 600px;
     left: 150px;
-    }
+    }*/
 /*#line{
   background-image: url("line.png");
   background-size: 500px;
@@ -180,6 +200,7 @@ margin: 0;
   top: 30px;
   position: fixed;
 }*/
+
 .ccbutton {
   font-family: /*'Oswald', sans-serif;*/ georgia;
   /*margin: 0px 10px;*/
@@ -225,3 +246,4 @@ text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+

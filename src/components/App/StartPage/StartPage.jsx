@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './starterBG.jpg';
+import './starterBG-edit.jpg';
 import style from './StartPage.css';
 import { Link } from 'react-router';
 
@@ -18,7 +18,7 @@ class StartPage extends Component {
       </button>
 
 
-      <div className="cookingmama">COMING SOON</div>
+
       <div className="pokemon">COMING SOON</div>
       </div>
 

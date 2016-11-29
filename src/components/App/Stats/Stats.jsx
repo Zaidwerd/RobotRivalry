@@ -11,6 +11,23 @@ class Stats extends Component {
       <div id="container">
       <link href="https://fonts.googleapis.com/css?family=Oswald:0,0,0|Titillium+Web:0,0,0,0i,0,0,0" rel="stylesheet" />
         <div className="stat-box">
+
+          <div className="bigstat">
+
+
+          <div className="GlobalStats">
+              <div className="global-top">GLOBAL</div>
+
+              <ul className="stat-ul">
+                <li className="stat-li">Questions Answered: {this.props.state.total_q_answered}</li>
+                <li className="stat-li">Questions Correct: {this.props.state.total_q_correct}</li>
+                <li className="stat-li">Questions Incorrect: {this.props.state.total_q_incorrect}</li>
+                <li className="stat-li">Total Games: {this.props.state.total_games}</li>
+                <li className="stat-li">Percent of Questions Correct: {this.props.state.percent_q_correct}</li>
+              </ul>
+          </div>
+
+
           <div className="UserStats">
             <div className="user-top">User Stats</div>
               <ul>
@@ -73,31 +90,19 @@ class Stats extends Component {
               <li>Animals Incorrect: {this.props.state.num_animals_incorrect}</li>
               </ul>
           </div>
-
-          <div className="avi"></div>
-
-          <div className="GlobalStats">
-            <div className="global-top">GLOBAL</div>
-            <ul className="stat-ul">
-              <li className="stat-li">Questions Answered: {this.props.state.total_q_answered}</li>
-              <li className="stat-li">Questions Correct: {this.props.state.total_q_correct}</li>
-              <li className="stat-li">Questions Incorrect: {this.props.state.total_q_incorrect}</li>
-              <li className="stat-li">Total Games: {this.props.state.total_games}</li>
-              <li className="stat-li">Percent of Questions Correct: {this.props.state.percent_q_correct}</li>
-            </ul>
-
           </div>
+        
+        <div className="avi"></div>
 
-        </div>
+          
+        
+
 
 
         <div className="stat-button-cont">
-        <button className="sb"><a className="stata" href='/#/startpage'>BACK</a></button>
-        <button className="sb"><a className="stata" href='/#/gamestate'>AGAIN</a></button>
 
-        <div className="stat-buttons">
-        <button><a href='/#/startpage'>BACK</a></button>
-        <button><a href='/#/gameprops'>AGAIN</a></button>
+          <button className="sb"><a className="stata" href='/#/startpage'>BACK</a></button>
+          <button className="sb"><a className="stata" href='/#/gamestate'>PLAY</a></button> 
 
         </div>
 
