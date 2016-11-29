@@ -482,7 +482,6 @@ class GameState extends Component {
 
 
 
-
   render() {
     return(
       <div id="container">
@@ -496,6 +495,16 @@ class GameState extends Component {
             <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
             <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           </div>
+
+          <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+
+          <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
+          <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
+          <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
+          <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
+          <div class="line"></div>
+          <div id="box" style={{left: `${this.state.boxPosition}px`}}></div>
+
         </div>
 
 
