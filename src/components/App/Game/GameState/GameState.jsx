@@ -5,7 +5,6 @@ let _ = require('underscore');
 class GameState extends Component {
   constructor(props){
     super();
-
     this.state = {
       questions: [],
       currentQuestion: '',
@@ -482,12 +481,14 @@ class GameState extends Component {
 
 
 
+
   render() {
     return(
       <div id="container">
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Titillium+Web:200,300,400,400i,600,700,900" rel="stylesheet" />
 
         <div className="q-cont">
+
           <div className="qq">
             <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
             <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
@@ -496,6 +497,7 @@ class GameState extends Component {
             <button className="q-button" onClick={this.props.nextQuestionD}>{this.props.state.answerD}</button>
           </div>
           </div>
+
 
           <div id='modal'>
            
