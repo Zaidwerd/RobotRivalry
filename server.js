@@ -7,7 +7,7 @@ const path    = require('path');
 // const expressJWT = require('express-jwt')
 
 const app     = express();
-const PORT    = process.argv[2] || process.env.port || 3000;
+const PORT    = process.argv[2] || process.env.PORT || 3000;
 
 const bodyParser = require('body-parser');
 // const session         = require('express-session');

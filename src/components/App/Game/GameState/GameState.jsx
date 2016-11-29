@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from './GameState.css';
 let _ = require('underscore');
 
-
+class GameState extends Component {
   constructor(props){
     super();
 
@@ -481,6 +481,8 @@ let _ = require('underscore');
   }
 
 
+
+
   render() {
     return(
       <div id="container">
@@ -508,15 +510,15 @@ let _ = require('underscore');
                 </div>
                 <div className="box-container">
                   <div className='main-box'>
-                    <button  className="cat-button" onClick={this.props.getKnow}     className='category-box1 box'>General Knowledge</button>
-                    <button  className="cat-button" onClick={this.props.getMusic}    className='category-box2 box'>Music</button>
-                    <button  className="cat-button" onClick={this.props.getTV}       className='category-box3 box'>Television</button>
-                    <button  className="cat-button" onClick={this.props.getSports}   className='category-box4 box'>Sports</button>
-                    <button  className="cat-button" onClick={this.props.getGeo}      className='category-box5 box'>Geography</button>
-                    <button  className="cat-button" onClick={this.props.getHistory}  className='category-box6 box'>History</button>
-                    <button  className="cat-button" onClick={this.props.getPolitics} className='category-box7 box'>Politics</button>
-                    <button  className="cat-button" onClick={this.props.getCelebs}   className='category-box8 box'>Celebrities</button>
-                    <button  className="cat-button" onClick={this.props.getAnimals}  className='category-box9 box'>Animals</button>
+                    <button  className="cat-button" onClick={this.props.getKnow}>General Knowledge</button>
+                    <button  className="cat-button" onClick={this.props.getMusic}>Music</button>
+                    <button  className="cat-button" onClick={this.props.getTV}>Television</button>
+                    <button  className="cat-button" onClick={this.props.getSports}>Sports</button>
+                    <button  className="cat-button" onClick={this.props.getGeo}>Geography</button>
+                    <button  className="cat-button" onClick={this.props.getHistory}>History</button>
+                    <button  className="cat-button" onClick={this.props.getPolitics}>Politics</button>
+                    <button  className="cat-button" onClick={this.props.getCelebs}>Celebrities</button>
+                    <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
                   </div>
                 </div>
 

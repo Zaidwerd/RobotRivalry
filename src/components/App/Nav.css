@@ -3,6 +3,7 @@
 	height: 30px;
 	background-color: black; 
 	position: fixed;
+	top: 0;
 }
 
 .nav-ul {

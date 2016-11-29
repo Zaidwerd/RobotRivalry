@@ -12,7 +12,7 @@ body {
 }
 
 .bg {
-	background-image: url(./starterBG-edit.png);
+	background-image: url(./starterBG.jpg);
 	background-attachment: fixed;
 	background-color: #1b1c1e;
 /*	object-fit: cover;*/

@@ -11,9 +11,9 @@ class Nav extends Component {
         <nav className="navi">
           <ul className="nav-ul">
             <li className="nav-li"><h1 className="navhead">Robot Rivalry</h1></li>
-            <li className="nav-li"><a className="navA" href="./#/">Home</a></li>
-            <li className="nav-li"><a className="navA" href="./#/login">Login</a></li>
-            <li className="nav-li"><a className="navA" href="./#/signup">Sign Up</a></li>
+            <li className="nav-li"><a className="navA" href="/">Home</a></li>
+            <li className="nav-li"><a className="navA" href="/login">Login</a></li>
+            <li className="nav-li"><a className="navA" href="/signup">Sign Up</a></li>
           </ul>
         </nav>
       </div>
