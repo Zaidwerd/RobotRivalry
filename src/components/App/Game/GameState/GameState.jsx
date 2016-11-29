@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from './GameState.css';
 let _ = require('underscore');
 
-
+class GameState extends Component {
   constructor(props){
     super();
 
