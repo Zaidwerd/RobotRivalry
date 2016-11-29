@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../normalize.css';
 import './AddQuestions.css';
 
 export default class AddQuestion extends Component {

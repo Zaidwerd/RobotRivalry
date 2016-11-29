@@ -18,7 +18,7 @@ class StartPage extends Component {
       </button>
 
 
-      <div className="cookingmama">COMING SOON</div>
+
       <div className="pokemon">COMING SOON</div>
       </div>
 

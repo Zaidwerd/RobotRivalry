@@ -24,7 +24,7 @@ class Profile extends Component {
           <div className="edit-button-cont">
             <button className="edit-user" onClick={this.props.editButton}>Edit</button>
             <button className="delete-user" onClick={this.props.deleteUser}>Delete User</button>
-            <button className="submit-q"><a className="submitquest" href="/addQuestions"> Submit Question</a></button>
+            <button className="submit-q"><a className="submitquest" href="#/addQuestions"> Submit Question</a></button>
           </div>
         </div>
 

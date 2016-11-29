@@ -26,13 +26,23 @@ body {
 	/*flex-flow: row wrap;*/
 }
 
+.bigstat {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 .UserStats {
 	border: 1px white solid;
 	background-color: rgba(27,28,30,0.5);
 	color: white;
-	height: 500px;
+	height: auto;
 	width: 400px;
 	margin: 50px;
+	letter-spacing: 2px;
+	line-height: 40px;
 }
 
 
@@ -41,7 +51,10 @@ body {
 	background-color: rgba(27,28,30,0.5);
 	color: white;
 	width: 400px;
+	height: 400px;
 	margin: 50px;
+	letter-spacing: 2px;
+	line-height: 40px;
 }
 
 
@@ -62,23 +75,24 @@ body {
 
 
 .stat-button-cont {
+	/*align-self: flex-start;*/
 	/*background-color: black;*/
 	text-align: center;
 	/*margin-bottom: 30px;*/
 }
 .sb {
-  margin: 0px 15px 0px 15px;
+  margin: 50px 30px 0px 15px;
 	/*margin: 50px;*/
   width: 100px;
   height: 38px;
   border-radius: 2px;
   padding: 5px;
-  color: #fafafa;
+  color: #ffffff;
   cursor: pointer;
   font-variant: center;
   letter-spacing: 1px;
   font-size: 16px;
-  margin: 50px;
+  /*margin: 30px;*/
   background: transparent;
   border: 1px solid white;
 
@@ -93,7 +107,7 @@ body {
 }
 .sb:hover {
   background-color: rgba(255,255,255,0.8);
-  color: #333333;
+  color: #1b1c1e;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -106,5 +120,10 @@ body {
 
 .stata {
 	text-decoration: none;
-	color: #1b1c1e;
+	/*color: #1b1c1e;*/
+	color: #fafafa;
+}
+.stata:hover {
+  color: #1b1c1e;
+  font-weight: bold;
 }
