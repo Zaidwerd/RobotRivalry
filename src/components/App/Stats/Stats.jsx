@@ -39,7 +39,7 @@ class Stats extends Component {
               <ul>
               <li>General Knowledge Played: {this.props.state.num_generalknowledge_played}</li>
               <li>General Knowledge Correct: {this.props.state.num_generalknowledge_correct}</li>
-              <li>General Knowledge Incorrect: {this.props.state.num_geography_incorrect}</li>
+              <li>General Knowledge Incorrect: {this.props.state.num_generalknowledge_incorrect}</li>
               </ul>
 
               <ul>
@@ -92,6 +92,7 @@ class Stats extends Component {
           </div>
           </div>
           </div>
+
 
         <div className="avi"></div>
 

@@ -4,13 +4,6 @@ let _ = require('underscore');
 
 class GameState extends Component {
 
-  constructor(props) {
-    super();
-    this.state = {
-      boxPosition: 150,
-    }
-  }
-
   render() {
     return(
       <div id="container">
@@ -50,8 +43,9 @@ class GameState extends Component {
                     <button  className="cat-button" onClick={this.props.getAnimals}>Animals</button>
                   </div>
                 </div>
-
-
+              </div>
+             </div>
+            </div>
 
             <div className="complete">
               <div className="cc">
@@ -62,9 +56,6 @@ class GameState extends Component {
             </div>
 
           </div>
-      </div>
-    </div>
-    </div>
       );
   }
 }

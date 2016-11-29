@@ -5,6 +5,7 @@ body {
   background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
   background-size: 200% 200%;
   font-family: 'Oswald', sans-serif;
+
 }
 #container {
   display: block;
