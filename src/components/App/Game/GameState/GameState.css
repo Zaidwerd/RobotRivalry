@@ -2,18 +2,15 @@ body {
   background-color: #1b1c1e;
 /*  background-image: url(futurama_bg.jpg);*/
   background-repeat: no-repeat;
-
   background: linear-gradient(180deg, #1b1c1e, #4c6a6e);
   background-size: 200% 200%;
   font-family: 'Oswald', sans-serif;
 }
-
 #container {
   display: block;
   width: 100%;
   height: 100%;
 }
-
 #modal {
   /*modal*/
   /*display: flex;
@@ -24,7 +21,6 @@ body {
   width: 100%;
   height: 100%;
 /*---TUTORIAL ON MODAL FROM W3SCHOOL---*/
-<<<<<<< HEAD
   /*display: none;*/ /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -34,18 +30,8 @@ body {
   height: 100%;
   overflow: hidden;
   margin: 30px;
-=======
-  /*display: none;*/ 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  top: 30px;
-  overflow: hidden; 
-  margin: 0px;
->>>>>>> master
   padding: 0px;
 }
-
 .cat-content {
   display: block;
   margin: 0;
@@ -54,25 +40,21 @@ body {
 /*  width: 100%;
   height: 100%;*/
 }
-
 .box-container {
 display: flex;
 height: 800px;
 justify-content: center;
 }
-
 .main-box {
   width: 560px;
   height: 560px;
   background-color: #000000;
   margin: auto;
-
   position: absolute;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
-
 .hOne {
 margin: 0;
 }
@@ -85,12 +67,10 @@ margin: 0;
   margin: 0;
   margin-bottom: 10px;
 }
-
 .cat-button {
   position: relative;
   width: 180px;
   height: 180px;
-
   border-radius: 2px;
   padding: 5px;
   color: #fafafa;
@@ -100,9 +80,7 @@ margin: 0;
   font-size: 16px;
   background: transparent;
   border: 1px solid white;
-
   align-self: center;
-
   transition: background-color 0.3s ease-out,
               color 0.2s ease-out,
               letter-spacing 0.2s ease-out,
@@ -120,9 +98,6 @@ margin: 0;
                 font-weight 0.3s ease-out,
                 text-transform 0.1s ease-out;
 }
-
-
-
 .q-cont {
   z-index: 0;
   background-color: #000000;
@@ -133,7 +108,7 @@ margin: 0;
   width: 100%;
   height: 100%;
   top: 30px;
-  position: fixed; 
+  position: fixed;
   /*overflow: hidden; */
 }
 .qq {
@@ -142,7 +117,6 @@ margin: 0;
   width: 100%;
   height: 100%;
 }
-
 .q-button {
   width: 250px;
   height: 100px;
@@ -158,7 +132,6 @@ margin: 0;
   background: transparent;
   border: 1px solid white;
   align-self: center;
-
   transition: background-color 0.3s ease-out,
               color 0.2s ease-out,
               letter-spacing 0.2s ease-out,
@@ -176,14 +149,11 @@ margin: 0;
                 font-weight 0.3s ease-out,
                 text-transform 0.1s ease-out;
 }
-
-
 .theQuestion {
   font-size: 50px;
   letter-spacing: 5px;
   text-align: center;
 }
-
 .complete {
   display: block;
   z-index: -1;
@@ -191,9 +161,7 @@ margin: 0;
   height: 100%;
   margin: 0;
   background-color: orange;
-<<<<<<< HEAD
 }
-
 #box {
     background-color: red;
     height: 50px;
@@ -202,23 +170,19 @@ margin: 0;
     top: 600px;
     left: 150px;
     }
-
 /*#line{
   background-image: url("line.png");
   background-size: 500px;
 }*/
-=======
-  font-size: 50px;
+  /*font-size: 50px;
   padding-top: 0;
   text-align: center;
   top: 30px;
-  position: fixed; 
-}
-
+  position: fixed;
+}*/
 .ccbutton {
   font-family: /*'Oswald', sans-serif;*/ georgia;
   /*margin: 0px 10px;*/
-
   width: 100px;
   height: 38px;
   border: none;
@@ -232,11 +196,8 @@ margin: 0;
   margin: 50px;
   background: transparent;
   border: 1px solid white;
-
 text-decoration: none;
-
   align-self: center;
-
   transition: background-color 0.3s ease-out,
               color 0.2s ease-out,
               letter-spacing 0.2s ease-out,
@@ -254,7 +215,6 @@ text-decoration: none;
                 font-weight 0.3s ease-out,
                 text-transform 0.1s ease-out;
 }
-
 .cclink {
   text-decoration: none;
   color: #fafafa;
@@ -265,6 +225,3 @@ text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-
->>>>>>> master

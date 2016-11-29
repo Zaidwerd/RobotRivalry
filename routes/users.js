@@ -1,10 +1,14 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 
 const express      = require('express');
-const { createUser, getUserByUsername, listUsers, deleteUser, editUser, getUserStats }    = require('../models/user.js');
+const { createUser, getUserByUsername, listUsers, deleteUser, editUser, getUserStats, updateUserStats }    = require('../models/user.js');
 // const { authenticate }   = require('../lib/auth');
 
 const usersRouter  = express.Router();
+
+usersRouter.put('/update/:id', updateUserStats, (req, res) => {
+  console.log('ok');
+})
 
 usersRouter.get('/', listUsers, (req, res) => {
   res.json(res.users.map((user) => {
@@ -24,6 +28,7 @@ usersRouter.delete('/:username', deleteUser,  (req, res) => {
 usersRouter.put('/:username', editUser,  (req, res) => {
   res.redirect('/user');
 });
+
 
 // usersRouter.get('/profile', (req, res) => {
 //   res.json(res.user);

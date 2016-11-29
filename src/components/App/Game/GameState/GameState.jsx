@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from './GameState.css';
 let _ = require('underscore');
 
-
+class GameState extends Component {
   constructor(props){
     super();
 
@@ -479,8 +479,6 @@ let _ = require('underscore');
       // location.reload();
     }
   }
-=======
->>>>>>> master
 
 
   render() {
@@ -490,6 +488,7 @@ let _ = require('underscore');
 
         <div className="q-cont">
           <h3 className="theQuestion">{this.props.state.currentQuestion}</h3>
+
           <button className="q-button" onClick={this.props.nextQuestionA}> {this.props.state.answerA}</button>
           <button className="q-button" onClick={this.props.nextQuestionB}>{this.props.state.answerB}</button>
           <button className="q-button" onClick={this.props.nextQuestionC}>{this.props.state.answerC}</button>
