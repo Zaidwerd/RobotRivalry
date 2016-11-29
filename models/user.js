@@ -34,6 +34,7 @@ function editUser(req, res, next) {
 
 function updateUserStats(req, res, next) {
   console.log('updating user stats');
+  console.log('req.body ', req.body)
   db.none(`UPDATE users
     SET num_games_played = $1
     WHERE id = $2 `, [req.body.num_games_played, req.params.id])

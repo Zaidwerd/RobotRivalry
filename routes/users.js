@@ -6,6 +6,10 @@ const { createUser, getUserByUsername, listUsers, deleteUser, editUser, getUserS
 
 const usersRouter  = express.Router();
 
+usersRouter.put('/update/:id', updateUserStats, (req, res) => {
+  console.log('ok');
+})
+
 usersRouter.get('/', listUsers, (req, res) => {
   res.json(res.users.map((user) => {
     const { id, username, password } = user;
@@ -25,9 +29,6 @@ usersRouter.put('/:username', editUser,  (req, res) => {
   res.redirect('/user');
 });
 
-usersRouter.put('/update/:id', updateUserStats, (req, res) => {
-  console.log('ok');
-})
 
 // usersRouter.get('/profile', (req, res) => {
 //   res.json(res.user);

@@ -621,11 +621,15 @@ class App extends Component {
   finishGameAll() {
     this.setState({
       num_games_played: this.state.num_games_played + 1,
-    })
+    });
+    console.log(this.state.num_games_played);
     fetch(`/users/update/${this.state.currentUser}`, {
       method: 'put',
+      header: {
+        'Content-type': 'application/json; charset=UTF-8'
+      },
       body: JSON.stringify({
-        num_games_played: this.state.num_games_played,
+        num_games_played: parseInt(this.state.num_games_played),
       })
     })
   }
