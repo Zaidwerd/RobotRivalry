@@ -136,6 +136,7 @@ class App extends Component {
         loggedIn: true,
       },
     });
+    document.querySelector('#modal2').style.display = 'block';
   }
 
   // grabs the password from the login form
@@ -182,7 +183,6 @@ class App extends Component {
     }))
     .then(this.LogIn.bind(this))
     .catch(err => console.log(err));
-    document.querySelector('#modal2').style.display = 'block';
   }
 
   // SIGN UP PAGE
@@ -641,15 +641,15 @@ class App extends Component {
       num_games_played: this.state.num_games_played + 1,
     });
     console.log(this.state.num_games_played);
-    fetch(`/users/update/${this.state.currentUser}`, {
-      method: 'put',
-      header: {
-        'Content-type': 'application/json; charset=UTF-8'
-      },
-      body: JSON.stringify({
-        num_games_played: parseInt(this.state.num_games_played),
-      })
-    })
+    // fetch(`/users/update/${this.state.currentUser}`, {
+    //   method: 'put',
+    //   header: {
+    //     'Content-type': 'application/json; charset=UTF-8'
+    //   },
+    //   body: JSON.stringify({
+    //     num_games_played: parseInt(this.state.num_games_played),
+    //   })
+    // })
   }
 
   // This function updates the total number of games played in the corresponding category.
@@ -727,7 +727,9 @@ class App extends Component {
       })
       this.finishGame();
       this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -756,7 +758,9 @@ class App extends Component {
       })
       this.finishGame();
       this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -785,7 +789,9 @@ class App extends Component {
       })
       this.finishGame();
       this.finishGameAll();
-      alert('Game done!');
+      document.querySelector('.q-cont').style.display = 'none';
+      document.querySelector('.complete').style.display = 'block';
+      // alert('Game done!');
       // location.reload();
     }
   }
@@ -813,12 +819,11 @@ class App extends Component {
       this.setState({
         counter: 0,
       })
+      this.finishGame();
+      this.finishGameAll();
       document.querySelector('.q-cont').style.display = 'none';
       document.querySelector('.complete').style.display = 'block';
       location.reload();
-      this.finishGame();
-      this.finishGameAll();
-      alert('Game done!');
       // location.reload();
     }
   }
