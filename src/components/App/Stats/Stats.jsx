@@ -95,14 +95,9 @@ class Stats extends Component {
         <button className="sb"><a className="stata" href='/#/startpage'>BACK</a></button>
         <button className="sb"><a className="stata" href='/#/gamestate'>AGAIN</a></button>
 
-        <div className="stat-buttons">
-        <button><a href='/#/startpage'>BACK</a></button>
-        <button><a href='/#/gameprops'>AGAIN</a></button>
-
         </div>
 
       </div>
-    </div>
     )
   }
 }
